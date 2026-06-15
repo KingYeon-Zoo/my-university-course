@@ -1,0 +1,60 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# 本地应用配置与回收站
+课程笔记/.obsidian/
+课程笔记/.trash/
+
+# 嵌套仓库的本地 Git 元数据备份
+**/.git.local-backup/
+
+# 本地维护脚本和包含个人信息的文件
+/update-repos.sh
+/更新所有仓库.command
+/课堂请假条.pdf
+
+# 其他作者的仓库：仅在 README 中保留原项目链接
+/EternityPetrichor-HFUT-CS-宣城-2022-2026/
+/Franpin-HFUT-IOT-Learning-WorkIOT-宣城-2019-2023/
+/h9696-hfut-cs-Hfut-cs-宣城-2022-2026/
+/hfut-cs-合肥-2018-2019（只有大二大三）/
+/hfut-cs-期末考试以及笔记/
+/mox-hub-hfut-cs-宣城-2019-2023/
+/styitches-HFUT-CS-合肥-2020-2024/
+/sunmiao0301-HFUT-CS-合肥-2018-2022/
+/thinkinglf-HFUT-22CS-HFUT-CS-宣城-2022-2026/
+
+# 超过 GitHub 普通 Git 100 MiB 限制的文件
+/我的大学课程资料/EDA实训学习参考资料/AD10安装文件/Altium Designer 10/Builds/22033/HDLSim_AlteraVerilog/zip/HDLSim_AlteraVerilog.zip
+/我的大学课程资料/EDA实训学习参考资料/AD10安装文件/Altium Designer 10/Builds/22033/HDLSim_XilinxVHDL/zip/HDLSim_XilinxVHDL.zip
+/我的大学课程资料/EDA实训学习参考资料/AD10安装文件/Altium Designer 10/Builds/22033/HDLSim_XilinxVerilog/zip/HDLSim_XilinxVerilog.zip
+/我的大学课程资料/OS/os-mission/mission/harddisk.img
+/我的大学课程资料/OS/实验/expr8-task3/harddisk.img
+/我的大学课程资料/OS/实验/expr8-task4/harddisk.img
+/我的大学课程资料/OS/实验软件安装包/VSCode-4.0.28-Linux011-windows-x64-1.59.zip
+/我的大学课程资料/OS/实验软件安装包/dot-net-4.8-x86-x64-allos-enu.exe
+/我的大学课程资料/nlp/2025自然语言处理作业-朱清扬-2023212290.zip
+/我的大学课程资料/nlp/2025自然语言处理作业-朱清扬-2023212290/大作业/多模态RAG.mp4
+/我的大学课程资料/大数据/eclipse-inst-jre-linux64.tar.gz
+/我的大学课程资料/嵌入式/QQ2025522-91851.mp4
+/我的大学课程资料/嵌入式/QQ2025522-92849.mp4
+/我的大学课程资料/数字媒体技术/数媒演示视频.mp4
+/我的大学课程资料/数字逻辑/课后实验资料（Vivado+Verilog）/EGo1-开发包v1.61/1-五分钟玩转EGo1系列视频教程-v1.4/第一章_5分钟上手实验-HDL流程-内含视频、工程/Vivado设计流程.mp4
+/我的大学课程资料/数字逻辑/课后实验资料（Vivado+Verilog）/EGo1-开发包v1.61/1-五分钟玩转EGo1系列视频教程-v1.4/第三章_5分钟上手实验-仿真-内含视频、工程/5分钟上手视频-仿真.mp4
+/我的大学课程资料/数字逻辑/课后实验资料（Vivado+Verilog）/EGo1-开发包v1.61/1-五分钟玩转EGo1系列视频教程-v1.4/第三章_5分钟上手实验-仿真-内含视频、工程/flash_led.rar
+/我的大学课程资料/数字逻辑/课后实验资料（Vivado+Verilog）/EGo1-开发包v1.61/1-五分钟玩转EGo1系列视频教程-v1.4/第二章_5分钟上手实验-搭建你的数字积木-内含视频、工程/搭建你的数字积木.mp4
+/我的大学课程资料/数字逻辑/课后实验资料（Vivado+Verilog）/EGo1-开发包v1.61/1-五分钟玩转EGo1系列视频教程-v1.4/第四章_5分钟上手实验-硬件在线调试-内含视频、工程/A7_uart_led_debug_demo_7A35T.rar
+/我的大学课程资料/数字逻辑/课后实验资料（Vivado+Verilog）/EGo1-开发包v1.61/1-五分钟玩转EGo1系列视频教程-v1.4/第四章_5分钟上手实验-硬件在线调试-内含视频、工程/硬件在线调试.mp4
+/我的大学课程资料/数字逻辑/课后实验资料（Vivado+Verilog）/EGo1-开发包v1.61/3c-EGo1配置实验vivado2017.2_v1.2.rar
+/我的大学课程资料/数据结构（新）/HomeWork Visual Studio/HomeWork/.vs/HomeWork/v17/ipch/AutoPCH/4725afb2d2ae58f/BIGWORK5.ipch
+/我的大学课程资料/机器学习/2023212290-朱清扬-工程讲解视频.mp4
+/我的大学课程资料/机器学习/2023212290-朱清扬-机器学习所有作业内容.zip
+/我的大学课程资料/机器学习/2023212290-朱清扬-题目讲解.mp4
+/我的大学课程资料/机器学习/Predict Calorie Expenditure/train_features.csv
+/我的大学课程资料/机器学习/test/Predict Calorie Expenditure/train_features.csv
+/我的大学课程资料/系统硬件设计/2023212290-朱清扬-计科23-3班-系统硬件综合设计.zip
+/我的大学课程资料/系统硬件设计/CA/CA/CA.sim/sim_1/behav/xsim/RISCV_CPU_tb_behav.wdb
+/我的大学课程资料/系统硬件设计/工程文件/CA/CA.sim/sim_1/behav/xsim/RISCV_CPU_tb_behav.wdb
+/我的大学课程资料/计算方法/教材与习题集.rar
+/我的大学课程资料/计算机实训/嵌入式系统的目标识别模型训练包/yolov5-7.0.zip
