@@ -1,0 +1,8 @@
+if i=0 then   
+a<= 3b %);
+
+n++;
+
+while (x > y) {
+    a = a + 1;
+} 
