@@ -1,0 +1,23 @@
+langchain==1.0.0a9
+langchain-openai==0.3.33
+python-dotenv==1.1.1
+fastapi==0.117.1
+uvicorn==0.37.0
+loguru==0.7.3
+pydantic_settings==2.11.0
+
+Pillow==11.3.0
+PyMuPDF==1.26.4
+python-magic-bin==0.4.14
+langchain_community==0.3.30
+
+langchain-unstructured==0.1.6
+langchain-text-splitters==0.3.11
+unstructured==0.18.15
+# PDF处理可选依赖（如需完整OCR功能，请安装 unstructured[pdf]）
+# 基本PDF处理已通过PyMuPDF支持，无需额外依赖
+matplotlib==3.8.0
+
+# Audio processing
+pydub>=0.25.1
+moviepy>=1.0.3
