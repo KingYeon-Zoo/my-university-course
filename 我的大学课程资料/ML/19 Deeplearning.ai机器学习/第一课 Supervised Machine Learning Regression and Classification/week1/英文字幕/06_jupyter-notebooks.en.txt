@@ -1,0 +1,72 @@
+From the videos, you've seen
+supervised learning and unsupervised learning and
+also examples of both. For you to more deeply
+understand these concepts, I'll like to invite you
+in this class to see, learn and maybe
+later write codes yourself to implement
+these concepts. The most widely used tool
+by machine learning and data science practitioners
+today is the Jupyter Notebook. This is the default
+environments that a lot of us use to code up and experiment
+and try things out. In this class, right here
+in your web browser, you build a user Jupyter
+Notebook environment to test out some of these
+ideas for yourself as well. This is not some made up
+simplified environment, this is the exact
+same environments, the exact same tool,
+the Jupyter Notebook that developers are using in many large countries right now. One type of lab that
+you see throughout this class are optional labs, which are ones you can
+open and run one line at a time with usually no need
+to write any code yourself. Optional labs are
+designed to be very easy and I can guarantee you
+will get full marks, every single one of them
+because there are no marks. All you need to do is open it up and just run the
+code we've provided. By reading through and running the code in the optional labs, you see how machine
+learning code runs. You should complete
+them relatively quickly just by running it one line at a time
+from top to bottom. Optional labs are
+completely optional so you don't have to do them at all if you
+don't want to, but I hope you will take a look because running through them will give you a deeper feel, give you a little
+bit more experience with what machine
+learning algorithms, what machine learning
+code actually looks like. Starting next week,
+there'll also be some practice labs
+which would give you an opportunity to write
+some of that code yourself but we'll get
+to that next week. Don't worry about it for now and I hope you
+just go through the next optional lab and get through the rest of the
+content for this week. Let's take a look at an
+example of a notebook. Here's what you see when you go to the first optional lab. Feel free to scroll up and
+down and browse and mouseover the different menus and take a look at the different
+options here. You might notice that there are two types of these blocks, also called cells in the notebook and there
+are two types of cells. One is what's called
+a Markdown cell, which means a bunch of tax. Here you can actually
+edit the text if you don't like the
+text that we wrote, but this is text that
+describes the code. Then there's a
+second type of block or cell which looks like this, which has a code cell. Here, we've already
+provided the code and if you want to
+run this code cell, hitting Shift Enter will run the code in this code
+cell, and by the way, if you click on a markdown cell, so this showing all
+this formatting, go ahead and hit Shift
+Enter on your keyboard as well and that will also convert back to this nicely
+formatted text. This optional lab shows
+some common Python code, so you can go ahead and run this afterwards in your
+own Jupyter notebook. When you jump into this
+notebook yourself, what I'd like you
+to do is select the cells and hit Shift Enter. Read through the code,
+see if it makes sense, try to make a prediction
+about what you think this code
+would do and then hit Shift Enter and then see what the
+code actually does, and if you like it, feel free to go in
+and edit the code, change the code, and then
+run it and see what happens. If you haven't played in the Jupyter Notebook
+environment for, I hope you become
+more familiar with Python in a Jupyter Notebook. I spend a lot of hours
+playing around in Jupyter notebooks and so I hope you have fun with them too. After that, I look
+forward to seeing you in the next video
+where we'll take the supervised learning
+problem as start to flesh out our first supervised
+learning algorithm. I hope that will
+be fun to you and look forward to
+seeing you there.

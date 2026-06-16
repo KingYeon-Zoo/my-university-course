@@ -1,0 +1,138 @@
+You saw in the last video how different choices
+of the degree of polynomial D affects the bias in variance of your
+learning algorithm and therefore its
+overall performance. In this video, let's take a
+look at how regularization, specifically the choice of the regularization
+parameter Lambda affects the bias
+and variance and therefore the overall
+performance of the algorithm. This, it turns out, will be helpful
+for when you want to choose a good value of Lambda of the
+regularization parameter for your algorithm.
+Let's take a look. In this example, I'm going to use a fourth-order polynomial, but we're going to fit this
+model using regularization. Where here the value of Lambda is the regularization
+parameter that controls how much you trade-off
+keeping the parameters w small versus fitting
+the training data well. Let's start with the
+example of setting Lambda to be a very large value. Say Lambda is equal to 10,000. If you were to do so, you would end up fitting a model that looks
+roughly like this. Because if Lambda
+were very large, then the algorithm is
+highly motivated to keep these parameters w very small and so you
+end up with w_1, w_2, really all of these parameters will
+be very close to zero. The model ends up
+being f of x is just approximately
+b a constant value, which is why you end up
+with a model like this. This model clearly has
+high bias and it underfits the training data because
+it doesn't even do well on the training set and
+J_train is large. Let's take a look at
+the other extreme. Let's say you set Lambda
+to be a very small value. With a small value of Lambda, in fact, let's go to extreme of setting Lambda equals zero. With that choice of Lambda, there is no regularization, so we're just fitting a
+fourth-order polynomial with no regularization
+and you end up with that curve that you saw previously that
+overfits the data. What we saw previously was when you have
+a model like this, J_train is small, but J_cv is much larger than
+J_train or J_cv is large. This indicates we
+have high variance and it overfits this data. It would be if you have some intermediate
+value of Lambda, not really largely 10,000, but not so small as zero that hopefully you get a model
+that looks like this, that is just right and
+fits the data well with small J_train
+and small J_cv. If you are trying
+to decide what is a good value of Lambda to use for the
+regularization parameter, cross-validation gives you
+a way to do so as well. Let's take a look at
+how we could do so. Just as a reminder, the problem we're addressing is if you're fitting a
+fourth-order polynomial, so that's the model and
+you're using regularization, how can you choose a
+good value of Lambda? This would be procedures similar
+to what you had seen for choosing the degree of polynomial D using
+cross-validation. Specifically, let's
+say we try to fit a model using
+Lambda equals 0. We would minimize
+the cost function using Lambda equals 0 and end
+up with some parameters w1, b1 and you can then compute
+the cross-validation error, J_cv of w1, b1. Now let's try a different
+value of Lambda. Let's say you try
+Lambda equals 0.01. Then again, minimizing
+the cost function gives you a second set
+of parameters, w2, b2 and you can also see how well that does on the
+cross-validation set, and so on. Let's keep trying
+other values of Lambda and in this example, I'm going to try doubling
+it to Lambda equals 0.02 and so that will
+give you J_cv of w3, b3, and so on. Then let's double again
+and double again. After doubling a
+number of times, you end up with Lambda
+approximately equal to 10, and that will give
+you parameters w12, b12, and J_cv w12 of b12. By trying out a large range of possible values for Lambda, fitting parameters using those different
+regularization parameters, and then evaluating
+the performance on the cross-validation set, you can then try to pick what is the best value for the
+regularization parameter. Quickly. If in this example, you find that J_cv of W5, B5 has the lowest value of all of these different
+cross-validation errors, you might then decide to
+pick this value for Lambda, and so use W5, B5 as to chosen parameters. Finally, if you want to report out an estimate of the
+generalization error, you would then report
+out the test set error, J tests of W5, B5. To further hone intuition about what this
+algorithm is doing, let's take a look at how training error and
+cross validation error vary as a function of
+the parameter Lambda. In this figure, I've
+changed the x-axis again. Notice that the x-axis here is annotated with the value of the regularization
+parameter Lambda, and if we look at the extreme of Lambda equals zero
+here on the left, that corresponds to not
+using any regularization, and so that's where we wound up with this very wiggly curve. If Lambda was small
+or it was even zero, and in that case, we have a high variance model, and so J train is going to be small and J_cv is going to be large because it does great on the training data but does much worse on the cross
+validation data. This extreme on the right were very large
+values of Lambda. Say Lambda equals 10,000 ends up with fitting a model
+that looks like that. This has high bias, it underfits the data, and it turns out J
+train will be high and J_cv will be high as well. In fact, if you
+were to look at how J train varies as a
+function of Lambda, you find that J train
+will go up like this because in the
+optimization cost function, the larger Lambda is, the more the algorithm is
+trying to keep W squared small. That is, the more weight is given to this
+regularization term, and thus the less
+attention is paid to actually do well
+on the training set. This term on the
+left is J train, so the most trying to keep
+the parameters small, the less good a job it does on minimizing
+the training error. That's why as Lambda increases, the training error J train
+will tend to increase like so. Now, how about the
+cross-validation error? Turns out the cross-validation
+error will look like this. Because we've seen that if Lambda is too small
+or too large, then it doesn't do well on
+the cross-validation set. It either overfits here on the left or underfits
+here on the right. There'll be some intermediate
+value of Lambda that causes the algorithm
+to perform best. What cross-validation
+is doing is, it's trying out a lot of
+different values of Lambda. This is what we saw
+on the last slide; trial Lambda equals zero, Lambda equals 0.01,
+logic is 0,02. Try a lot of different
+values of Lambda and evaluate the
+cross-validation error in a lot of these
+different points, and then hopefully pick a value that has low cross
+validation error, and this will hopefully correspond to a good model
+for your application. If you compare this diagram to the one that we had in
+the previous video, where the horizontal axis was
+the degree of polynomial, these two diagrams look a little bit not mathematically and
+not in any formal way, but they look a little bit like mirror images
+of each other, and that's because when you're fitting a
+degree of polynomial, the left part of this
+curve corresponded to overfitting in high bias, the right part corresponded to underfitting in high variance. Whereas in this one, high-variance was
+on the left and high bias was on the right. But that's why these two
+images are a little bit like mirror images
+of each other. But in both cases,
+cross-validation, evaluating different
+values can help you choose a good value of t
+or a good value of Lambda. That's how the choice of regularization parameter
+Lambda affects the bias and variance and overall performance
+of your algorithm, and you've also seen how you
+can use cross-validation to make a good choice for the regularization
+parameter Lambda. Now, so far, we've talked about how having
+a high training set error, high J train is indicative of high bias and how having a high cross-validation
+error of J_cv, specifically if it's much
+higher than J train, how that's indicative
+of variance problem. But what does these
+words "high" or "much higher" actually mean? Let's take a look at that in the next video where we'll
+look at how you can look at the numbers J train and J_cv and judge if
+it's high or low, and it turns out that one further refinement
+of these ideas, that is, establishing a baseline level of performance we're learning algorithm will make it much easier for you to look
+at these numbers, J train, J_cv, and judge if they
+are high or low. Let's take a look at what all this means in the next video.

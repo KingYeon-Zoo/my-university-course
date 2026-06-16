@@ -1,0 +1,161 @@
+The typical workflow
+of developing a machine learning
+system is that you have an idea and
+you train the model, and you almost
+always find that it doesn't work as well
+as you wish yet. When I'm training a
+machine learning model, it pretty much never works
+that well the first time. Key to the process of building machine learning
+system is how to decide what to do next in order to improve
+his performance. I've found across many
+different applications that looking at the bias and variance of a learning
+algorithm gives you very good guidance
+on what to try next. Let's take a look
+at what this means. You might remember
+this example from the first course on
+linear regression. Where given this dataset, if you were to fit a
+straight line to it, it doesn't do that well. We said that this algorithm has high bias or that it
+underfits this dataset. If you were to fit a
+fourth-order polynomial, then it has high-variance
+or it overfits. In the middle if you fit
+a quadratic polynomial, then it looks pretty good. Then I said that was just right. Because this is a problem
+with just a single feature x, we could plot the function
+f and look at it like this. But if you had more features, you can't plot f and visualize whether it's
+doing well as easily. Instead of trying to
+look at plots like this, a more systematic way to diagnose or to find out if your algorithm
+has high bias or high variance will be to
+look at the performance of your algorithm on
+the training set and on the cross validation set. In particular, let's look
+at the example on the left. If you were to compute J_train, how well does the algorithm
+do on the training set? Not that well. I'd say J train here would be high
+because there are actually pretty large errors between the examples and the actual
+predictions of the model. How about J_cv? J_cv would be if we had
+a few new examples, maybe examples like that, that the algorithm had
+not previously seen. Here the algorithm
+also doesn't do that well on examples that it
+had not previously seen, so J_cv will also be high. One characteristic of an
+algorithm with high bias, something that is under fitting, is that it's not even doing that well on
+the training set. When J_train is high, that is your strong indicator that this algorithm
+has high bias. Let's now look at the
+example on the right. If you were to compute J_train, how well is this doing
+on the training set? Well, it's actually doing
+great on the training set. Fits the training
+data really well. J_train here will be low. But if you were to evaluate this model on other houses
+not in the training set, then you find that J_cv, the cross-validation
+error, will be quite high. A characteristic signature or a characteristic Q that
+your algorithm has high variance will be of J_cv is much higher
+than J_train. In other words, it does
+much better on data it has seen than on data
+it has not seen. This turns out to be a strong indicator that your
+algorithm has high variance. Again, the point of
+what we're doing is that I'm computing J_train and J_cv and seeing if J _train is high or if J_cv is
+much higher than J_train. This gives you a sense, even if you can't
+plot to function f, of whether your algorithm has
+high bias or high variance. Finally, the chase
+in the middle. If you look at J_train, it's pretty low,
+so this is doing quite well on the training set. If you were to look at
+a few new examples, like those from, say, your cross-validation set, you find that J_cv is
+also a pretty low. J_train not being too high indicates this doesn't have
+a high bias problem and J_cv not being much worse than J_train this indicates that it doesn't have a high
+variance problem either. Which is why the quadratic model seems to be a pretty good
+one for this application. Let me share with you another
+view of bias and variance. To summarize, when d equals
+1 for a linear polynomial, J_train was high
+and J_cv was high. When d equals 4, J train was low, but J_cv is high. When d equals 2, both were pretty low. Let's now take a different
+view on bias and variance. In particular, on
+the next slide I'd like to show you how J_train and J_cv variance as a function of the degree of the
+polynomial you're fitting. Let me draw a figure where the horizontal
+axis, this d here, will be the degree of polynomial that we're fitting to the data. Over on the left we'll correspond
+to a small value of d, like d equals 1, which corresponds to
+fitting straight line. Over to the right we'll
+correspond to, say, d equals 4 or even
+higher values of d. We're fitting this
+high order polynomial. So if you were to
+plot J train or W, B as a function of the
+degree of polynomial, what you find is that as you fit a higher and higher
+degree polynomial, here I'm assuming we're
+not using regularization, but as you fit a higher and
+higher order polynomial, the training error
+will tend to go down because when you have a very
+simple linear function, it doesn't fit the
+training data that well, when you fit a
+quadratic function or third order polynomial or
+fourth-order polynomial, it fits the training
+data better and better. As the degree of
+polynomial increases, J train will typically go down. Next, let's look at J_cv, which is how well does it do on data that it did
+not get to fit to? What we saw was
+when d equals one, when the degree of
+polynomial was very low, J_cv was pretty high
+because it underfits, so it didn't do well on
+the cross validation set. Here on the right as well, when the degree of polynomial
+is very large, say four, it doesn't do well on the
+cross-validation set either, and so it's also high. But if d was in-between say, a second-order polynomial, then it actually
+did much better. If you were to vary the
+degree of polynomial, you'd actually get a curve
+that looks like this, which comes down and
+then goes back up. Where if the degree of
+polynomial is too low, it underfits and so doesn't
+do the cross validation set, if it is too high, it overfits and also doesn't do well on the cross
+validation set. Is only if it's
+somewhere in the middle, that is just right, which is why the
+second-order polynomial in our example ends up with a lower cross-validation
+error and neither high bias
+nor high-variance. To summarize, how
+do you diagnose bias and variance in
+your learning algorithm? If your learning algorithm has high bias or it has
+undefeated data, the key indicator will
+be if J train is high. That corresponds to this
+leftmost portion of the curve, which is where J train as high. Usually you have J train and J_cv will be close
+to each other. How do you diagnose if
+you have high variance? While the key indicator
+for high-variance will be if J_cv is much greater than J train does double greater than sign in math
+refers to a much greater than, so this is greater, and this means much greater. This rightmost portion
+of the plot is where J_cv is much greater
+than J train. Usually J train
+will be pretty low, but the key indicator is whether J_cv is much greater
+than J train. That's what happens when we had fit a very high order polynomial
+to this small dataset. Even though we've just
+seen buyers in the areas, it turns out, in some cases, is possible to simultaneously have high bias and
+have high-variance. You won't see this happen that much for linear regression, but it turns out that if you're training
+a neural network, there are some
+applications where unfortunately you have high
+bias and high variance. One way to recognize
+that situation will be if J train is high, so you're not doing that well on the training set,
+but even worse, the cross-validation
+error is again, even much larger than
+the training set. The notion of high bias
+and high variance, it doesn't really happen for linear models
+applied to one deep. But to give intuition
+about what it looks like, it would be as if for
+part of the input, you had a very complicated
+model that overfit, so it overfits to
+part of the inputs. But then for some reason, for other parts of the input, it doesn't even fit the
+training data well, and so it underfits
+for part of the input. In this example, which
+looks artificial because it's a single
+feature input, we fit the training
+set really well and we overfit in
+part of the input, and we don't even fit
+the training data well, and we underfit the
+part of the input. That's how in some
+applications you can unfortunate end up with both
+high bias and high variance. The indicator for
+that will be if the algorithm does poorly
+on the training set, and it even does much worse
+than on the training set. For most learning applications, you probably have
+primarily a high bias or high variance problem rather than both
+at the same time. But it is possible sometimes they're both
+at the same time. I know that there's
+a lot of process, there are a lot of
+concepts on the slides, but the key takeaways are, high bias means is not even doing well on
+the training set, and high variance means, it does much worse on the cross validation set
+and the training set. Whenever I'm training a
+machine learning algorithm, I will almost always
+try to figure out to what extent
+the algorithm has a high bias or underfitting versus a high-variance
+when overfitting problem. This will give good guidance, as we'll see later this week, on how you can improve the
+performance of the algorithm. But first, let's take a look at how regularization
+effects the bias and variance of a learning algorithm
+because that will help you better understand when you
+should use regularization. Let's take a look at
+that in the next video.

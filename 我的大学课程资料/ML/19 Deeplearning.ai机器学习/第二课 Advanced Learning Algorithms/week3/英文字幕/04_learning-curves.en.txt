@@ -1,0 +1,180 @@
+Learning curves are a way
+to help understand how your learning
+algorithm is doing as a function of the amount
+of experience it has, whereby experience, I mean, for example, the number of
+training examples it has. Let's take a look. Let me
+plot the learning curves for a model that fits a second-order polynomial
+quadratic function like so. I'm going to plot both J_cv, the cross-validation error, as well as J_train
+the training error. On this figure, the
+horizontal axis is going to be m_train. That is the training set size or the number of examples so the
+algorithm can learn from. On the vertical axis, I'm going to plot the error. By error, I mean either
+J_cv or J_train. Let's start by plotting the
+cross-validation error. It will look
+something like this. That's what J_cv of
+(w, b) will look like. Is maybe no surprise
+that as m_train, the training set
+size gets bigger, then you learn a better model and so the cross-validation
+error goes down. Now, let's plot J_train of (w, b) of what the training
+error looks like as the training set
+size gets bigger. It turns out that
+the training error will actually look like this. That has the training
+set size gets bigger, the training set error
+actually increases. Let's take a look at
+why this is the case. We'll start with an example of when you have just a
+single training example. Well, if you were to fit a
+quadratic model to this, you can fit easiest
+straight line or a curve and your training
+error will be zero. How about if you have two
+training examples like this? Well, you can again fit a straight line and achieve
+zero training error. In fact, if you have
+three training examples, the quadratic function
+can still fit this very well and get pretty much
+zero training error, but now, if your training set
+gets a little bit bigger, say you have four
+training examples, then it gets a
+little bit harder to fit all four examples perfectly. You may get a curve
+that looks like this, is a pretty well, but you're a little bit off in a few
+places here and there. When you have entries, the training set size to four the training error has
+actually gone up a little bit. How about we have five
+training examples. Well again, you can
+fit it pretty well, but it gets even a
+little bit harder to fit all of them perfectly. We haven't even larger shading sets it just gets harder and harder to fit every single one of your training
+examples perfectly. To recap, when you have
+a very small number of training examples like
+one or two or even three, is relatively easy to get zero or very
+small training error, but when you have a
+larger training set is harder for quadratic function to fit all the training
+examples perfectly. Which is why as the
+training set gets bigger, the training error
+increases because it's harder to fit all of the
+training examples perfectly. Notice one other thing
+about these curves, which is the
+cross-validation error, will be typically higher than the training error because you fit the parameters
+to the training set. You expect to do
+at least a little bit better or when m is small, maybe even a lot better on the training set than on
+the trans validation set. Let's now take a look at what the learning curves
+will look like for an average with high bias versus
+one with high variance. Let's start at the high bias
+or the underfitting case. Recall that an example of high bias would be if you're
+fitting a linear function, so curve that looks like this. If you were to plot
+the training error, then the training error will go up like so as you'd expect. In fact, this curve of training error may
+start to flatten out. We call it plateau, meaning flatten
+out after a while. That's because as you get more and more training examples when you're fitting the
+simple linear function, your model doesn't actually
+change that much more. It's fitting a straight
+line and even as you get more and more
+and more examples, there's just not that
+much more to change, which is why the
+average training error flattens out after a while. Similarly, your cross-validation
+error will come down and also fattened
+out after a while, which is why J_cv again
+is higher than J_train, but J_cv will tend
+to look like that. It's because be
+honest, its endpoints, even as you get more and
+more and more examples, not much is going to change about the street
+now you're fitting. It's just too simple a model to be fitting into
+this much data. Which is why both of
+these curves, J_cv, and J_train tend to
+flatten after a while. If you had a measure of that baseline
+level of performance, such as human-level performance, then they'll tend to
+be a value that is lower than your
+J_train and your J_cv. Human-level performance
+may look like this. There's a big gap between the baseline level of
+performance and J_train, which was our indicator for this algorithm having high bias. That is, one could hope to
+be doing much better if only we could fit a more complex function
+than just a straight line. Now, one interesting thing about this plot is you can ask, what do you think
+will happen if you could have a much
+bigger training set? What would it look
+like if we could increase even further than
+the right of this plot, you can go further to
+the right as follows? Well, you can imagine if you were to extend both of
+these curves to the right, they'll both flatten out
+and both of them will probably just continue
+to be flat like that. No matter how far you
+extend to the right of this plot, these two curves, they will never somehow
+find a way to dip down to this human level
+performance or just keep on being flat like this, pretty much forever no matter how large the training set gets. That gives this conclusion, maybe a little bit surprising, that if a learning
+algorithm has high bias, getting more training
+data will not by itself hope that much. I know that we're
+used to thinking that having more data is good, but if your algorithm
+has high bias, then if the only thing you do is throw more
+training data added, that by itself will not ever let you bring down the
+error rate that much. It's because of this really, no matter how many more examples
+you add to this figure, the straight linear
+fitting just isn't going to get that much better. That's why before
+investing a lot of effort into collecting
+more training data, it's worth checking if your learning algorithm has high bias, because if it does, then you probably need to do some other things other than just throw more
+training data added. Let's now take a look at what the learning curve
+looks like for learning algorithm
+with high variance. You might remember that
+if you were to fit the forefather polynomial
+with small lambda, say, or even lambda equals zero, then you get a curve
+that looks like this, and even though it
+fits the training data very well, it
+doesn't generalize. Let's now look at what a learning curve
+might look like in this high variance scenario. J train will be going up as the training
+set size increases, so you get a curve
+that looks like this, and J cv will be much higher, so your cross-validation
+error is much higher than
+your training error. The fact there's a huge gap here is what I can tell you that this high-variance is doing much better on the training set than it's doing on your
+cross-validation set. If you were to plot a baseline
+level of performance, such as human level performance, you may find that it
+turns out to be here, that J train can sometimes
+be even lower than the human level
+performance or maybe human level performance is a
+little bit lower than this. But when you're over
+fitting the training set, you may be able to fit
+the training set so well to have an
+unrealistically low error, such as zero error in
+this example over here, which is actually better
+than how well humans will actually be able to predict housing prices or whatever the application
+you're working on. But again, to signal for
+high variance is whether J cv is much higher
+than J train. When you have high variance, then increasing the training
+set size could help a lot, and in particular, if we could extrapolate these
+curves to the right, increase M train, then the training error
+will continue to go up, but then the cross-validation
+error hopefully will come down and
+approach J train. So in this scenario, it might be possible just by increasing the
+training set size to lower the cross-validation
+error and to get your algorithm to
+perform better and better, and this is unlike
+the high bias case, where if the only thing you
+do is get more training data, that won't actually help you learn your algorithm
+performance much. To summarize, if a learning algorithm
+suffers from high variance, then getting more training
+data is indeed likely to help. Because extrapolating to
+the right of this curve, you see that you can expect
+J cv to keep on coming down. In this example, just by
+getting more training data, allows the algorithm to go from relatively high
+cross-validation error to get much closer to human
+level performance. You can see that
+if you were to add a lot more training examples and continue to fill the
+fourth-order polynomial, then you can just get
+a better fourth order polynomial fit to this data than just very weakly
+curve up on top. If you're building a machine
+learning application, you could plot the learning curves if
+you want, that is, you can take different subsets
+of your training sets, and even if you have, say, 1,000 training examples, you could train a model on just 100 training
+examples and look at the training error and
+cross-validation error, then train them although
+on 200 examples, holding out 800 examples and just not using them for now, and plot J train
+and J cv and so on the repeats and plot out what the learning
+curve looks like. If we were to
+visualize it that way, then that could be another
+way for you to see if your learning
+curve looks more like a high bias or
+high variance one. One downside of the
+plotting learning curves like this is
+something I've done, but one downside is, it is computationally
+quite expensive to train so many different models using different size subsets of your training set,
+so in practice, it isn't done that
+often, but nonetheless, I find that having this mental visual picture in my head of what the
+training set looks like, sometimes that helps me to
+think through what I think my learning algorithm
+is doing and whether it has high bias or high variance. I know we've gone through a
+lot about bias and variance, let's go back to our
+earlier example of if you've trained a model for
+housing price prediction, how does bias and variance help you decide what to do next? Let's go back to that
+earlier example, which I hope will now make
+a lot more sense to you. Let's do that in the next video.

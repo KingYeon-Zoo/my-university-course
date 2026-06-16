@@ -1,0 +1,158 @@
+If you're working on a
+machine learning application where the ratio of positive to negative examples
+is very skewed, very far from 50-50, then it turns out that the usual error metrics like accuracy don't work that well. Let's start with an example. Let's say you're training a binary classifier to
+detect a rare disease in patients based on lab tests or based on other data
+from the patients. Y is equal to 1
+if the disease is present and y is
+equal to 0 otherwise. Suppose you find that you've achieved one percent
+error on the test set, so you have a 99 percent
+correct diagnosis. This seems like a great outcome. But it turns out that if
+this is a rare disease, so y is equal to 1, very rarely, then this may not be as
+impressive as it sounds. Specifically, if it is a
+rare disease and if only 0.5 percent of the patients in your population
+have the disease, then if instead you
+wrote the program, that just said,
+print y equals 0. It predicts y equals
+0 all the time. This very simple even
+non-learning algorithm, because it just says y
+equals 0 all the time, this will actually
+have 99.5 percent accuracy or 0.5 percent error. This really dumb algorithm outperforms your
+learning algorithm which had one percent error, much worse than
+0.5 percent error. But I think a piece of software that just
+prints y equals 0, is not a very useful
+diagnostic tool. What this really means
+is that you can't tell if getting one percent error is actually a good result
+or a bad result. In particular, if you have one algorithm that achieves
+99.5 percent accuracy, different one that achieves
+99.2 percent accuracy, different one that achieves
+99.6 percent accuracy. It's difficult to know which of these is actually
+the best algorithm. Because if you have an algorithm that achieve 0.5
+percent error and a different one that achieves
+one percent error and a different one that
+achieves 1.2 percent error, it's difficult to know which of these is
+the best algorithm. Because the one with
+the lowest error may be is not particularly
+useful prediction like this that always
+predicts y equals 0 and never ever diagnose any patient
+as having this disease. Quite possibly an algorithm
+that has one percent error, but that at least diagnosis
+some patients as having the disease could be
+more useful than just printing y equals
+0 all the time. When working on problems
+with skewed data sets, we usually use a different
+error metric rather than just classification error to figure out how well your learning
+algorithm is doing. In particular, a common pair of error metrics are
+precision and recall, which we'll define on the slide. In this example, y equals
+one will be the rare class, such as the rare disease
+that we may want to detect. In particular, to evaluate a learning algorithm's
+performance with one rare class of useful to construct what's called
+a confusion matrix, which is a two-by-two matrix or a two-by-two table
+that looks like this. On the axis on top, I'm going to write
+the actual class, which could be one or zero. On the vertical axis, I'm going to write
+the predicted class, which is what did your
+learning algorithm predicts on a given example, one or zero? To evaluate your
+algorithm's performance on the cross-validation set
+or the test set say, we will then count up
+how many examples? Was the actual class, 1, and the predicted class 1? Maybe you have 100
+cross-validation examples and on 15 of them, the learning algorithm
+had predicted one and the actual
+label was also one. Over here you would
+count up the number of examples in C or
+cross-validation set where the actual class was zero and your
+algorithm predicted one. Maybe you've five
+examples there and here predicted Class
+0, actual Class 1. You have 10 examples
+and let's say 70 examples with predicted
+Class 0 and actual Class 0. In this example, the skew isn't as extreme as what I had
+on the previous slide. Because in these 100 examples in your cross-validation set, we have a total of 25 examples where the
+actual class was one and 75 where the
+actual class was zero by adding up these
+numbers vertically. You'll notice also that I'm
+using different colors to indicate these four
+cells in the table. I'm actually going to give
+names to these four cells. When the actual class is one and the predicted
+class is one, we're going to call
+that a true positive because you predicted positive and it was true there's
+a positive example. In this cell on the lower right, where the actual class is zero and the predicted
+class is zero, we will call that
+a true negative because you predicted
+negative and it was true. It really was a
+negative example. This cell on the upper
+right is called a false positive
+because the algorithm predicted positive,
+but it was false. It's not actually positive, so this is called
+a false positive. This cell is called
+the number of false negatives
+because the algorithm predicted zero,
+but it was false. It wasn't actually negative. The actual class was one. Having divided the
+classifications into these four cells, two common metrics
+you might compute are then the precision and recall. Here's what they mean. The precision of the
+learning algorithm computes of all the patients where we
+predicted y is equal to 1, what fraction actually
+has the rare disease. In other words, precision
+is defined as the number of true positives divided by the number classified
+as positive. In other words, of
+all the examples you predicted as positive, what fraction did we
+actually get right. Another way to write
+this formula would be true positives divided
+by true positives plus false positives
+because it is by summing this cell and this cell that you end up with
+the total number that was predicted as positive. In this example, the
+numerator, true positives, would be 15 and
+divided by 15 plus 5, and so that's 15 over 20
+or three-quarters, 0.75. So we say that this
+algorithm has a precision of 75 percent because of all the things it
+predicted as positive, of all the patients that it thought has this rare disease, it was right 75
+percent of the time. The second metric that is
+useful to compute is recall. Recall ask, of all the patients that actually
+have the rare disease, what fraction did we correctly
+detect as having it? Recall is defined as the number
+of true positives divided by the number of
+actual positives. Alternatively, we can
+write that as number of true positives divided by the
+number of actual positives. Well, it's this cell
+plus this cell. So it's actually the number
+of true positives plus the number of false
+negatives because it's by summing up
+this upper-left cell and this lower-left cell that you get the number of
+actual positive examples. In our example, this would
+be 15 divided by 15 plus 10, which is 15 over 25, which is 0.6 or 60 percent. This learning
+algorithm would have 0.75 precision and 0.60 recall. You notice that this
+will help you detect if the learning algorithm is just printing y equals
+0 all the time. Because if it predicts
+zero all the time, then the numerator of both of these quantities
+would be zero. It has no true positives. The recall metric in
+particular helps you detect if the learning algorithm is
+predicting zero all the time. Because if your
+learning algorithm just prints y equals 0, then the number of true positives will be zero because it never
+predicts positive, and so the recall
+will be equal to zero divided by the number
+of actual positives, which is equal to zero. In general, a learning
+algorithm with either zero precision or zero recall is not
+a useful algorithm. But just as a side note, if an algorithm actually
+predicts zero all the time, precision actually
+becomes undefined because it's actually zero over. zero. But in practice, if an algorithm doesn't predict
+even a single positive, we just say that precision
+is also equal to zero. But we'll find that computing both precision and recall makes it easier to spot if an algorithm is both
+reasonably accurate, in that, when it says a
+patient has a disease, there's a good chance the
+patient has a disease, such as 0.75 chance
+in this example, and also making sure that of all the patients
+that have the disease, it's helping to diagnose a
+reasonable fraction of them, such as here it's finding
+60 percent of them. When you have a rare class, looking at precision and
+recall and making sure that both numbers are decently high, that hopefully helps
+reassure you that your learning algorithm
+is actually useful. The term recall was motivated
+by this observation that if you have a group of patients or
+population of patients, then recall measures, of all the patients
+that have the disease, how many would you have accurately diagnosed
+as having it. So when you have skewed classes or a rare class that
+you want to detect, precision and recall
+helps you tell if your learning
+algorithm is making good predictions or
+useful predictions. Now that we have
+these metrics for telling how well your
+learning algorithm is doing, in the next video, let's take a look at how to
+trade-off between precision and recall to try to optimize the performance of your
+learning algorithm.

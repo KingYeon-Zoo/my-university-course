@@ -1,0 +1,72 @@
+In this class, you learn about the state of the art and also practice implementing machine learning
+algorithms yourself. You learn about the most important machine
+learning algorithms, some of which are exactly what's being used in large AI or large tech companies
+today and you get a sense of what is the
+state of the art in AI. Beyond learning the algorithms
+though, in this class, you also learn all the
+important practical tips and tricks for making
+them perform well. You get to implement
+them and see how they work for yourself. Why is machine learning
+so widely used today? Machine Learning had grown up as a sub-field of AI or
+artificial intelligence. We wanted to build
+intelligent machines. It turns out that there are a few basic things that we
+could program a machine to do, such as how to find the
+shortest path from a to b, like in your GPS. But for the most part, we just
+did not know how to write an explicit program to do many of the more
+interesting things, such as perform web search, recognize human speech, diagnose diseases from X-rays or
+build a self-driving car. The only way we knew
+how to do these things was to have a machine
+learn to do it by itself. For me, when I founded and was leading the
+Google Brain Team, I worked on problems
+like speech recognition, computer vision for Google Maps, Street View images
+and advertising, or leading AI by two. I worked on everything from
+AI for augmented reality to combating payment forwards to leading a
+self-driving car team. Most recently, a landing AI, AI fund in the
+Stanford University up again to work on the
+applications in the factory, large-scale agriculture,
+health care, e-commerce, and other problems. Today, there are
+hundreds of thousands, perhaps millions of people working on machine
+learning applications who could tell you in the stories about their work with
+machine learning. When you've learned
+these skills, I hope that you too will
+find the great fun to dabble in exciting different
+applications and maybe even
+different industries. In fact, I find it
+hard to think of any industry that
+machine learning is unlikely to touch in a significant way now
+or in the near future. Looking even further
+into the future, many people, including me, are excited about
+the AI dream of someday building machines as
+intelligent as you or me. This is sometimes called Artificial General
+Intelligence or AGI. I think AGI has
+been overhyped and we're still a long way
+away from that goal. I don't know. It'll take 50 years or 500 years
+or longer to get there. But mostly AI researchers believe that the best way to get closer toward that goal is by
+using learning algorithms. Maybe ones that take
+some inspiration from how the human brain works. You also hear a
+little more about this Quest for AGI
+later in this course. According to a
+study by McKinsey, AI and machine learning
+is estimated to create an additional 13
+trillion US dollars of value annually
+by the year 2023. Even though machine learning
+is already creating tremendous amounts of value
+in the software industry, I think there could be even vastly greater
+value that has yet to be created outside the
+software industry in sectors such as retail, travel, transportation, automotive, materials
+manufacturing, and so on. Because of the massive
+untapped opportunities across so many
+different sectors, today there is a vast
+unfulfilled demand for this skill set. That's why this is
+such a great time to be learning about
+machine learning. If you find machine learning
+applications exciting, I hope you stick with
+me through this class. I can almost
+guarantee that you'll find mastering these
+skills worthwhile. In the next video, we'll look at a more formal definition of
+what is machine learning. And we'll begin to talk about the main types of machine learning
+problems and algorithms. You pick up some of the main machine learning
+terminology and start to get a sense of what are the
+different algorithms and when each one
+might be appropriate. So let's go on to
+the next video.

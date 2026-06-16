@@ -1,0 +1,44 @@
+Welcome back to
+the second week of this course on advanced
+learning algorithms. Last week, you learned how to carry out inference
+on a neural network. This week, we're going to go over training of
+a neural network. I think being able to
+take you on data and train you on neural network
+unit is really fun. This week, we'll look at how you could do that. Let's dive in. Let's continue with
+our running example of hand written
+digit recognition, recognizing this image
+as zero or a one. Here we are using the neural network architecture
+that you saw last week where you
+have an input X, that is the image, and then the first sitting
+there with 25 units, second sitting there
+with 15 units, and then one operate unit. If you are given a
+training set of examples comprising images X as was
+the ground proof labeled Y, how would you train the
+parameters of this new network? Let me go ahead and show
+you the code that you can use in TensorFlow
+to train this network, and then in the next
+few videos after this, we'll dive in the details explaining what the
+code is actually doing. This is the code you write. This first part may look familiar from the previous week, where you are asking
+TensorFlow to sequentially string together these three
+layers of a neural network. the first in the layer with 25 units and sigmoid activation, the second [inaudible] there, and then finally,
+the upper layer. Nothing new here relative
+to what you saw last week. Second step is you have
+to ask TensorFlow to compile the model and the key step in asking TensorFlow to compile
+the mode is to specify what is the last
+function you want to use. In this case, we'll use
+something that goes by the arcane name of sparse
+categorical cross entropy. We'll see more in the
+next video what this is. Then having specified
+the last function, the next step is to call the fit function which tells
+TensorFlow to fit the model that you specified in
+step 1 using the last of the cost function that
+you specified in step 2 to the data set XY. Back in the first
+course is when we talked about creating descent. We had to decide how many
+steps to run creating descent, so how long to run
+creating descent. Epoch is a technical
+term for how many steps creating descent that you
+may want to run. That's it. Step 1 is to specify
+the mode which tells TensorFlow how to compute
+for the inference. Step 2... (TIME COULD NOT ALLOW ME TO FINISH). Our p whenever things don't work the way you expect. With that, let's go on to the next video where
+we'll dive more deeply into what these steps in the TensorFlow implementation
+are actually doing. I'll see you in the next video.
