@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>实验1 纯手写四算法加解密系统</title>
+<style>
+body { margin: 0; font-family: Arial, "PingFang SC", sans-serif; background: #f7f9fc; color: #182235; }
+header { padding: 22px 34px; background: #1f3b57; color: white; }
+h1 { margin: 0 0 8px; font-size: 28px; letter-spacing: 0; }
+main { padding: 26px 34px; }
+.identity { font-size: 17px; line-height: 1.7; }
+.cards { display: grid; grid-template-columns: repeat(4, minmax(180px, 1fr)); gap: 14px; margin-bottom: 22px; }
+.card { background: white; border: 1px solid #d7e0ea; border-radius: 8px; padding: 16px; }
+.card h2 { margin: 0 0 10px; font-size: 18px; }
+table { width: 100%; border-collapse: collapse; background: white; font-size: 14px; }
+th, td { border: 1px solid #d7e0ea; padding: 9px; text-align: left; vertical-align: top; }
+th { background: #e8eef5; }
+.note { margin-top: 16px; font-size: 15px; }
+</style>
+</head>
+<body>
+<header>
+<h1>实验1 纯手写四算法加解密系统</h1>
+<div class="identity">学号：2023212290　姓名：朱清扬　专业班级：计算机科学与技术 23级3班</div>
+</header>
+<main>
+<div class="cards"><section class='card'><h2>AES-256-CBC</h2><p>平均加密 15.875 ms</p><p>平均解密 16.546 ms</p><p>样本数 2</p></section><section class='card'><h2>RSA-1024-OAEP-Hybrid</h2><p>平均加密 15.627 ms</p><p>平均解密 18.896 ms</p><p>样本数 2</p></section><section class='card'><h2>SM4-CBC</h2><p>平均加密 9.430 ms</p><p>平均解密 9.279 ms</p><p>样本数 2</p></section><section class='card'><h2>ZUC-128</h2><p>平均加密 5.165 ms</p><p>平均解密 4.921 ms</p><p>样本数 2</p></section></div>
+<table>
+<thead><tr><th>算法</th><th>类型</th><th>文件</th><th>原始字节</th><th>密文字节</th><th>加密毫秒</th><th>解密毫秒</th><th>SHA256 校验</th><th>篡改测试</th></tr></thead>
+<tbody><tr><td>AES-256-CBC</td><td>文本</td><td>文本.txt</td><td>1348</td><td>1412</td><td>3.103</td><td>3.352</td><td>一致</td><td>拒绝解密: ValueError</td></tr><tr><td>RSA-1024-OAEP-Hybrid</td><td>文本</td><td>文本.txt</td><td>1348</td><td>1544</td><td>3.631</td><td>5.947</td><td>一致</td><td>拒绝解密: ValueError</td></tr><tr><td>SM4-CBC</td><td>文本</td><td>文本.txt</td><td>1348</td><td>1412</td><td>2.188</td><td>1.919</td><td>一致</td><td>拒绝解密: ValueError</td></tr><tr><td>ZUC-128</td><td>文本</td><td>文本.txt</td><td>1348</td><td>1400</td><td>1.178</td><td>1.071</td><td>一致</td><td>拒绝解密: ValueError</td></tr><tr><td>AES-256-CBC</td><td>文件</td><td>文件3.xlsx</td><td>12288</td><td>12356</td><td>28.647</td><td>29.741</td><td>一致</td><td>拒绝解密: ValueError</td></tr><tr><td>RSA-1024-OAEP-Hybrid</td><td>文件</td><td>文件3.xlsx</td><td>12288</td><td>12488</td><td>27.622</td><td>31.845</td><td>一致</td><td>拒绝解密: ValueError</td></tr><tr><td>SM4-CBC</td><td>文件</td><td>文件3.xlsx</td><td>12288</td><td>12356</td><td>16.673</td><td>16.639</td><td>一致</td><td>拒绝解密: ValueError</td></tr><tr><td>ZUC-128</td><td>文件</td><td>文件3.xlsx</td><td>12288</td><td>12340</td><td>9.153</td><td>8.772</td><td>一致</td><td>拒绝解密: ValueError</td></tr></tbody>
+</table>
+<p class="note">本页面由 Python 标准库生成。AES、RSA、SM4、ZUC 的核心轮函数、密钥扩展、分组/流处理均在源码中手写实现。</p>
+</main>
+</body>
+</html>

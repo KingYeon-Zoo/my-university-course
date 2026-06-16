@@ -1,0 +1,18 @@
+# Original lab rules inspired by Suricata rule syntax and ET Open categories.
+# Scope: only HTTP requests to the intentionally exposed lab service on TCP/8080.
+
+drop http any any -> any 8080 (msg:"LAB-IPS WEB SQL Injection UNION SELECT Attempt"; flow:established,to_server; http.uri; content:"union"; nocase; fast_pattern; content:"select"; nocase; distance:0; within:80; classtype:web-application-attack; sid:1001001; rev:1;)
+
+drop http any any -> any 8080 (msg:"LAB-IPS WEB XSS Script Tag Attempt"; flow:established,to_server; http.uri; content:"<script"; nocase; fast_pattern; classtype:web-application-attack; sid:1001002; rev:1;)
+
+drop http any any -> any 8080 (msg:"LAB-IPS WEB Directory Traversal Attempt"; flow:established,to_server; http.uri.raw; pcre:"/(?:\\.\\.|%2e%2e)(?:\\/|%2f)/i"; classtype:web-application-attack; sid:1001003; rev:1;)
+
+drop http any any -> any 8080 (msg:"LAB-IPS WEB Command Injection Attempt"; flow:established,to_server; http.uri.raw; content:"cmd="; nocase; fast_pattern; content:"|3b|"; distance:0; within:80; classtype:web-application-attack; sid:1001004; rev:1;)
+
+drop http any any -> any 8080 (msg:"LAB-IPS EXPLOIT Log4Shell JNDI Probe"; flow:established,to_server; http.user_agent; content:"${jndi:"; nocase; fast_pattern; classtype:attempted-admin; sid:1001005; rev:1;)
+
+drop http any any -> any 8080 (msg:"LAB-IPS EXPLOIT Log4Shell JNDI Probe"; flow:established,to_server; http.user_agent; content:"JNDI-LAB-PROBE"; nocase; fast_pattern; classtype:attempted-admin; sid:1001105; rev:1;)
+
+drop http any any -> any 8080 (msg:"LAB-IPS SCAN Automated SQLMap User-Agent"; flow:established,to_server; http.user_agent; content:"sqlmap"; nocase; fast_pattern; classtype:web-application-attack; sid:1001006; rev:1;)
+
+drop http any any -> any 8080 (msg:"LAB-IPS SCAN Automated SQLMap User-Agent"; flow:established,to_server; http.user_agent; content:"SQL-MAP-LAB"; nocase; fast_pattern; classtype:web-application-attack; sid:1001106; rev:1;)

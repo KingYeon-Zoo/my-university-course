@@ -1,0 +1,9 @@
+name: suricata-ips-lab
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.11
+  - flask=3.1
+  - requests=2.32
+  - pytest=8.3

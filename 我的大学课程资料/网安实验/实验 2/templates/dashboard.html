@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Suricata 公网 IPS 实时仪表盘</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <p class="eyebrow">EXPERIMENT 2 · PUBLIC NETWORK IPS</p>
+        <h1>Suricata 公网攻击防御实时仪表盘</h1>
+        <p class="subtitle">EVE JSON 每 1 秒刷新，展示由 Mac 发起并被 ECS 内联 IPS 处理的请求。</p>
+      </div>
+      <div class="live"><span></span> LIVE</div>
+    </header>
+
+    <section class="stats">
+      <article><p>告警总数</p><strong id="total">0</strong></article>
+      <article><p>已阻断</p><strong id="blocked">0</strong></article>
+      <article><p>最近来源</p><strong id="source">-</strong></article>
+      <article><p>EVE 日志</p><strong id="eve-path">-</strong></article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-title">
+        <h2>实时告警</h2>
+        <p id="updated">等待日志...</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>时间</th>
+              <th>动作</th>
+              <th>规则名称</th>
+              <th>来源</th>
+              <th>目标</th>
+              <th>分类</th>
+            </tr>
+          </thead>
+          <tbody id="events">
+            <tr><td colspan="6" class="empty">暂无告警，请在 Mac 上运行攻击模拟器。</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+</body>
+</html>
+

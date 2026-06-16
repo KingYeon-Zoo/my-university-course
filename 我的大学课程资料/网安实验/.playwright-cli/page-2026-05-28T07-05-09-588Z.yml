@@ -1,0 +1,64 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - heading "实验2 入侵检测与防御报警演示" [level=1] [ref=e3]
+    - generic [ref=e4]: 学号：2023212290 姓名：朱清扬 专业：计算机科学与技术 23级3班
+  - main [ref=e5]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - heading "LAB 2023212290 ICMP reconnaissance" [level=2] [ref=e8]
+        - paragraph [ref=e9]: 报警次数 1
+      - generic [ref=e10]:
+        - heading "LAB 2023212290 SQL injection attempt" [level=2] [ref=e11]
+        - paragraph [ref=e12]: 报警次数 1
+      - generic [ref=e13]:
+        - heading "LAB 2023212290 XSS script attempt" [level=2] [ref=e14]
+        - paragraph [ref=e15]: 报警次数 1
+      - generic [ref=e16]:
+        - heading "LAB 2023212290 path traversal attempt" [level=2] [ref=e17]
+        - paragraph [ref=e18]: 报警次数 1
+    - generic [ref=e19]:
+      - generic [ref=e20]:
+        - heading "Docker 隔离环境配置" [level=2] [ref=e21]
+        - generic [ref=e22]: "services: pcapgen: build: context: ./pcapgen volumes: - ../results:/data suricata: image: jasonish/suricata:latest command: - -r - /data/attacks.pcap - -S - /rules/local.rules - -l - /data/suricata_logs - -k - none volumes: - ../results:/data - ./rules:/rules:ro"
+      - generic [ref=e23]:
+        - heading "Suricata 本地检测规则" [level=2] [ref=e24]
+        - generic [ref=e25]: alert http any any -> any any (msg:"LAB 2023212290 SQL injection attempt"; flow:to_server; http.uri; content:"OR"; nocase; content:"1=1"; distance:0; sid:2290001; rev:1;) alert http any any -> any any (msg:"LAB 2023212290 XSS script attempt"; flow:to_server; http.uri; content:"<script"; nocase; sid:2290002; rev:1;) alert http any any -> any any (msg:"LAB 2023212290 path traversal attempt"; flow:to_server; http.uri; content:"../"; sid:2290003; rev:1;) alert icmp any any -> any any (msg:"LAB 2023212290 ICMP reconnaissance"; content:"2023212290"; sid:2290004; rev:1;)
+    - table [ref=e26]:
+      - rowgroup [ref=e27]:
+        - row "时间 源地址 目标地址 规则编号 报警签名 级别" [ref=e28]:
+          - columnheader "时间" [ref=e29]
+          - columnheader "源地址" [ref=e30]
+          - columnheader "目标地址" [ref=e31]
+          - columnheader "规则编号" [ref=e32]
+          - columnheader "报警签名" [ref=e33]
+          - columnheader "级别" [ref=e34]
+      - rowgroup [ref=e35]:
+        - row "2026-05-27T06:44:04.872552+0000 172.30.0.10 172.30.0.20 2290004 LAB 2023212290 ICMP reconnaissance 3" [ref=e36]:
+          - cell "2026-05-27T06:44:04.872552+0000" [ref=e37]
+          - cell "172.30.0.10" [ref=e38]
+          - cell "172.30.0.20" [ref=e39]
+          - cell "2290004" [ref=e40]
+          - cell "LAB 2023212290 ICMP reconnaissance" [ref=e41]
+          - cell "3" [ref=e42]
+        - row "2026-05-27T06:44:04.871238+0000 172.30.0.10 172.30.0.20 2290001 LAB 2023212290 SQL injection attempt 3" [ref=e43]:
+          - cell "2026-05-27T06:44:04.871238+0000" [ref=e44]
+          - cell "172.30.0.10" [ref=e45]
+          - cell "172.30.0.20" [ref=e46]
+          - cell "2290001" [ref=e47]
+          - cell "LAB 2023212290 SQL injection attempt" [ref=e48]
+          - cell "3" [ref=e49]
+        - row "2026-05-27T06:44:04.871238+0000 172.30.0.10 172.30.0.20 2290002 LAB 2023212290 XSS script attempt 3" [ref=e50]:
+          - cell "2026-05-27T06:44:04.871238+0000" [ref=e51]
+          - cell "172.30.0.10" [ref=e52]
+          - cell "172.30.0.20" [ref=e53]
+          - cell "2290002" [ref=e54]
+          - cell "LAB 2023212290 XSS script attempt" [ref=e55]
+          - cell "3" [ref=e56]
+        - row "2026-05-27T06:44:04.871238+0000 172.30.0.10 172.30.0.20 2290003 LAB 2023212290 path traversal attempt 3" [ref=e57]:
+          - cell "2026-05-27T06:44:04.871238+0000" [ref=e58]
+          - cell "172.30.0.10" [ref=e59]
+          - cell "172.30.0.20" [ref=e60]
+          - cell "2290003" [ref=e61]
+          - cell "LAB 2023212290 path traversal attempt" [ref=e62]
+          - cell "3" [ref=e63]
+    - paragraph [ref=e64]: 检测流量来自 Docker 生成的离线 pcap，Suricata 容器按本地规则输出报警，页面固定展示学号和姓名。

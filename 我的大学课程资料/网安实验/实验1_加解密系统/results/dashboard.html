@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>实验1加解密系统演示</title>
+<style>
+body { font-family: Arial, "PingFang SC", sans-serif; margin: 0; background: #f6f8fb; color: #172033; }
+header { background: #16324f; color: white; padding: 22px 36px; position: sticky; top: 0; z-index: 10; }
+h1 { margin: 0 0 10px 0; font-size: 28px; letter-spacing: 0; }
+main { padding: 28px 36px; }
+/* 身份水印展示区：强制绑定学生信息，防范抄袭 */
+.identity { font-size: 18px; line-height: 1.7; }
+.cards { display: grid; grid-template-columns: repeat(3, minmax(220px, 1fr)); gap: 16px; margin: 22px 0; }
+.card { background: white; border: 1px solid #d8dee9; border-radius: 8px; padding: 18px; }
+.card h2 { margin: 0 0 12px 0; font-size: 20px; }
+.keyspace { display: grid; grid-template-columns: repeat(3, minmax(220px, 1fr)); gap: 16px; margin: 18px 0 24px 0; }
+.keyspace .card { border-color: #b8c7d9; }
+table { width: 100%; border-collapse: collapse; background: white; font-size: 14px; }
+th, td { border: 1px solid #d8dee9; padding: 10px; text-align: left; vertical-align: top; }
+th { background: #e7edf5; }
+.note { margin-top: 18px; font-size: 16px; }
+</style>
+</head>
+<body>
+<header>
+<h1>实验1 加解密系统设计与性能分析</h1>
+<div class="identity">学号：2023212290　姓名：朱清扬　专业：计算机科学与技术 23级3班</div>
+</header>
+<main>
+<div class="cards"><section class='card'><h2>AES 256 GCM</h2><p>平均加密耗时 1.501 ms</p><p>平均解密耗时 1.533 ms</p><p>覆盖样本 7 个</p></section><section class='card'><h2>RSA OAEP Hybrid</h2><p>平均加密耗时 1.653 ms</p><p>平均解密耗时 2.312 ms</p><p>覆盖样本 7 个</p></section><section class='card'><h2>SM4 CBC</h2><p>平均加密耗时 86.326 ms</p><p>平均解密耗时 83.817 ms</p><p>覆盖样本 7 个</p></section></div>
+<section class="keyspace">
+<section class="card"><h2>AES-256 密钥空间</h2><p>2^256，认证加密模式 GCM，篡改后 InvalidTag 拒绝解密。</p></section>
+<section class="card"><h2>RSA-2048 安全基础</h2><p>基于大整数分解难题，OAEP 包裹会话密钥，数据体由 AES-GCM 保护。</p></section>
+<section class="card"><h2>SM4-128 密钥空间</h2><p>2^128，CBC 加密结合 HMAC-SHA256，篡改后 ValueError 拒绝解密。</p></section>
+</section>
+<table>
+<thead><tr><th>算法</th><th>类型</th><th>文件</th><th>原始字节</th><th>密文字节</th><th>加密毫秒</th><th>解密毫秒</th><th>哈希校验</th><th>密文敏感性测试</th></tr></thead>
+<tbody><tr><td>AES 256 GCM</td><td>图像</td><td>图片.jpg</td><td>18875778</td><td>18875806</td><td>5.534</td><td>6.204</td><td>一致</td><td>篡改密文后拒绝解密: InvalidTag</td></tr><tr><td>RSA OAEP Hybrid</td><td>图像</td><td>图片.jpg</td><td>18875778</td><td>18876062</td><td>5.833</td><td>5.657</td><td>一致</td><td>篡改密文后拒绝解密: InvalidTag</td></tr><tr><td>SM4 CBC</td><td>图像</td><td>图片.jpg</td><td>18875778</td><td>18875840</td><td>305.465</td><td>304.032</td><td>一致</td><td>篡改密文后拒绝解密: ValueError</td></tr><tr><td>AES 256 GCM</td><td>文件</td><td>文件1.pdf</td><td>1666128</td><td>1666156</td><td>0.482</td><td>0.588</td><td>一致</td><td>篡改密文后拒绝解密: InvalidTag</td></tr><tr><td>RSA OAEP Hybrid</td><td>文件</td><td>文件1.pdf</td><td>1666128</td><td>1666412</td><td>0.528</td><td>1.165</td><td>一致</td><td>篡改密文后拒绝解密: InvalidTag</td></tr><tr><td>SM4 CBC</td><td>文件</td><td>文件1.pdf</td><td>1666128</td><td>1666192</td><td>27.053</td><td>28.198</td><td>一致</td><td>篡改密文后拒绝解密: ValueError</td></tr><tr><td>AES 256 GCM</td><td>文件</td><td>文件2.docx</td><td>604805</td><td>604833</td><td>0.187</td><td>0.14</td><td>一致</td><td>篡改密文后拒绝解密: InvalidTag</td></tr><tr><td>RSA OAEP Hybrid</td><td>文件</td><td>文件2.docx</td><td>604805</td><td>605089</td><td>0.254</td><td>0.924</td><td>一致</td><td>篡改密文后拒绝解密: InvalidTag</td></tr><tr><td>SM4 CBC</td><td>文件</td><td>文件2.docx</td><td>604805</td><td>604864</td><td>10.676</td><td>10.784</td><td>一致</td><td>篡改密文后拒绝解密: ValueError</td></tr><tr><td>AES 256 GCM</td><td>文件</td><td>文件3.xlsx</td><td>12288</td><td>12316</td><td>0.033</td><td>0.007</td><td>一致</td><td>篡改密文后拒绝解密: InvalidTag</td></tr><tr><td>RSA OAEP Hybrid</td><td>文件</td><td>文件3.xlsx</td><td>12288</td><td>12572</td><td>0.076</td><td>0.795</td><td>一致</td><td>篡改密文后拒绝解密: InvalidTag</td></tr><tr><td>SM4 CBC</td><td>文件</td><td>文件3.xlsx</td><td>12288</td><td>12352</td><td>0.362</td><td>0.36</td><td>一致</td><td>篡改密文后拒绝解密: ValueError</td></tr><tr><td>AES 256 GCM</td><td>文本</td><td>文本.txt</td><td>1348</td><td>1376</td><td>0.014</td><td>0.004</td><td>一致</td><td>篡改密文后拒绝解密: InvalidTag</td></tr><tr><td>RSA OAEP Hybrid</td><td>文本</td><td>文本.txt</td><td>1348</td><td>1632</td><td>0.054</td><td>0.764</td><td>一致</td><td>篡改密文后拒绝解密: InvalidTag</td></tr><tr><td>SM4 CBC</td><td>文本</td><td>文本.txt</td><td>1348</td><td>1408</td><td>0.052</td><td>0.034</td><td>一致</td><td>篡改密文后拒绝解密: ValueError</td></tr><tr><td>AES 256 GCM</td><td>视频</td><td>视频.mp4</td><td>13727092</td><td>13727120</td><td>4.019</td><td>3.557</td><td>一致</td><td>篡改密文后拒绝解密: InvalidTag</td></tr><tr><td>RSA OAEP Hybrid</td><td>视频</td><td>视频.mp4</td><td>13727092</td><td>13727376</td><td>4.611</td><td>5.966</td><td>一致</td><td>篡改密文后拒绝解密: InvalidTag</td></tr><tr><td>SM4 CBC</td><td>视频</td><td>视频.mp4</td><td>13727092</td><td>13727152</td><td>246.682</td><td>226.786</td><td>一致</td><td>篡改密文后拒绝解密: ValueError</td></tr><tr><td>AES 256 GCM</td><td>声音</td><td>音频.mp3</td><td>880639</td><td>880667</td><td>0.236</td><td>0.234</td><td>一致</td><td>篡改密文后拒绝解密: InvalidTag</td></tr><tr><td>RSA OAEP Hybrid</td><td>声音</td><td>音频.mp3</td><td>880639</td><td>880923</td><td>0.216</td><td>0.916</td><td>一致</td><td>篡改密文后拒绝解密: InvalidTag</td></tr><tr><td>SM4 CBC</td><td>声音</td><td>音频.mp3</td><td>880639</td><td>880688</td><td>13.992</td><td>16.525</td><td>一致</td><td>篡改密文后拒绝解密: ValueError</td></tr></tbody>
+</table>
+<p class="note">所有样本均完成加密和解密，恢复文件 SHA256 与原文件一致。截图页面固定展示学号和姓名。</p>
+</main>
+</body>
+</html>

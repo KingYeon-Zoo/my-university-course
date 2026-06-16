@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>实验1 纯手写四算法加解密系统</title>
+<style>
+body { margin: 0; font-family: Arial, "PingFang SC", sans-serif; background: #f7f9fc; color: #182235; }
+header { padding: 22px 34px; background: #1f3b57; color: white; }
+h1 { margin: 0 0 8px; font-size: 28px; letter-spacing: 0; }
+main { padding: 26px 34px; }
+.identity { font-size: 17px; line-height: 1.7; }
+.cards { display: grid; grid-template-columns: repeat(4, minmax(180px, 1fr)); gap: 14px; margin-bottom: 22px; }
+.card { background: white; border: 1px solid #d7e0ea; border-radius: 8px; padding: 16px; }
+.card h2 { margin: 0 0 10px; font-size: 18px; }
+table { width: 100%; border-collapse: collapse; background: white; font-size: 14px; }
+th, td { border: 1px solid #d7e0ea; padding: 9px; text-align: left; vertical-align: top; }
+th { background: #e8eef5; }
+.note { margin-top: 16px; font-size: 15px; }
+</style>
+</head>
+<body>
+<header>
+<h1>实验1 纯手写四算法加解密系统</h1>
+<div class="identity">学号：2023212290　姓名：朱清扬　专业班级：计算机科学与技术 23级3班</div>
+</header>
+<main>
+<div class="cards"><section class='card'><h2>AES-256-CBC</h2><p>平均加密 11834.279 ms</p><p>平均解密 12595.653 ms</p><p>样本数 7</p></section><section class='card'><h2>RSA-1024-OAEP-Hybrid</h2><p>平均加密 11965.738 ms</p><p>平均解密 12843.564 ms</p><p>样本数 7</p></section><section class='card'><h2>SM4-CBC</h2><p>平均加密 6885.074 ms</p><p>平均解密 6865.112 ms</p><p>样本数 7</p></section><section class='card'><h2>ZUC-128</h2><p>平均加密 3651.399 ms</p><p>平均解密 3636.049 ms</p><p>样本数 7</p></section></div>
+<table>
+<thead><tr><th>算法</th><th>类型</th><th>文件</th><th>原始字节</th><th>密文字节</th><th>加密毫秒</th><th>解密毫秒</th><th>SHA256 校验</th><th>篡改测试</th></tr></thead>
+<tbody><tr><td>AES-256-CBC</td><td>文本</td><td>文本.txt</td><td>1348</td><td>1412</td><td>3.016</td><td>3.081</td><td>一致</td><td>拒绝解密: ValueError</td></tr><tr><td>RSA-1024-OAEP-Hybrid</td><td>文本</td><td>文本.txt</td><td>1348</td><td>1544</td><td>3.152</td><td>5.817</td><td>一致</td><td>拒绝解密: ValueError</td></tr><tr><td>SM4-CBC</td><td>文本</td><td>文本.txt</td><td>1348</td><td>1412</td><td>2.229</td><td>1.925</td><td>一致</td><td>拒绝解密: ValueError</td></tr><tr><td>ZUC-128</td><td>文本</td><td>文本.txt</td><td>1348</td><td>1400</td><td>1.129</td><td>1.175</td><td>一致</td><td>拒绝解密: ValueError</td></tr><tr><td>AES-256-CBC</td><td>文件</td><td>文件3.xlsx</td><td>12288</td><td>12356</td><td>28.185</td><td>27.672</td><td>一致</td><td>拒绝解密: ValueError</td></tr><tr><td>RSA-1024-OAEP-Hybrid</td><td>文件</td><td>文件3.xlsx</td><td>12288</td><td>12488</td><td>27.444</td><td>30.223</td><td>一致</td><td>拒绝解密: ValueError</td></tr><tr><td>SM4-CBC</td><td>文件</td><td>文件3.xlsx</td><td>12288</td><td>12356</td><td>16.526</td><td>16.2</td><td>一致</td><td>拒绝解密: ValueError</td></tr><tr><td>ZUC-128</td><td>文件</td><td>文件3.xlsx</td><td>12288</td><td>12340</td><td>8.802</td><td>8.983</td><td>一致</td><td>拒绝解密: ValueError</td></tr><tr><td>AES-256-CBC</td><td>文件</td><td>文件2.docx</td><td>604805</td><td>604868</td><td>1313.023</td><td>1360.552</td><td>一致</td><td>拒绝解密: ValueError</td></tr><tr><td>RSA-1024-OAEP-Hybrid</td><td>文件</td><td>文件2.docx</td><td>604805</td><td>605000</td><td>1317.99</td><td>1366.834</td><td>一致</td><td>拒绝解密: ValueError</td></tr><tr><td>SM4-CBC</td><td>文件</td><td>文件2.docx</td><td>604805</td><td>604868</td><td>794.67</td><td>802.859</td><td>一致</td><td>拒绝解密: ValueError</td></tr><tr><td>ZUC-128</td><td>文件</td><td>文件2.docx</td><td>604805</td><td>604857</td><td>447.789</td><td>427.737</td><td>一致</td><td>拒绝解密: ValueError</td></tr><tr><td>AES-256-CBC</td><td>声音</td><td>音频.mp3</td><td>880639</td><td>880692</td><td>1973.856</td><td>1999.018</td><td>一致</td><td>拒绝解密: ValueError</td></tr><tr><td>RSA-1024-OAEP-Hybrid</td><td>声音</td><td>音频.mp3</td><td>880639</td><td>880824</td><td>1920.867</td><td>2009.518</td><td>一致</td><td>拒绝解密: ValueError</td></tr><tr><td>SM4-CBC</td><td>声音</td><td>音频.mp3</td><td>880639</td><td>880692</td><td>1152.102</td><td>1143.745</td><td>一致</td><td>拒绝解密: ValueError</td></tr><tr><td>ZUC-128</td><td>声音</td><td>音频.mp3</td><td>880639</td><td>880691</td><td>621.676</td><td>654.106</td><td>一致</td><td>拒绝解密: ValueError</td></tr><tr><td>AES-256-CBC</td><td>文件</td><td>文件1.pdf</td><td>1666128</td><td>1666196</td><td>3765.749</td><td>3986.329</td><td>一致</td><td>拒绝解密: ValueError</td></tr><tr><td>RSA-1024-OAEP-Hybrid</td><td>文件</td><td>文件1.pdf</td><td>1666128</td><td>1666328</td><td>3877.778</td><td>4140.584</td><td>一致</td><td>拒绝解密: ValueError</td></tr><tr><td>SM4-CBC</td><td>文件</td><td>文件1.pdf</td><td>1666128</td><td>1666196</td><td>2413.889</td><td>2271.435</td><td>一致</td><td>拒绝解密: ValueError</td></tr><tr><td>ZUC-128</td><td>文件</td><td>文件1.pdf</td><td>1666128</td><td>1666180</td><td>1235.722</td><td>1212.75</td><td>一致</td><td>拒绝解密: ValueError</td></tr><tr><td>AES-256-CBC</td><td>视频</td><td>视频.mp4</td><td>13727092</td><td>13727156</td><td>31122.289</td><td>33513.343</td><td>一致</td><td>拒绝解密: ValueError</td></tr><tr><td>RSA-1024-OAEP-Hybrid</td><td>视频</td><td>视频.mp4</td><td>13727092</td><td>13727288</td><td>33136.355</td><td>34486.616</td><td>一致</td><td>拒绝解密: ValueError</td></tr><tr><td>SM4-CBC</td><td>视频</td><td>视频.mp4</td><td>13727092</td><td>13727156</td><td>18992.564</td><td>19357.067</td><td>一致</td><td>拒绝解密: ValueError</td></tr><tr><td>ZUC-128</td><td>视频</td><td>视频.mp4</td><td>13727092</td><td>13727144</td><td>9928.38</td><td>9937.663</td><td>一致</td><td>拒绝解密: ValueError</td></tr><tr><td>AES-256-CBC</td><td>图像</td><td>图片.jpg</td><td>18875778</td><td>18875844</td><td>44633.838</td><td>47279.575</td><td>一致</td><td>拒绝解密: ValueError</td></tr><tr><td>RSA-1024-OAEP-Hybrid</td><td>图像</td><td>图片.jpg</td><td>18875778</td><td>18875976</td><td>43476.581</td><td>47865.354</td><td>一致</td><td>拒绝解密: ValueError</td></tr><tr><td>SM4-CBC</td><td>图像</td><td>图片.jpg</td><td>18875778</td><td>18875844</td><td>24823.541</td><td>24462.555</td><td>一致</td><td>拒绝解密: ValueError</td></tr><tr><td>ZUC-128</td><td>图像</td><td>图片.jpg</td><td>18875778</td><td>18875830</td><td>13316.293</td><td>13209.928</td><td>一致</td><td>拒绝解密: ValueError</td></tr></tbody>
+</table>
+<p class="note">本页面由 Python 标准库生成。AES、RSA、SM4、ZUC 的核心轮函数、密钥扩展、分组/流处理均在源码中手写实现。</p>
+</main>
+</body>
+</html>

@@ -1,0 +1,98 @@
+[
+  {
+    "algorithm": "AES-256-CBC",
+    "category": "文本",
+    "file_name": "文本.txt",
+    "original_bytes": 1348,
+    "encrypted_bytes": 1412,
+    "encrypt_ms": 3.103,
+    "decrypt_ms": 3.352,
+    "original_sha256": "557c2b064f4f24091345eac98a441948ef9b71e6541e200dd88e98231f3aa18c",
+    "restored_sha256": "557c2b064f4f24091345eac98a441948ef9b71e6541e200dd88e98231f3aa18c",
+    "sensitivity_result": "拒绝解密: ValueError"
+  },
+  {
+    "algorithm": "RSA-1024-OAEP-Hybrid",
+    "category": "文本",
+    "file_name": "文本.txt",
+    "original_bytes": 1348,
+    "encrypted_bytes": 1544,
+    "encrypt_ms": 3.631,
+    "decrypt_ms": 5.947,
+    "original_sha256": "557c2b064f4f24091345eac98a441948ef9b71e6541e200dd88e98231f3aa18c",
+    "restored_sha256": "557c2b064f4f24091345eac98a441948ef9b71e6541e200dd88e98231f3aa18c",
+    "sensitivity_result": "拒绝解密: ValueError"
+  },
+  {
+    "algorithm": "SM4-CBC",
+    "category": "文本",
+    "file_name": "文本.txt",
+    "original_bytes": 1348,
+    "encrypted_bytes": 1412,
+    "encrypt_ms": 2.188,
+    "decrypt_ms": 1.919,
+    "original_sha256": "557c2b064f4f24091345eac98a441948ef9b71e6541e200dd88e98231f3aa18c",
+    "restored_sha256": "557c2b064f4f24091345eac98a441948ef9b71e6541e200dd88e98231f3aa18c",
+    "sensitivity_result": "拒绝解密: ValueError"
+  },
+  {
+    "algorithm": "ZUC-128",
+    "category": "文本",
+    "file_name": "文本.txt",
+    "original_bytes": 1348,
+    "encrypted_bytes": 1400,
+    "encrypt_ms": 1.178,
+    "decrypt_ms": 1.071,
+    "original_sha256": "557c2b064f4f24091345eac98a441948ef9b71e6541e200dd88e98231f3aa18c",
+    "restored_sha256": "557c2b064f4f24091345eac98a441948ef9b71e6541e200dd88e98231f3aa18c",
+    "sensitivity_result": "拒绝解密: ValueError"
+  },
+  {
+    "algorithm": "AES-256-CBC",
+    "category": "文件",
+    "file_name": "文件3.xlsx",
+    "original_bytes": 12288,
+    "encrypted_bytes": 12356,
+    "encrypt_ms": 28.647,
+    "decrypt_ms": 29.741,
+    "original_sha256": "08d9a6b8fdafe3a100189e7f168075c88fd68a02f8173fea67bc4542e2263343",
+    "restored_sha256": "08d9a6b8fdafe3a100189e7f168075c88fd68a02f8173fea67bc4542e2263343",
+    "sensitivity_result": "拒绝解密: ValueError"
+  },
+  {
+    "algorithm": "RSA-1024-OAEP-Hybrid",
+    "category": "文件",
+    "file_name": "文件3.xlsx",
+    "original_bytes": 12288,
+    "encrypted_bytes": 12488,
+    "encrypt_ms": 27.622,
+    "decrypt_ms": 31.845,
+    "original_sha256": "08d9a6b8fdafe3a100189e7f168075c88fd68a02f8173fea67bc4542e2263343",
+    "restored_sha256": "08d9a6b8fdafe3a100189e7f168075c88fd68a02f8173fea67bc4542e2263343",
+    "sensitivity_result": "拒绝解密: ValueError"
+  },
+  {
+    "algorithm": "SM4-CBC",
+    "category": "文件",
+    "file_name": "文件3.xlsx",
+    "original_bytes": 12288,
+    "encrypted_bytes": 12356,
+    "encrypt_ms": 16.673,
+    "decrypt_ms": 16.639,
+    "original_sha256": "08d9a6b8fdafe3a100189e7f168075c88fd68a02f8173fea67bc4542e2263343",
+    "restored_sha256": "08d9a6b8fdafe3a100189e7f168075c88fd68a02f8173fea67bc4542e2263343",
+    "sensitivity_result": "拒绝解密: ValueError"
+  },
+  {
+    "algorithm": "ZUC-128",
+    "category": "文件",
+    "file_name": "文件3.xlsx",
+    "original_bytes": 12288,
+    "encrypted_bytes": 12340,
+    "encrypt_ms": 9.153,
+    "decrypt_ms": 8.772,
+    "original_sha256": "08d9a6b8fdafe3a100189e7f168075c88fd68a02f8173fea67bc4542e2263343",
+    "restored_sha256": "08d9a6b8fdafe3a100189e7f168075c88fd68a02f8173fea67bc4542e2263343",
+    "sensitivity_result": "拒绝解密: ValueError"
+  }
+]

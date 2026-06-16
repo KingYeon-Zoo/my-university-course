@@ -1,0 +1,4 @@
+interface:
+  display_name: "报告生成器"
+  short_description: "依据上传模板生成 Markdown 报告并转换为 DOCX"
+  default_prompt: "使用 $report-generator 根据我上传的报告模板撰写报告，并输出 Markdown 和 DOCX。"
