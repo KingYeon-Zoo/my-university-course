@@ -1,0 +1,6 @@
+file '/Users/zoo/Desktop/数字媒体技术/实验01_视频编辑ffmpeg/DIY/Work/segments/01_title.mp4'
+file '/Users/zoo/Desktop/数字媒体技术/实验01_视频编辑ffmpeg/DIY/Work/segments/02_earth.mp4'
+file '/Users/zoo/Desktop/数字媒体技术/实验01_视频编辑ffmpeg/DIY/Work/segments/03_rocket.mp4'
+file '/Users/zoo/Desktop/数字媒体技术/实验01_视频编辑ffmpeg/DIY/Work/segments/04_webb_cliffs.mp4'
+file '/Users/zoo/Desktop/数字媒体技术/实验01_视频编辑ffmpeg/DIY/Work/segments/05_webb_galaxies.mp4'
+file '/Users/zoo/Desktop/数字媒体技术/实验01_视频编辑ffmpeg/DIY/Work/segments/06_end.mp4'

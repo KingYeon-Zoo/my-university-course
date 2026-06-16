@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <style>
+      .bg { fill: #111722; }
+      .panel { fill: #17202c; stroke: #41556c; stroke-width: 2; rx: 12; }
+      .text { fill: #eef5ff; font-family: "PingFang SC", "Heiti SC", Arial, sans-serif; font-size: 34px; }
+      .small { fill: #e8f0fb; font-family: "PingFang SC", "Heiti SC", Arial, sans-serif; font-size: 27px; }
+      .tiny { fill: #aebfd2; font-family: "PingFang SC", "Heiti SC", Arial, sans-serif; font-size: 23px; }
+    </style>
+  </defs>
+  <rect class="bg" width="1600" height="1000"/>
+  <text class="text" x="70" y="82">图 4 手动建模集合与新增对象结构</text>
+  <text class="tiny" x="70" y="125">根据 Blender 大纲视图中的对象命名整理，展示新增内容和用途。</text>
+  <rect class="panel" x="55" y="155" width="1490" height="775"/>
+  <rect x="80" y="170" width="1440" height="54" fill="#1b2532" rx="6"/>
+  <text class="small" x="115" y="205">▾ 手动建模_展示与贴图</text>
+  <text class="tiny" x="900" y="205">新增模型展示集合，组织场景对象</text>
+  <rect x="80" y="228" width="1440" height="54" fill="#202c3a" rx="6"/>
+  <text class="small" x="115" y="263">   └ 国旗贴图_核心舱</text>
+  <text class="tiny" x="900" y="263">核心舱国旗贴图平面</text>
+  <rect x="80" y="286" width="1440" height="54" fill="#1b2532" rx="6"/>
+  <text class="small" x="115" y="321">   └ 展示说明牌</text>
+  <text class="tiny" x="900" y="321">展示主题说明牌</text>
+  <rect x="80" y="344" width="1440" height="54" fill="#202c3a" rx="6"/>
+  <text class="small" x="115" y="379">   └ 标题文字</text>
+  <text class="tiny" x="900" y="379">中国空间站 Tiangong 文本</text>
+  <rect x="80" y="402" width="1440" height="54" fill="#1b2532" rx="6"/>
+  <text class="small" x="115" y="437">   └ 展示轨道线</text>
+  <text class="tiny" x="900" y="437">空间展示轨道线</text>
+  <rect x="80" y="460" width="1440" height="54" fill="#202c3a" rx="6"/>
+  <text class="small" x="115" y="495">   └ 主补光_Area</text>
+  <text class="tiny" x="900" y="495">区域补光</text>
+  <rect x="80" y="518" width="1440" height="54" fill="#1b2532" rx="6"/>
+  <text class="small" x="115" y="553">   └ 太阳方向光</text>
+  <text class="tiny" x="900" y="553">太阳方向光</text>
+  <rect x="80" y="576" width="1440" height="54" fill="#202c3a" rx="6"/>
+  <text class="small" x="115" y="611">   └ 相机01_国旗正面</text>
+  <text class="tiny" x="900" y="611">国旗正面渲染角度</text>
+  <rect x="80" y="634" width="1440" height="54" fill="#1b2532" rx="6"/>
+  <text class="small" x="115" y="669">   └ 相机02_空间站斜俯视</text>
+  <text class="tiny" x="900" y="669">整体斜俯视渲染角度</text>
+  <rect x="80" y="692" width="1440" height="54" fill="#202c3a" rx="6"/>
+  <text class="small" x="115" y="727">   └ 贴图坐标观察_平面</text>
+  <text class="tiny" x="900" y="727">彩色棋盘贴图观察</text>
+  <rect x="80" y="750" width="1440" height="54" fill="#1b2532" rx="6"/>
+  <text class="small" x="115" y="785">   └ 贴图坐标观察_立方体</text>
+  <text class="tiny" x="900" y="785">彩色棋盘贴图观察</text>
+  <rect x="80" y="808" width="1440" height="54" fill="#202c3a" rx="6"/>
+  <text class="small" x="115" y="843">   └ 贴图坐标观察_球体</text>
+  <text class="tiny" x="900" y="843">彩色棋盘贴图观察</text>
+  <rect x="80" y="866" width="1440" height="54" fill="#1b2532" rx="6"/>
+  <text class="small" x="115" y="901">   └ 贴图坐标观察_柱体</text>
+  <text class="tiny" x="900" y="901">彩色棋盘贴图观察</text>
+  <text class="tiny" x="80" y="955">空间站主体结构组件（如核心舱、实验舱、载人飞船等）保存在主场景集合中，新增的辅助展示组件统一放入手动建模展示集合，便于场景管理。</text>
+</svg>
