@@ -1,0 +1,41 @@
+# Advanced Diagram Generator Requirements
+# Python packages for generating professional diagrams
+
+# Core plotting and visualization
+matplotlib>=3.6.0
+numpy>=1.21.0
+networkx>=2.8.0
+
+# Advanced plotting libraries
+plotly>=5.15.0
+kaleido>=0.2.1
+
+# Image processing
+Pillow>=9.0.0
+
+# Graph visualization
+graphviz>=0.20.0
+
+# Color utilities
+seaborn>=0.11.0
+
+# Mathematical utilities
+scipy>=1.9.0
+
+# Data manipulation
+pandas>=1.5.0
+
+# Additional utilities
+tqdm>=4.64.0
+
+# Vector graphics and PDF support
+svglib>=1.5.1
+reportlab>=4.0.4
+
+# Color processing
+colour>=0.1.5
+colorcet>=3.0.1
+
+# Optional: Deep learning graphics (if needed)
+# torch>=2.0.0
+# torchvision>=0.15.0 

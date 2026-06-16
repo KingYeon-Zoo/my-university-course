@@ -1,0 +1,4 @@
+graphviz
+pillow
+matplotlib
+numpy 

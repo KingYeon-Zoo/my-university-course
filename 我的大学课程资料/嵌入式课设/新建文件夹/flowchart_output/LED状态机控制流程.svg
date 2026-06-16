@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="850" height="450" xmlns="http://www.w3.org/2000/svg">
+<style>
+.node-text { font-family: "Microsoft YaHei", sans-serif; font-size: 12px; text-anchor: middle; dominant-baseline: middle; fill: white; font-weight: bold; }
+.edge-text { font-family: "Microsoft YaHei", sans-serif; font-size: 10px; text-anchor: middle; dominant-baseline: middle; fill: black; }
+</style>
+<title>LED状态机控制流程</title>
+<line x1="150" y1="110" x2="350" y2="110" stroke="#404040" stroke-width="2" marker-end="url(#arrowhead)"/>
+<line x1="150" y1="110" x2="550" y2="110" stroke="#404040" stroke-width="2" marker-end="url(#arrowhead)"/>
+<line x1="150" y1="110" x2="750" y2="110" stroke="#404040" stroke-width="2" marker-end="url(#arrowhead)"/>
+<line x1="150" y1="110" x2="150" y2="230" stroke="#404040" stroke-width="2" marker-end="url(#arrowhead)"/>
+<line x1="350" y1="110" x2="150" y2="110" stroke="#404040" stroke-width="2" marker-end="url(#arrowhead)"/>
+<line x1="550" y1="110" x2="150" y2="110" stroke="#404040" stroke-width="2" marker-end="url(#arrowhead)"/>
+<line x1="750" y1="110" x2="750" y2="110" stroke="#404040" stroke-width="2" marker-end="url(#arrowhead)"/>
+<line x1="150" y1="230" x2="150" y2="110" stroke="#404040" stroke-width="2" marker-end="url(#arrowhead)"/>
+<line x1="350" y1="230" x2="550" y2="230" stroke="#404040" stroke-width="2" marker-end="url(#arrowhead)"/>
+<line x1="550" y1="230" x2="750" y2="230" stroke="#404040" stroke-width="2" marker-end="url(#arrowhead)"/>
+<line x1="750" y1="230" x2="150" y2="350" stroke="#404040" stroke-width="2" marker-end="url(#arrowhead)"/>
+<line x1="350" y1="350" x2="550" y2="350" stroke="#404040" stroke-width="2" marker-end="url(#arrowhead)"/>
+<line x1="550" y1="350" x2="350" y2="350" stroke="#404040" stroke-width="2" marker-end="url(#arrowhead)"/>
+<rect x="100" y="85" width="100" height="50" rx="5" fill="#1f4e79" stroke="black" stroke-width="2"/>
+<text x="150" y="110" class="node-text">空闲状态</text>
+<rect x="300" y="85" width="100" height="50" rx="5" fill="#1f4e79" stroke="black" stroke-width="2"/>
+<text x="350" y="110" class="node-text">清零闪烁</text>
+<rect x="500" y="85" width="100" height="50" rx="5" fill="#1f4e79" stroke="black" stroke-width="2"/>
+<text x="550" y="110" class="node-text">数字显示</text>
+<rect x="700" y="85" width="100" height="50" rx="5" fill="#1f4e79" stroke="black" stroke-width="2"/>
+<text x="750" y="110" class="node-text">跑马灯显示</text>
+<rect x="100" y="205" width="100" height="50" rx="5" fill="#1f4e79" stroke="black" stroke-width="2"/>
+<text x="150" y="230" class="node-text">低位闪烁</text>
+<rect x="300" y="205" width="100" height="50" rx="5" fill="#1f4e79" stroke="black" stroke-width="2"/>
+<text x="350" y="230" class="node-text">LED1闪烁个位</text>
+<rect x="500" y="205" width="100" height="50" rx="5" fill="#1f4e79" stroke="black" stroke-width="2"/>
+<text x="550" y="230" class="node-text">LED2闪烁十位</text>
+<rect x="700" y="205" width="100" height="50" rx="5" fill="#1f4e79" stroke="black" stroke-width="2"/>
+<text x="750" y="230" class="node-text">LED3闪烁百位</text>
+<rect x="100" y="325" width="100" height="50" rx="5" fill="#1f4e79" stroke="black" stroke-width="2"/>
+<text x="150" y="350" class="node-text">LED4闪烁千位</text>
+<rect x="300" y="325" width="100" height="50" rx="5" fill="#1f4e79" stroke="black" stroke-width="2"/>
+<text x="350" y="350" class="node-text">正向移动</text>
+<rect x="500" y="325" width="100" height="50" rx="5" fill="#1f4e79" stroke="black" stroke-width="2"/>
+<text x="550" y="350" class="node-text">反向移动</text>
+<defs>
+<marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+<polygon points="0 0, 10 3.5, 0 7" fill="#404040" />
+</marker>
+</defs>
+</svg>

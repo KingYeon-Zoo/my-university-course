@@ -1,0 +1,3 @@
+digraph {
+	test [label=test]
+}
