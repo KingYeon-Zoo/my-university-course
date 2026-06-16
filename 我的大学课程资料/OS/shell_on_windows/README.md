@@ -1,0 +1,259 @@
+# Unix/Linux Shell 解释器 for Windows
+
+## 项目简介
+
+本项目是一个在 Windows 环境下运行的 Unix/Linux Shell 解释器。项目严格遵循操作系统课程设计要求，采用双层架构设计：**内核代码**生成静态库（`.lib`），**演示代码**生成可执行程序（`.exe`）。
+
+### 主要特性
+
+- 完整的 `.sh` 脚本词法分析与语法分析
+- 流程控制语句：`if/then/else/elif/fi`、`while/do/done`、`for/in/do/done`、`case/esac`
+- 变量管理：赋值、引用（`$var`、`${var}`）、特殊变量（`$?`、`$#`）
+- 管道与重定向：`|`、`>`、`>>`、`<`
+- 内置命令：`cd`、`echo`、`pwd`、`export`、`exit`、`test`、`[`、`read`
+- Unix 到 Windows 命令映射（如 `ls` → `dir`）
+- 交互式 Shell 界面
+- 调试模式（词法/语法分析可视化）
+
+---
+
+## 项目结构
+
+```
+shell_on_windows/
+├── kernel/                     # 内核代码（生成静态库 .lib）
+│   ├── include/               # 头文件目录
+│   │   ├── shell_api.h       # 公共 API 接口
+│   │   ├── types.h           # 核心数据结构定义
+│   │   └── internal.h        # 内部接口声明
+│   ├── lexer.c               # 词法分析器
+│   ├── parser.c              # 语法分析器
+│   ├── executor.c            # 执行引擎
+│   ├── variable.c            # 变量管理器
+│   ├── builtin_cmd.c         # 内置命令实现
+│   ├── cmd_mapping.c         # 命令映射
+│   ├── io_redirect.c         # I/O 重定向与管道
+│   ├── ast.c                 # AST 节点操作
+│   ├── utils.c               # 工具函数库
+│   ├── memory_pool.c         # 内存池管理
+│   └── shell_core.c          # 核心 API 实现
+│
+├── demo/                       # 演示代码（生成可执行程序 .exe）
+│   ├── main.c                # 主程序入口
+│   ├── interactive.c         # 交互式 Shell 实现
+│   ├── script_runner.c       # 脚本文件执行器
+│   └── debug_ui.c            # 调试界面
+│
+├── test/                       # 测试脚本
+│   ├── test_basic.sh         # 基本命令测试
+│   ├── test_variable.sh      # 变量功能测试
+│   ├── test_if.sh            # 条件语句测试
+│   ├── test_while.sh         # while 循环测试
+│   ├── test_for.sh           # for 循环测试
+│   ├── test_pipe.sh          # 管道操作测试
+│   ├── test_redirect.sh      # 重定向测试
+│   ├── test_case.sh          # case 语句测试
+│   ├── test_builtin.sh       # 内置命令测试
+│   └── test_all.sh           # 全部测试集合
+│
+├── Makefile                    # 编译构建脚本
+└── README.md                   # 项目说明
+```
+
+---
+
+## 编译与运行
+
+### 环境要求
+
+- **操作系统**：Windows 7/10/11
+- **编译器**：GCC（推荐 MinGW-w64 或 TDM-GCC）
+- **构建工具**：GNU Make
+
+### 编译步骤
+
+```bash
+# 进入项目目录
+cd shell_on_windows
+
+# 编译项目
+make all
+```
+
+编译成功后将生成：
+
+- `lib/shell_kernel.lib` - 内核静态库
+- `shell_demo.exe` - 演示程序
+
+### 清理编译文件
+
+```bash
+make clean
+```
+
+---
+
+## 使用方法
+
+### 方式一：交互式菜单
+
+```bash
+./shell_demo.exe
+```
+
+进入主菜单后可选择：
+
+1. 交互式 Shell
+2. 执行脚本文件
+3. 调试模式
+4. 退出
+
+### 方式二：直接执行脚本
+
+```bash
+./shell_demo.exe test/test_basic.sh
+```
+
+---
+
+## 使用示例
+
+### 交互式 Shell
+
+```bash
+user@pc:/d/project$ echo "Hello, World!"
+Hello, World!
+
+user@pc:/d/project$ name="Shell"
+user@pc:/d/project$ echo "Welcome to $name"
+Welcome to Shell
+
+user@pc:/d/project$ exit
+```
+
+### 条件语句
+
+```bash
+#!/bin/sh
+x=10
+if [ $x -gt 5 ]; then
+    echo "x is greater than 5"
+else
+    echo "x is not greater than 5"
+fi
+```
+
+### 循环结构
+
+```bash
+#!/bin/sh
+for i in 1 2 3 4 5; do
+    echo "Number: $i"
+done
+
+count=0
+while [ $count -lt 3 ]; do
+    echo "Count: $count"
+    count=$((count + 1))
+done
+```
+
+### 管道和重定向
+
+```bash
+echo "Hello World" | cat
+echo "Log content" > output.txt
+echo "More content" >> output.txt
+cat < input.txt
+```
+
+---
+
+## 技术架构
+
+```
++----------------------------------------------------------+
+|                      Demo Layer                           |
+|   +--------------+  +--------------+  +--------------+   |
+|   | Interactive  |  |   Script     |  |   Debug      |   |
+|   |    Shell     |  |   Runner     |  |     UI       |   |
+|   +--------------+  +--------------+  +--------------+   |
++----------------------------------------------------------+
+|                      Shell API                            |
++----------------------------------------------------------+
+|                     Kernel Layer                          |
+|   +--------+    +--------+    +----------------------+   |
+|   | Lexer  | -> | Parser | -> |      Executor        |   |
+|   |(Token) |    | (AST)  |    | (Execute AST Tree)   |   |
+|   +--------+    +--------+    +----------+-----------+   |
+|                                          |               |
+|   +-------------+  +-------------+  +----+--------+      |
+|   |  Variable   |  |  Built-in   |  |    I/O      |      |
+|   |  Manager    |  |  Commands   |  |  Redirect   |      |
+|   +-------------+  +-------------+  +-------------+      |
++----------------------------------------------------------+
+```
+
+### 模块说明
+
+| 模块           | 功能   | 关键技术           |
+| ------------ | ---- | -------------- |
+| Lexer        | 词法分析 | 有限状态机、Token 链表 |
+| Parser       | 语法分析 | 递归下降解析、AST 构建  |
+| Executor     | 执行引擎 | AST 遍历、进程管理    |
+| Variable     | 变量管理 | 哈希表、环境变量继承     |
+| Built-in     | 内置命令 | 命令分发、参数解析      |
+| I/O Redirect | 重定向  | 管道创建、文件描述符     |
+| Memory Pool  | 内存管理 | 池化分配、统一释放      |
+
+---
+
+## 代码规范
+
+### 内核代码（kernel/）
+
+- 禁止使用 `printf`、`scanf` 等标准 I/O
+- 禁止使用 STL 容器
+- 使用回调函数机制与演示层通信
+- 遵循 Linux 内核编码风格
+- 使用内存池进行内存管理
+
+### 演示代码（demo/）
+
+- 可使用标准 I/O
+- 支持彩色控制台输出
+- 提供用户友好的交互界面
+
+---
+
+## 测试
+
+运行所有测试：
+
+```bash
+./shell_demo.exe test/test_all.sh
+```
+
+| 测试脚本             | 测试内容              |
+| ---------------- | ----------------- |
+| test_basic.sh    | 基本命令（echo、pwd）    |
+| test_variable.sh | 变量赋值、引用、展开        |
+| test_if.sh       | if/else/elif 条件分支 |
+| test_while.sh    | while 循环控制        |
+| test_for.sh      | for 循环迭代          |
+| test_pipe.sh     | 管道操作              |
+| test_redirect.sh | I/O 重定向           |
+| test_case.sh     | case 多分支语句        |
+| test_builtin.sh  | 内置命令              |
+
+---
+
+## 设计亮点
+
+1. **严格的代码分离** - 内核与演示代码完全独立，符合课程设计要求
+2. **完整的语法支持** - 真正的 Shell 解释器，支持复杂脚本
+3. **内存池优化** - 减少内存碎片，提升性能
+4. **详细错误定位** - 精确到行号的语法错误报告
+5. **可视化调试** - 词法/语法分析过程可视化展示
+6. **全面测试覆盖** - 9 个测试脚本验证所有功能
+7. **规范代码风格** - 遵循 Linux 内核编码规范

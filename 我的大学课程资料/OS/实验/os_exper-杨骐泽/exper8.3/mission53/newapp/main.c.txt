@@ -1,0 +1,9 @@
+#define __LIBRARY__
+#include <unistd.h>
+#define __NR_table_mapping 87
+_syscall0(int, table_mapping)
+int main()
+{
+table_mapping();
+return 0;
+}

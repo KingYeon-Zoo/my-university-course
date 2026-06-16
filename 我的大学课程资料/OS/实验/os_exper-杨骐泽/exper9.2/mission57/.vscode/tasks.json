@@ -1,0 +1,60 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "生成项目(make)",
+            "type": "shell",
+            "windows": {
+                "command": "cmd.exe /c echo VSCode安装路径-${execPath} ; echo ''; echo 正在使用makefile文件生成项目 ; echo ''; make",
+                "options": {
+                    "env": {
+                        "PATH": "${execPath}.toolchain\\bin;${env:PATH}"
+                    }
+                }
+            },
+            "args": [],
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "group": "make"
+            },
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "清理项目(make clean)",
+            "type": "shell",
+            "windows": {
+                "command": "cmd.exe /c echo VSCode安装路径-${execPath} ; echo ''; echo 正在使用makefile文件清理项目 ; echo ''; make clean",
+                    "options": {
+                        "env": {
+                            "PATH": "${execPath}.toolchain\\bin;${env:PATH}"
+                        }
+                    }
+            },
+            "args": [],
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "group": "clean"
+            },
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "提交作业(git push)",
+            "type": "shell",
+            "windows": {
+                "command": "cmd.exe /c type \"'${execPath}.tips\\python_tip.txt'\" ; echo '' ; python .vscode\\gitpush.py"
+            },
+            "linux": {
+                "command": "echo 暂不支持Linux"
+            },
+            "args": [],
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "group": "git-push"
+            },
+            "problemMatcher": []
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Bochs remote debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "linux011.exe",
+            "targetArchitecture": "x86",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [
+                {
+                    "name": "TEMPLIDENTIFY",
+                    "value": "LinuxKernel"
+                }
+            ],
+            "preLaunchTask": "Bochs 远程调试(勿运行)",
+            "MIMode": "gdb",
+            "miDebuggerPath": "${execPath}.toolchain\\bin\\gdb.exe",
+            "miDebuggerServerAddress": "localhost:1234",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": false
+                },
+                {
+                    "description": "do not stop at trap like page fault",
+                    "text": "handle all nostop noprint pass",
+                    "ignoreFailures": false
+                },
+                {
+                    "description": "do not stop at trap like page fault",
+                    "text": "handle SIGSEGV nostop noprint ignore",
+                    "ignoreFailures": false
+                }
+            ]
+        }
+    ]
+}

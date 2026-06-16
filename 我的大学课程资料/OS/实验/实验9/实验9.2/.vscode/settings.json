@@ -1,0 +1,9 @@
+{
+    "files.exclude": {
+        "**/*.git*": true,
+		"**/preopenfile.lock":true,        
+    },
+    "workbench.editor.enablePreview": false,
+    "C_Cpp.errorSquiggles": "Disabled",   
+    "python.analysis.extraPaths": [".vscode"]
+}

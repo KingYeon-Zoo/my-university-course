@@ -1,0 +1,17 @@
+{
+    "env": {
+      "myDefaultIncludePath": ["${workspaceFolder}", "${workspaceFolder}\\include"]
+    },
+    "configurations": [
+      {
+        "name": "Windows",
+        "includePath": ["${myDefaultIncludePath}"],
+        "browse": {
+            "path": ["${workspaceFolder}"],
+            "limitSymbolsToIncludedHeaders": true,
+            "databaseFilename": ""
+        }
+      }
+    ],
+    "version": 4
+  }

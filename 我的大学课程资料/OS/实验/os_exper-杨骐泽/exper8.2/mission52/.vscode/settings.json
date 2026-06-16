@@ -1,0 +1,13 @@
+{
+    "debug.allowBreakpointsEverywhere": true,
+    "C_Cpp.errorSquiggles": "Disabled",
+    "files.associations": {
+        "*.h": "c"
+    },
+    "files.exclude": {
+        "**/*.git*": true,
+		"**/preopenfile.lock":true,
+    },
+    "workbench.editor.enablePreview": false,
+    "python.analysis.extraPaths": [".vscode"],
+}

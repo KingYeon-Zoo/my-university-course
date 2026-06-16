@@ -1,0 +1,158 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "生成项目(make)",
+            "type": "shell",
+            "windows": {
+                "command": "cmd.exe /c echo VSCode安装路径-${execPath} ; echo '' ; echo 正在使用makefile文件生成项目 ; echo ''; make",
+                "options": {
+                    "env": {
+                        "PATH": "${execPath}.toolchain\\bin;${env:PATH}",
+                        "VSCODE_ARTIFACT_DIR": "${execPath}.artifact"
+                    }
+                }
+            },
+            "linux": {
+                "command": "echo 暂不支持Linux"
+            },
+            "args": [],
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "group": "make"
+            },
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "清理项目(make clean)",
+            "type": "shell",
+            "windows": {
+                "command": "cmd.exe /c echo VSCode安装路径-${execPath} ; echo '' ; echo 正在使用makefile文件清理项目 ; echo '' ; make clean",
+                "options": {
+                    "env": {
+                        "PATH": "${execPath}.toolchain\\bin;${env:PATH}"
+                    }
+                }
+            },
+            "linux": {
+                "command": "echo 暂不支持Linux"
+            },
+            "args": [],
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "group": "clean"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "提交作业(git push)",
+            "type": "shell",
+            "windows": {
+                "command": "cmd.exe /c type \"'${execPath}.tips\\python_tip.txt'\" ; echo '' ; python .vscode\\gitpush.py"
+            },
+            "linux": {
+                "command": "echo 暂不支持Linux"
+            },
+            "args": [],
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "group": "git-push"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Bochs 远程调试(勿运行)",
+            "type": "shell",
+            "windows": {
+                "command": "cmd.exe /c echo VSCode安装路径-${execPath} ; echo ''; echo 正在使用makefile文件生成项目 ; echo ''; make; rm -ErrorAction SilentlyContinue harddisk.img.lock; cmd.exe /c \"start bochs.exe -q -f bochsrc.bxrc\"",
+                "options": {
+                    "env": {
+                        "PATH": "${execPath}.toolchain\\bin;${env:PATH}",
+                        "VSCODE_ARTIFACT_DIR": "${execPath}.artifact"
+                    }
+                }
+            },
+            "linux": {
+                "command": "echo 暂不支持Linux"
+            },
+            "args": [],
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "group": "debug"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Bochs 命令调试",
+            "type": "shell",
+            "windows": {
+                "command": "cmd.exe /c echo VSCode安装路径-${execPath} ; echo ''; echo 正在使用makefile文件生成项目 ; echo ''; make; rm -ErrorAction SilentlyContinue harddisk.img.lock; cmd.exe /c \"start bochsdbg.exe -q -f bochsrcdbg.bxrc\"",
+                "options": {
+                    "env": {
+                        "PATH": "${execPath}.toolchain\\bin;${env:PATH}",
+                        "VSCODE_ARTIFACT_DIR": "${execPath}.artifact"
+                    }
+                }
+            },
+            "linux": {
+                "command": "echo 暂不支持Linux"
+            },
+            "args": [],
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "group": "debug"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Bochs 运行(不调试)",
+            "type": "shell",
+            "windows": {
+                "command": "cmd.exe /c echo VSCode安装路径-${execPath} ; echo ''; echo 正在使用makefile文件生成项目 ; echo ''; make; rm -ErrorAction SilentlyContinue harddisk.img.lock; cmd.exe /c \"start bochs-official.exe -q -f bochsrcdbg.bxrc\"",
+                "options": {
+                    "env": {
+                        "PATH": "${execPath}.toolchain\\bin;${env:PATH}",
+                        "VSCODE_ARTIFACT_DIR": "${execPath}.artifact"
+                    }
+                }
+            },
+            "linux": {
+                "command": "echo 暂不支持Linux"
+            },
+            "args": [],
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "group": "debug"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "打开 floppyb.img",
+            "type": "shell",
+            "windows": {
+                "command": "cmd.exe /c echo VSCode安装路径-${execPath} ; echo ''; echo 正在打开floppyb.img文件 ; echo ''; FloppyEditor Floppyb.img",
+                "options": {
+                    "env": {
+                        "PATH": "${execPath}.oldgcc\\bin;${env:PATH}",
+                    }
+                }
+            },
+            "linux": {
+                "command": "echo 暂不支持Linux"
+            },
+            "args": [],
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "group": "make"
+            },
+            "problemMatcher": []
+        }
+    ]
+}
