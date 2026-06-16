@@ -1,0 +1,25 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Thu Oct 20 16:36:08 2016
+| Host         : EES-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7a35tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'char_fifo'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of char_fifo from xilinx.com:ip:fifo_generator:12.0 (Rev. 4) to xilinx.com:ip:fifo_generator:13.0 (Rev. 1)
+
+2. Upgrade messages
+-------------------
+
+Added parameter Output_Register_Type with value Embedded_Reg (source 'default')
+Added parameter Enable_Safety_Circuit with value false (source 'default')
+Added parameter Enable_ECC_Type with value Hard_ECC (source 'default')
+Set parameter Slave_interface_Clock_enable_memory_mapped to value false (source 'default')
+Set parameter Master_interface_Clock_enable_memory_mapped to value false (source 'default')
+

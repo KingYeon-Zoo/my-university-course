@@ -1,0 +1,21 @@
+set_property -dict {PACKAGE_PIN P5 IOSTANDARD LVCMOS33} [get_ports {N[14]}]
+set_property -dict {PACKAGE_PIN P4 IOSTANDARD LVCMOS33} [get_ports {N[13]}]
+set_property -dict {PACKAGE_PIN P3 IOSTANDARD LVCMOS33} [get_ports {N[12]}]
+set_property -dict {PACKAGE_PIN P2 IOSTANDARD LVCMOS33} [get_ports {N[11]}]
+set_property -dict {PACKAGE_PIN R2 IOSTANDARD LVCMOS33} [get_ports {N[10]}]
+set_property -dict {PACKAGE_PIN M4 IOSTANDARD LVCMOS33} [get_ports {N[9]}]
+set_property -dict {PACKAGE_PIN N4 IOSTANDARD LVCMOS33} [get_ports {N[8]}]
+set_property -dict {PACKAGE_PIN R1 IOSTANDARD LVCMOS33} [get_ports {N[7]}]
+set_property -dict {PACKAGE_PIN U3 IOSTANDARD LVCMOS33} [get_ports {N[6]}]
+set_property -dict {PACKAGE_PIN U2 IOSTANDARD LVCMOS33} [get_ports {N[5]}]
+set_property -dict {PACKAGE_PIN V2 IOSTANDARD LVCMOS33} [get_ports {N[4]}]
+set_property -dict {PACKAGE_PIN V5 IOSTANDARD LVCMOS33} [get_ports {N[3]}]
+set_property -dict {PACKAGE_PIN V4 IOSTANDARD LVCMOS33} [get_ports {N[2]}]
+set_property -dict {PACKAGE_PIN R3 IOSTANDARD LVCMOS33} [get_ports {N[1]}]
+set_property -dict {PACKAGE_PIN T3 IOSTANDARD LVCMOS33} [get_ports {N[0]}]
+
+set_property -dict {PACKAGE_PIN P17 IOSTANDARD LVCMOS33} [get_ports clk]
+set_property -dict {PACKAGE_PIN P15 IOSTANDARD LVCMOS33} [get_ports rst_n]
+set_property -dict {PACKAGE_PIN B16 IOSTANDARD LVCMOS33} [get_ports clk_out]
+
+
