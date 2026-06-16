@@ -16,6 +16,9 @@
 **/.pytest_cache/
 **/.mypy_cache/
 **/.ruff_cache/
+**/logs/
+**/*.log
+**/*.pem
 **/.idea/
 **/.vs/
 **/build/
