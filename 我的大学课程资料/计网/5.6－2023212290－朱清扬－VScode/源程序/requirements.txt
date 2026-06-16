@@ -1,0 +1,9 @@
+PyQt5>=5.15.0
+scapy>=2.5.0
+matplotlib>=3.5.0
+numpy>=1.21.0
+pandas>=1.3.0
+pyqtgraph>=0.12.0
+qt-material>=2.14
+Pillow>=9.0.0
+
