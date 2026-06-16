@@ -1,0 +1,31 @@
+![](https://cdn-mineru.openxlab.org.cn/extract/ec42654d-7816-417a-b8dc-330be0291851/bafb979b673bca959a56c0c6cb0b86bbb8d2c64479837e80fc0e4b1dc7b56a70.jpg)
+
+# ChatGPT
+
+# Multi-Agent Dialogue System Architectures
+
+![](https://cdn-mineru.openxlab.org.cn/extract/ec42654d-7816-417a-b8dc-330be0291851/0129937568a46cdda7a5e28af03149b5a57d9933c097bcf4f9dba81cbd78716d.jpg)  
+Figure 1: A multi-agent conversational framework from AutoGen (Wu et al., COLM 2024) 1 2 . AutoGen allows LLM-based agents (blue) to converse with each other and optional human/tool agents (green/red) in flexible patterns 3 4 . This high-level architecture can illustrate SolaceMind' s overall system design (e.g. as Figure 3.1), where multiple agents coordinate to perform tasks via dialogue.
+
+![](https://cdn-mineru.openxlab.org.cn/extract/ec42654d-7816-417a-b8dc-330be0291851/553436c2602e003d1f4cda8e2d949b5dd846e135505235f1eb705492833e5d21.jpg)  
+Figure 2: The SUPPORTER model architecture for emotional support dialogues (Zhou et al., ACL 2023) 5 . It encodes the dialogue context, uses emotion & keyword expert modules (yellow/blue) and a policy network to select a strategy, then a response decoder generates the supportive reply 6 . "DC" denotes dialogue coherence reward. This figure could serve in SolaceMind as the strategy-planning module diagram (fits Section 3, as Fig 3.2), showing how emotion recognition and strategy selection are integrated 5 7 .
+
+# Memory-Augmented LLM Architectures (RAG & Long-Term Memory)
+
+![](https://cdn-mineru.openxlab.org.cn/extract/ec42654d-7816-417a-b8dc-330be0291851/c29fcf2c1c6d5a4cffc736240df5fd4f71d9268ef1e146970c5aa34d4400ec77.jpg)  
+Figure 3: Generative Agents architecture for long-term memory (Park et al., UIST 2023) 8 9 . Agents perceive and store experiences in a Memory Stream, then retrieve relevant memories to inform current actions, and reflect to form higher-level plans 8 10 . This diagram (sourced from the paper' s Fig. 5) can be used as SolaceMind' s memory system illustration (e.g. Fig 4.1), showing how an agent' s memory and planning interact over dialogues.
+
+Figure 4: EM- LLM episodic memory architecture (Fountas et al., ICLR 2025) 11 12 . It segments the conversation into discrete events (using a surprise- based detector) and employs a two- stage retrieval (similarity + temporal) to fetch relevant past episodes 13 14 . This module (which outperforms standard RAG 15 ) illustrates SolaceMind' s long- term memory retrieval mechanism (could be Fig 4.2), where the system actively decides when and what to retrieve during generation (an Active- RAG approach 16 ).
+
+# Emotion Recognition, Strategy Planning & Evaluation
+
+In SolaceMind' s dialogue engine, an initial Emotion Recognition component identifies the user' s emotional state, which then informs the Strategy Planner for response generation. For example, Wan et al. (NAACL 2025) propose a pipeline where the system first classifies fine- grained user emotions, then predicts a supportive strategy (e.g. "question", "reflection") before generating a reply 17 18 . This could be depicted as a flowchart (Fig 3.3) showing emotion  $\rightarrow$  strategy  $\rightarrow$  response. In terms of evaluation, recent works report emotion recognition accuracy improvements 19 and track conversation dynamics. For instance, Liu et al. (ACL 2021) show the distribution of support strategies across dialogue turns - early turns often use "Question" strategies while later turns shift to "Reflection" or "Suggestion" 20 21 . Such results can be presented as charts (e.g. Fig 5.2) to evaluate SolaceMind: one graph comparing emotion classification accuracy of different models, another showing the percentage of strategy use by turn as conversations progress 20 21 . Additionally, a long- term memory evaluation (like MemoryBank' s memory recall rate 22 ) can assess SolaceMind' s memory module. These figures demonstrate SolaceMind' s performance on key metrics such as emotional accuracy, dialogue length distribution, and memory recall - validating the system' s effectiveness in sustaining supportive, coherent long- term dialogues.
+
+1. Wu, Q., Bansal, G., Zhang, J., Wu, Y., Li, B., Zhu, E., Awadallah, A. H., White, R. W., Burger, D., & Wang, C. (2023). **AutoGen: Enabling Next‑Gen LLM Applications via Multi‑Agent Conversation**. *arXiv preprint* arXiv:2308.08155.  
+2. Zhou, J., Chen, Z., Wang, B., & Huang, M. (2023). **Facilitating Multi‑turn Emotional Support Conversation with Positive Emotion Elicitation: A Reinforcement Learning Approach**. In *Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics* (pp. 1714‑1729). Association for Computational Linguistics.  
+3. Park, J. S., O’Brien, J. C., Cai, C. J., Morris, M. R., Liang, P., & Bernstein, M. S. (2023). **Generative Agents: Interactive Simulacra of Human Behavior**. *arXiv preprint* arXiv:2304.03442.  
+4. Fountas, Z., Benfeghoul, M., Oomerjee, A., Christopoulou, F., Lampouras, G., Bou Ammar, H., & Wang, J. (2025). **Human‑inspired Episodic Memory for Infinite Context LLMs**. In *International Conference on Learning Representations* (ICLR 2025).  
+5. Jiang, Z., Xu, F. F., Gao, L., Sun, Z., Liu, Q., Dwivedi‑Yu, J., Yang, Y., Callan, J., & Neubig, G. (2023). **Active Retrieval Augmented Generation**. *arXiv preprint* arXiv:2305.06983.  
+6. Wan, C., Labeau, M., & Clavel, C. (2025). **EmoDynamiX: Emotional Support Dialogue Strategy Prediction by Modelling Mixed Emotions and Discourse Dynamics**. In *Proceedings of the 2025 Conference of the North American Chapter of the Association for Computational Linguistics* (NAACL 2025). arXiv:2408.08782.  
+7. Liu, S., Zheng, C., Demasi, O., Sabour, S., Li, Y., Yu, Z., Jiang, Y., & Huang, M. (2021). **Towards Emotional Support Dialog Systems**. In *Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics* (ACL 2021). arXiv:2106.01144.  
+8. Zhong, W., Guo, L., Gao, Q., Ye, H., & Wang, Y. (2023). **MemoryBank: Enhancing Large Language Models with Long‑Term Memory**. *arXiv preprint* arXiv:2305.10250.  
