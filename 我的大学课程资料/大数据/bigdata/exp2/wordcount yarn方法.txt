@@ -1,0 +1,2 @@
+hadoop fs -put word_count_test.txt /input
+hadoop jar /export/server/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.4.1.jar wordcount hdfs://node1:8020/input/ hdfs://node1:8020/output/testtest
