@@ -1,0 +1,1933 @@
+{
+  "template_docx": {
+    "paragraphs": [
+      "智能无人飞行器设计",
+      "设计报告",
+      "课题概述 （四号、宋体）",
+      "（正文小四、宋体，行间距1.25倍行距。）课题背景、本课题来源、目的及意义。（1到2页纸，可以加二级标题，1.1 xxx  1.2 xxxx 等等）",
+      "课题任务",
+      "描述课题的任务，即课题研究开发的具体内容，含要实现的功能以及要达到的技术指标和经济指标。（1到2页纸，可以加二级标题，2.1 xxx  2.2 xxx 等等）",
+      "技术方案及关键问题",
+      "技术方案及开发平台对比论证，简述拟采用的方法、步骤和开发平台，以及其中的关键问题是什么，并给出解决关键问题的思路和方法。（2到4页纸，可以加二级标题，3.1 xxx  3.2 xxx 等等）",
+      "设计实现及测试",
+      "具体实现过程，包括设计开发的基础知识、基本原理、基本理论；设计实现分为哪几个步骤；硬件接线及调试原理介绍、算法结构和原理介绍；实验平台、实验过程及实验结果；实验结果的分析、对比，一定要有分析、对比。",
+      "（此部分为重点阐述内容，10到20页纸，可以加二级标题，4.1 xxx  4.2 xxx 等等。注意，一定要阐述清楚，站在读者的角度去写，要先总后分，先给思路，再具体展开。能让大二的学生能看懂，看了以后能按照你的方法做出来。正文里面要将自己填充部分的代码附上，并附上该代码运行结果的终端结果和调试中飞机对应效果，该部分为重点考察项。某些重要函数的功能、参数可以在正文中说明。）",
+      "需要在正文或者附录中给出相应的公式、表格、框图、电路原理图、程序流程图、成果截图（截图中必须有自己的学号，不能使用指导书中附带的截图，更不能用别人的截图）等。",
+      "相关公式、图、表格的格式如下：",
+      "（1）公式要用公式编辑器编辑，居中排版，公式序号行右对齐。第二章第一个公式举例如下：",
+      "（2.1）",
+      "（公式居中，公式序号2.1 要右对齐）",
+      "（2）图居中，大小合适，排列紧凑，要有图序号及图题，图号及图题在图下方，图号及图题及图中文字的字体比正文字体小一号。子图也要有序号。第三节第2个图举例如下：",
+      "(a)xxx                           (b)xxx",
+      "图4.1实验终端运行截图示例",
+      "（图布局合理，居中，大小合适。图号、图题在图的正下方。图号、图题及图中文字的字体大小比正文字体要小1号）",
+      "（3）表格也要居中，大小合适，栏目大小紧凑，布局合理，要有表序号及表题，表号及表题在表的正上方。表号及表题及表中文字的字体比正文字体要小1号。第三节第4个表举例如下：",
+      "表4.2 YOLO5模型训练准确率",
+      "课程设计总结",
+      "任务完成情况，创新点以及不足之处，改进的思路（1-2页即可，不要图、表）",
+      "参考文献",
+      "正规出版的书籍、期刊论文和学术会议论文可以作为参考文献。文献要在文中引用处正确标注[10]（[序号]上标）。（5篇以上）",
+      "期刊论文格式",
+      "[序号] 作者.论文名称[J].期刊名称，出版年份，卷号（期号），页码范围.举例如下",
+      "[1] 范彩霞, 朱虹, 蔺广逢, 等. 多特征融合的人体目标再识别[J]. 中国图象图形学报, 2013, 18(6): 711-717.",
+      "（2）会议论文格式",
+      "[序号] 作者.论文名称[C].会议名称，会议年份，页码范围.举例如下",
+      "[2] Kostinger M., Hirzer M., Wohlhart P. Large scale metric learning from equivalence constraints[C]. IEEE Conference on Computer Vision and Pattern Recognition, 2012: 2288-2295.",
+      "（3）书籍文献格式",
+      "[序号] 作者.书籍名称[M]. 出版地：出版社，出版年份，页码范围.举例如下：",
+      "[13]  黄卫华，方康玲. 模糊控制系统及应用 [M]. 北京:电子工业出版社,2012：1-173."
+    ],
+    "tables": [
+      [
+        [
+          "学院",
+          "计算机与信息学院"
+        ],
+        [
+          "专  业  班  级",
+          "物联网 xx级-x班"
+        ],
+        [
+          "学生姓名及学号",
+          "Xxx  xxxxxxxx"
+        ],
+        [
+          "指导教师",
+          ""
+        ],
+        [
+          "课题名称",
+          ""
+        ],
+        [
+          "20xx年xx月xx日",
+          "20xx年xx月xx日"
+        ]
+      ],
+      [
+        [
+          "Methods",
+          "",
+          "Accuracy"
+        ],
+        [
+          "xxxxx[9]\nOurs",
+          "",
+          "94\n96"
+        ]
+      ]
+    ]
+  },
+  "acceptance_original": {
+    "paragraphs": [
+      "智能无人飞行器设计与应用",
+      "验收过程记录表",
+      "班级：计科 23-3 班",
+      "小组名称：马刺总冠军",
+      "团队成员及学号：朱清扬 2023212290",
+      "联系方式：15804505800",
+      "验收时间：6 月 11 日下午",
+      "验收地点：东操场",
+      "验收过程视频照片记录网盘链接（链接永久共享）：",
+      "现场提问记录：",
+      "老师提问1：你在这个实验里面做了什么？",
+      "回答1：我主要负责yolo 目标识别，投弹系统设计与实现，服务器、虚拟机三端互ping，飞行器4G传图等任务。",
+      "老师提问2：说下实现 3 端互ping 的过程",
+      "回答2：首先购买阿里云服务器，然后使用 wireguardvpn 进行内网穿透。具体实现方式为…",
+      "老师提问3：为什么要实现 3 段互ping",
+      "回答 3：根据课件，旧的操作是直接飞行，把图像传到 sd 卡里，这相当于盲飞。只有 ping 通了才能把图像实时传送到虚拟机端，这样我们飞行的时候就能看到地面的试试画面了（这个答案在 pdf 里有原话）\n\n老师提问 4: 这个过程是加密传输还是非加密传输",
+      "回答 4：加密传输，因为用的是 vpn，才能把 ip 进行封装封装成对应的 泰山派ip来访问。",
+      "老师提问 5：为什么一定需要服务器进行三端互 ping",
+      "回答 5：需要公网 ip…（结合计网知识回答）"
+    ],
+    "tables": []
+  },
+  "acceptance_completed": {
+    "paragraphs": [
+      "智能无人飞行器设计与应用",
+      "验收过程记录表",
+      "班级：计科 23-3 班",
+      "小组名称：马刺总冠军",
+      "团队成员及学号：朱清扬 2023212290",
+      "联系方式：15804505800",
+      "验收时间：6 月 11 日下午",
+      "验收地点：东操场",
+      "验收过程视频照片记录网盘链接（链接永久共享）：",
+      "现场提问记录：",
+      "老师提问1：你在这个实验里面主要做了什么？",
+      "回答1：我这边主要做了YOLO目标识别、自动投弹程序、阿里云服务器、虚拟机和泰山派三端互通，还有4G实时图传。简单说就是把识别、网络和ROS通信打通，最后能在虚拟机上看到机载摄像头传回来的画面。",
+      "老师提问2：三端互相ping通，你们具体是怎么做的？",
+      "回答2：我们先准备一台有固定公网IP的阿里云服务器，放开51820 UDP端口。然后三端都安装WireGuard，生成各自的公钥和私钥，再配wg0.conf。VPN地址是服务器10.0.0.1、虚拟机10.0.0.2、泰山派10.0.0.3。启动wg0以后互相ping，能通就说明隧道和路由基本配对了。",
+      "老师提问3：为什么要实现三端互相ping通？",
+      "回答3：以前图像主要存在SD卡里，要等飞机回来以后再看，飞的时候地面端看不到画面。三端互相ping通是先确认服务器、泰山派和虚拟机之间的链路已经通了，后面才能通过ROS把摄像头画面实时传到虚拟机。ping通只是测试手段，最终目的是实时图传和远程监控。\n\n老师提问4：这个过程是加密传输还是非加密传输？",
+      "回答4：是加密传输。WireGuard先用公钥和私钥确认通信双方，再把原来的IP数据包加密封装成UDP报文发到对端。对端收到以后再解密、解封装，所以公网里传的不是直接可读的原始数据。",
+      "老师提问5：为什么这个方案里需要服务器来实现三端互通？",
+      "回答5：因为虚拟机和泰山派通常都在NAT后面，泰山派走4G时地址还会变，外网很难直接连进去。云服务器有固定公网IP，两端都能主动连它，所以让服务器做中转最省事，也更稳定。只有两端都有公网IP，或者另外做了NAT穿透，才适合直接连接。"
+    ],
+    "tables": []
+  },
+  "screenshots": [
+    {
+      "path": "实验截图/已经组装好的飞机真实图片/右翼与投弹舵机.jpg",
+      "width": 2100,
+      "height": 2800,
+      "format": "JPEG"
+    },
+    {
+      "path": "实验截图/已经组装好的飞机真实图片/左翼与云台摄像头.jpg",
+      "width": 2100,
+      "height": 2800,
+      "format": "JPEG"
+    },
+    {
+      "path": "实验截图/已经组装好的飞机真实图片/泰山派图片 2.jpg",
+      "width": 2100,
+      "height": 2800,
+      "format": "JPEG"
+    },
+    {
+      "path": "实验截图/已经组装好的飞机真实图片/泰山派照片.jpg",
+      "width": 2100,
+      "height": 2800,
+      "format": "JPEG"
+    },
+    {
+      "path": "实验截图/已经组装好的飞机真实图片/飞控图片.jpg",
+      "width": 2100,
+      "height": 2800,
+      "format": "JPEG"
+    },
+    {
+      "path": "实验截图/泰山派调试截图/完整链路测试.png",
+      "width": 1796,
+      "height": 1028,
+      "format": "PNG"
+    },
+    {
+      "path": "实验截图/泰山派调试截图/测试语音识别.png",
+      "width": 575,
+      "height": 435,
+      "format": "PNG"
+    },
+    {
+      "path": "实验截图/泰山派调试截图/语音识别 2.png",
+      "width": 478,
+      "height": 310,
+      "format": "PNG"
+    },
+    {
+      "path": "实验截图/泰山派调试截图/语音识别 3.png",
+      "width": 531,
+      "height": 201,
+      "format": "PNG"
+    },
+    {
+      "path": "实验截图/飞机正式起飞截图/截图 2.png",
+      "width": 757,
+      "height": 518,
+      "format": "PNG"
+    },
+    {
+      "path": "实验截图/飞机正式起飞截图/截图 3.png",
+      "width": 533,
+      "height": 299,
+      "format": "PNG"
+    },
+    {
+      "path": "实验截图/飞机正式起飞截图/截图 4.png",
+      "width": 584,
+      "height": 242,
+      "format": "PNG"
+    },
+    {
+      "path": "实验截图/飞机正式起飞截图/截图 5.png",
+      "width": 623,
+      "height": 315,
+      "format": "PNG"
+    },
+    {
+      "path": "实验截图/飞机正式起飞截图/截图3.png",
+      "width": 834,
+      "height": 513,
+      "format": "PNG"
+    },
+    {
+      "path": "实验截图/飞机正式起飞截图/正式起飞，虚拟机画面.png",
+      "width": 1816,
+      "height": 1086,
+      "format": "PNG"
+    },
+    {
+      "path": "实验截图/飞机正式起飞截图/飞机飞上天截图 1.png",
+      "width": 543,
+      "height": 298,
+      "format": "PNG"
+    }
+  ],
+  "videos": [
+    {
+      "path": "实验截图/c58900aa3b0a006c849b7b70ada3fd60.mp4",
+      "error": "ffprobe unavailable or failed"
+    },
+    {
+      "path": "实验截图/e3deb9c7e8d44b38710b6332a9ddec78.mp4",
+      "error": "ffprobe unavailable or failed"
+    },
+    {
+      "path": "实验截图/ee45b05da419c565ef3566cfd68c619c.mp4",
+      "error": "ffprobe unavailable or failed"
+    },
+    {
+      "path": "实验截图/虚拟机录屏.mp4",
+      "error": "ffprobe unavailable or failed"
+    }
+  ],
+  "courseware": [
+    {
+      "path": "课件/1.1_定义与价值.md",
+      "characters": 467,
+      "headings": [
+        {
+          "level": 2,
+          "text": "第一章 智能无人机概述"
+        },
+        {
+          "level": 2,
+          "text": "1.1.定义与价值"
+        }
+      ],
+      "images": [],
+      "code_blocks": []
+    },
+    {
+      "path": "课件/1.2_发展历程.md",
+      "characters": 1877,
+      "headings": [
+        {
+          "level": 2,
+          "text": "1.2.发展历程"
+        },
+        {
+          "level": 2,
+          "text": "（1）萌芽阶段（20 世纪初 - 20 世纪 80年代）：军事雏形期"
+        },
+        {
+          "level": 2,
+          "text": "（2）发展阶段（20 世纪 90 年代 - 21 世纪 10 年代）：技术突破与民用拓展"
+        },
+        {
+          "level": 2,
+          "text": "（3）成熟阶段（21 世纪 20 年代至今）：智能升级与全域应用"
+        }
+      ],
+      "images": [
+        "1.2_发展历程_images/e1b1aa9feddb144cdd4fd28130aa15092119047b729901ba9acdca207475537a.jpg",
+        "1.2_发展历程_images/6f481de28c1cb6f11356e6ff68a9c34288b4bfdd8e2ae61fa2fdaeb0f37bed34.jpg",
+        "1.2_发展历程_images/805a778a61b9302013bff0ef7056d8fefdcdf5e01448983951979e7dc4c9afa0.jpg"
+      ],
+      "code_blocks": []
+    },
+    {
+      "path": "课件/1.3_核心技术体系.md",
+      "characters": 2582,
+      "headings": [
+        {
+          "level": 2,
+          "text": "1.3.核心技术体系"
+        },
+        {
+          "level": 2,
+          "text": "（1）飞行平台技术"
+        },
+        {
+          "level": 2,
+          "text": "（2）感知与导航技术"
+        },
+        {
+          "level": 2,
+          "text": "（3）自主控制技术"
+        },
+        {
+          "level": 2,
+          "text": "（4）通信技术"
+        },
+        {
+          "level": 2,
+          "text": "（5）任务载荷技术"
+        }
+      ],
+      "images": [],
+      "code_blocks": []
+    },
+    {
+      "path": "课件/1.4_主要应用领域.md",
+      "characters": 2627,
+      "headings": [
+        {
+          "level": 2,
+          "text": "1.4.主要应用领域"
+        },
+        {
+          "level": 2,
+          "text": "（1）军事领域"
+        },
+        {
+          "level": 2,
+          "text": "（2）民用领域"
+        }
+      ],
+      "images": [
+        "1.4_主要应用领域_images/2d53bcd1639c523f7fad18ca4a1b68cfd2d8fe11b7d84652790256e02a6fa207.jpg",
+        "1.4_主要应用领域_images/89509d840316d9aee48adaec36310c84112e8c0280ec86195a310c79f5ea3bc5.jpg",
+        "1.4_主要应用领域_images/6c2399a326190afcf08b3385e7df6aa5b340aebfbe7f312540d072fecc47dcf2.jpg",
+        "1.4_主要应用领域_images/408a6e195d4423b5e77f47b429d6c28bbd6440b4f1fbec621b23b3eeb4eae8af.jpg",
+        "1.4_主要应用领域_images/c75e85558aa2546e9cac7d2c9ffbcf378e73a8cac6a074667c87d446a2296395.jpg",
+        "1.4_主要应用领域_images/6868caee547422bc32e76dd5217c002a7a0556ae3e6ba0ae90c6b15faa54f72c.jpg"
+      ],
+      "code_blocks": []
+    },
+    {
+      "path": "课件/1.5_面临的挑战.md",
+      "characters": 450,
+      "headings": [
+        {
+          "level": 2,
+          "text": "1.5.面临的挑战"
+        },
+        {
+          "level": 2,
+          "text": "（1）技术层面"
+        },
+        {
+          "level": 2,
+          "text": "（2）法规与安全层面"
+        },
+        {
+          "level": 2,
+          "text": "（3）行业应用层面"
+        }
+      ],
+      "images": [],
+      "code_blocks": []
+    },
+    {
+      "path": "课件/1.6_发展趋势.md",
+      "characters": 813,
+      "headings": [
+        {
+          "level": 2,
+          "text": "1.6.发展趋势"
+        },
+        {
+          "level": 2,
+          "text": "（1）技术发展趋势"
+        },
+        {
+          "level": 2,
+          "text": "（2）应用发展趋势"
+        },
+        {
+          "level": 2,
+          "text": "（3）法规与安全发展趋势"
+        }
+      ],
+      "images": [],
+      "code_blocks": []
+    },
+    {
+      "path": "课件/1.7_结语.md",
+      "characters": 333,
+      "headings": [
+        {
+          "level": 2,
+          "text": "1.7.结语"
+        }
+      ],
+      "images": [],
+      "code_blocks": []
+    },
+    {
+      "path": "课件/10.1_附录A_章节所用指令速览.md",
+      "characters": 857,
+      "headings": [
+        {
+          "level": 2,
+          "text": "附录 A 章节所用指令速览"
+        },
+        {
+          "level": 2,
+          "text": "1、安装 WireGuard："
+        },
+        {
+          "level": 2,
+          "text": "2、生成密钥对："
+        },
+        {
+          "level": 2,
+          "text": "3、本实验的公私钥："
+        },
+        {
+          "level": 2,
+          "text": "4、查看摄像头："
+        },
+        {
+          "level": 2,
+          "text": "5、启动 WireGuard 服务"
+        },
+        {
+          "level": 2,
+          "text": "6、启动 MAVROS："
+        },
+        {
+          "level": 2,
+          "text": "7、语音识别指令："
+        }
+      ],
+      "images": [],
+      "code_blocks": []
+    },
+    {
+      "path": "课件/10.2_附录B_MobaXterm操作说明.md",
+      "characters": 3294,
+      "headings": [
+        {
+          "level": 2,
+          "text": "附录 B MobaXterm（泰山派上位机）操作说明"
+        }
+      ],
+      "images": [
+        "10.2_附录B_MobaXterm操作说明_images/61a3ad941b785028c5c48afe0051b9eb0177eb414359167e0c545482c5c52b28.jpg",
+        "10.2_附录B_MobaXterm操作说明_images/84ecc2555bb8bbdcbee834e32459ae8b0537960648573ddc4ae896ddf06932a5.jpg",
+        "10.2_附录B_MobaXterm操作说明_images/5dff1784f8382250b8559c647bd5ef4dc4eb4d737e71f86ee99e05f66df04585.jpg",
+        "10.2_附录B_MobaXterm操作说明_images/4f2b449138be8340a8a098ab9021d37c98e23d7b7ab744700b8c72df93d5e390.jpg"
+      ],
+      "code_blocks": []
+    },
+    {
+      "path": "课件/2.1_固定翼无人机的飞行原理.md",
+      "characters": 1851,
+      "headings": [
+        {
+          "level": 2,
+          "text": "第二章 基础知识与准备工作"
+        },
+        {
+          "level": 2,
+          "text": "2.1固定翼无人机的飞行原理"
+        }
+      ],
+      "images": [
+        "2.1_固定翼无人机的飞行原理_images/862550b2533f80ce1d5fcf813befcc05b997a1b8de6a02402d30ad6e28d28497.jpg",
+        "2.1_固定翼无人机的飞行原理_images/f8be972f85a8565fd3c9c19f3c2debd366d5d35dd877ea893ce5149e654332ab.jpg",
+        "2.1_固定翼无人机的飞行原理_images/5be2e2d212e6ce4272bcbd95ea97c022a4d51d7ddd6dc9cb9b852230b4d4152b.jpg",
+        "2.1_固定翼无人机的飞行原理_images/3989a9906fffd72f4d3b9cbf89b4199b79c6f55276769a907a1e35f51d584ee0.jpg"
+      ],
+      "code_blocks": []
+    },
+    {
+      "path": "课件/2.2_主要设计内容及架构.md",
+      "characters": 3004,
+      "headings": [
+        {
+          "level": 2,
+          "text": "2.2主要设计内容及架构"
+        },
+        {
+          "level": 2,
+          "text": "2.2.1 实践内容"
+        },
+        {
+          "level": 2,
+          "text": "2.2.2 整体架构"
+        }
+      ],
+      "images": [
+        "2.2_主要设计内容及架构_images/498ee65d4445e6eaf3556fc8f148193100e3d3c93d994735bd1cff7e4fd255de.jpg",
+        "2.2_主要设计内容及架构_images/00f261d9055dd5e75c6ff47dfdd8fedab284c3c0a8d13ee80ab1344f6b82d3ce.jpg",
+        "2.2_主要设计内容及架构_images/6e052462a55d0f8a4b7a65038d51f254bff4f59c7b82b61113e8677d68ae50b3.jpg",
+        "2.2_主要设计内容及架构_images/85594209199f012bc500b21a006405550a0e932c8b40ab6562ae90efb104eb1c.jpg",
+        "2.2_主要设计内容及架构_images/9871e24ee6720141a8a18d66c4911de6e4dfb32bec889f9d544df4091b3dedaa.jpg"
+      ],
+      "code_blocks": [
+        {
+          "language": "mermaid",
+          "characters": 350
+        },
+        {
+          "language": "mermaid",
+          "characters": 413
+        },
+        {
+          "language": "mermaid",
+          "characters": 317
+        },
+        {
+          "language": "mermaid",
+          "characters": 435
+        }
+      ]
+    },
+    {
+      "path": "课件/2.3_硬件模块及软件工具介绍.md",
+      "characters": 933,
+      "headings": [
+        {
+          "level": 2,
+          "text": "2.3硬件模块及软件工具介绍"
+        }
+      ],
+      "images": [
+        "2.3_硬件模块及软件工具介绍_images/38f365dd7ac817b0f706e6de6649ff0607d3dee4dc0ecc0f27d148bb0f106699.jpg",
+        "2.3_硬件模块及软件工具介绍_images/1b2108e060a677b3d255b98e7fe2686469481fad66c0bc6dc42f99f934888a22.jpg"
+      ],
+      "code_blocks": []
+    },
+    {
+      "path": "课件/3.1_实验一：塞斯纳无人机模型组装.md",
+      "characters": 3767,
+      "headings": [
+        {
+          "level": 2,
+          "text": "第三章 固定翼无人机装配、调试与试飞"
+        },
+        {
+          "level": 2,
+          "text": "3.1 实验一：塞斯纳无人机模型组装"
+        },
+        {
+          "level": 2,
+          "text": "3.1.1 实验目的"
+        },
+        {
+          "level": 2,
+          "text": "3.1.2 实验说明"
+        },
+        {
+          "level": 2,
+          "text": "3.1.3 实验步骤"
+        },
+        {
+          "level": 2,
+          "text": "步骤三：安装螺旋桨"
+        },
+        {
+          "level": 2,
+          "text": "步骤四：加固机翼"
+        }
+      ],
+      "images": [
+        "3.1_实验一：塞斯纳无人机模型组装_images/2f384e95599427891c96746db7c54de3cc1d892374c187d31b5815ced06d0751.jpg",
+        "3.1_实验一：塞斯纳无人机模型组装_images/283d8b58020c15ff0e52b31ce6bc5fad18cf1941d5548622f9a237e31359ae97.jpg",
+        "3.1_实验一：塞斯纳无人机模型组装_images/d8b06d7e7ca05026196cbf44de7dbe69f7e7c81a7044ead7885d787fbf4d214d.jpg",
+        "3.1_实验一：塞斯纳无人机模型组装_images/168b68edcfbcc42a717b24624762548893360ddb6e92eee8124342f29f2227c7.jpg",
+        "3.1_实验一：塞斯纳无人机模型组装_images/f441bfd78f8205f037d8cecf4cb6efc884698c1ff5a4551bd6778d4b0245b913.jpg",
+        "3.1_实验一：塞斯纳无人机模型组装_images/faff801e57e7f6f23e74e0b230c506952a2f92846e516bff31a7352ffc64a5af.jpg",
+        "3.1_实验一：塞斯纳无人机模型组装_images/614aa967c9cc83cc3222d6c9176d7626017e29c690f19795c70d1e43d310b2bc.jpg",
+        "3.1_实验一：塞斯纳无人机模型组装_images/ce7148a99293522ae6b519d4ba53a60559dbb8d0532428f778b9168d64aa3282.jpg",
+        "3.1_实验一：塞斯纳无人机模型组装_images/87c99f5ec066dc08e9f26092cb4e6a3b2c7f1ced885276547e247151497b9c65.jpg"
+      ],
+      "code_blocks": []
+    },
+    {
+      "path": "课件/3.2_实验二：飞控固件升级及参数烧录.md",
+      "characters": 6601,
+      "headings": [
+        {
+          "level": 2,
+          "text": "3.2 实验二：飞控固件升级及参数烧录"
+        },
+        {
+          "level": 2,
+          "text": "3.2.1 实验目的"
+        },
+        {
+          "level": 2,
+          "text": "3.2.2 实验说明"
+        },
+        {
+          "level": 2,
+          "text": "3.2.3 实验步骤"
+        },
+        {
+          "level": 2,
+          "text": "步骤三：固件升级步骤"
+        },
+        {
+          "level": 2,
+          "text": "步骤五：加载航点文件"
+        }
+      ],
+      "images": [
+        "3.2_实验二：飞控固件升级及参数烧录_images/5723d8b1e33ad0b57a4df61d4ebb3751a16cf42ba2a51fc8311fe8fd084f1f9e.jpg",
+        "3.2_实验二：飞控固件升级及参数烧录_images/f9fb74b4eaab36161d1555aeedd2d6f405a8f3e08d1c0fb8600ad25494eb1365.jpg",
+        "3.2_实验二：飞控固件升级及参数烧录_images/0639a4f928f5551c1fa6f9f409120068b9a432cac538c0719fd431eff9cb1cb0.jpg",
+        "3.2_实验二：飞控固件升级及参数烧录_images/d2927d705e340666be3bd48b6644ea6a5bbe557c849c2022bda354f2b544d178.jpg",
+        "3.2_实验二：飞控固件升级及参数烧录_images/0d0758c86f4046e24520bf193088b631c98f9493d5b0359d28063714b2a6cc9a.jpg",
+        "3.2_实验二：飞控固件升级及参数烧录_images/e32dc237812713ef378a651ef3050eb5fabb55b7346ec83f974bd94291644dac.jpg",
+        "3.2_实验二：飞控固件升级及参数烧录_images/3f9608fca6982595a5cb08c5f462f44df01e8c5df1fa8a7a51af0913050d44ba.jpg",
+        "3.2_实验二：飞控固件升级及参数烧录_images/fedee03a94e5e2e8c0f72879ad687969a6ce1ec9d24b63c0661abe72884d77a9.jpg",
+        "3.2_实验二：飞控固件升级及参数烧录_images/9692f487ea158d6fc192aa8ff8011c8731fce287203bafd90cc72464cb840b9b.jpg"
+      ],
+      "code_blocks": []
+    },
+    {
+      "path": "课件/3.3_实验三：RK3566开发板系统镜像烧录.md",
+      "characters": 3562,
+      "headings": [
+        {
+          "level": 2,
+          "text": "3.3 实验三：RK3566开发板系统镜像烧录"
+        },
+        {
+          "level": 2,
+          "text": "3.3.1 实验目的"
+        },
+        {
+          "level": 2,
+          "text": "3.3.2 实验说明"
+        },
+        {
+          "level": 2,
+          "text": "3.3.3 实验步骤"
+        },
+        {
+          "level": 1,
+          "text": "□\t存储\t地址\t名字\t路径\t..."
+        },
+        {
+          "level": 1,
+          "text": "□\t存储\t地址\t名字\t路径\t..."
+        },
+        {
+          "level": 1,
+          "text": "□\t存储\t地址\t名字\t路径\t..."
+        }
+      ],
+      "images": [
+        "3.3_实验三：RK3566开发板系统镜像烧录_images/d3a57b9808893fb42dd6d1fd61553a6a871f31f92688c998886145e0eb662e06.jpg",
+        "3.3_实验三：RK3566开发板系统镜像烧录_images/e5d1c3f945796dc493c568c7375c3a847c3eab920a0f5e547c13e01284a3247e.jpg",
+        "3.3_实验三：RK3566开发板系统镜像烧录_images/21b37bc05cf28a29391c7ba66cc5e1d81782b189a90be0e9e2d5af39df11f2e2.jpg",
+        "3.3_实验三：RK3566开发板系统镜像烧录_images/101f1c1dcbfa2d86a847694a1b1d747c3db7d8f721fd757b2d10092841513750.jpg"
+      ],
+      "code_blocks": []
+    },
+    {
+      "path": "课件/3.4_实验四：塞斯纳无人机的硬件装配.md",
+      "characters": 11535,
+      "headings": [
+        {
+          "level": 2,
+          "text": "3.4 实验四：塞斯纳无人机的硬件装配"
+        },
+        {
+          "level": 2,
+          "text": "3.4.1 实验目的"
+        },
+        {
+          "level": 2,
+          "text": "3.4.2 实验说明"
+        },
+        {
+          "level": 2,
+          "text": "3.4.3 实验步骤"
+        }
+      ],
+      "images": [
+        "3.4_实验四：塞斯纳无人机的硬件装配_images/ed366d43da175d7584337abf151de1e5704a6ed742768eb119f500ddd1ce00c0.jpg",
+        "3.4_实验四：塞斯纳无人机的硬件装配_images/06a9ca673808e2749abbe58a3217810fab22554284006c102919a5e7657241b8.jpg",
+        "3.4_实验四：塞斯纳无人机的硬件装配_images/478b956552851a138d3a965d6c356bc3391897ac79f72239604d8acd97657e02.jpg",
+        "3.4_实验四：塞斯纳无人机的硬件装配_images/ea114d160bfe2a2593106e8d66f11ed781f8c8c85f205dd9e3b2524633b814ad.jpg",
+        "3.4_实验四：塞斯纳无人机的硬件装配_images/774772ecadb64359ee63eb8af2d9b260decfefc039b9d8ee01c0a6b14990185d.jpg",
+        "3.4_实验四：塞斯纳无人机的硬件装配_images/0ca9328d8efbdc797781edad2f735c7916665a0123028372c6f775a4bd414f80.jpg",
+        "3.4_实验四：塞斯纳无人机的硬件装配_images/7253c6fb95e795fbefa4c2be8168e7c63ff5d1dc2acbe7734e12fdc76efbc77d.jpg",
+        "3.4_实验四：塞斯纳无人机的硬件装配_images/fbcf6e9857839c56207d16688b6022e9b6db08492de36d56bccb5747d9bd4950.jpg",
+        "3.4_实验四：塞斯纳无人机的硬件装配_images/0d46c4b5b0b719116b2a97db92c97d6c1e7a4fd1bcf92663e2e42e6f4c2ebafd.jpg",
+        "3.4_实验四：塞斯纳无人机的硬件装配_images/eebe58a073db909aafbc1ab286db36e1520c89ab0e275a665120cb8bb05f6338.jpg",
+        "3.4_实验四：塞斯纳无人机的硬件装配_images/c77d851129b9be4e3010c227072dca8d69a89c0b85709a804fb4dd771f99cd81.jpg",
+        "3.4_实验四：塞斯纳无人机的硬件装配_images/cf33bf4b443a8079ce24a8a395b5a1f9d8a70e89082b843f5fabb6613c149502.jpg",
+        "3.4_实验四：塞斯纳无人机的硬件装配_images/d5d2bc0a2e4cfc0175a9f033fb9ae12390b48445d3a840a5fba06ae113ac2cbd.jpg",
+        "3.4_实验四：塞斯纳无人机的硬件装配_images/d7757a685dbed064c8de75e2afb3b04451446f6f3aeb8554774e881eb66fa01f.jpg",
+        "3.4_实验四：塞斯纳无人机的硬件装配_images/d60da8b0a2d40de643741f18b93fdc4b5053f810eeb5d6e54aa4977488de2b8c.jpg",
+        "3.4_实验四：塞斯纳无人机的硬件装配_images/c0747400562fd1a08451b7fef4c0fcc74803de5e0c8cf3892d51e28f2fb34101.jpg",
+        "3.4_实验四：塞斯纳无人机的硬件装配_images/279b647f88b831a4c8fcafa45df74242ad2c4dc0c3f8fc123ff0c7fd0c45a88b.jpg",
+        "3.4_实验四：塞斯纳无人机的硬件装配_images/a3a928fd1b95cf13da6529c752b6bd1905824c96860b7d428a3bb80e9b179a33.jpg"
+      ],
+      "code_blocks": []
+    },
+    {
+      "path": "课件/3.5_实验五：固定翼无人机的操纵原理与实践.md",
+      "characters": 3332,
+      "headings": [
+        {
+          "level": 2,
+          "text": "3.5 实验五：固定翼无人机的操纵原理与实践"
+        },
+        {
+          "level": 2,
+          "text": "3.5.1 实验目的"
+        },
+        {
+          "level": 2,
+          "text": "3.5.2 实验说明"
+        },
+        {
+          "level": 2,
+          "text": "3.5.3 实验步骤"
+        }
+      ],
+      "images": [
+        "3.5_实验五：固定翼无人机的操纵原理与实践_images/be58747cdbd2584d03a5f15448d977fdaf35aa56a4ed365dd9403cea553ba086.jpg",
+        "3.5_实验五：固定翼无人机的操纵原理与实践_images/f5e16cf383e2dd74422ea151d083fd64bebec3b793afee9e5ab4770d49ddf0ef.jpg",
+        "3.5_实验五：固定翼无人机的操纵原理与实践_images/747cc1715d0b4e80311e590965c504315899d7a6cd8f7ec9c57b338f44f855e3.jpg",
+        "3.5_实验五：固定翼无人机的操纵原理与实践_images/a510c8591dce5019da12573a88749f53dc9da32b4d05284632e33952a9b59562.jpg",
+        "3.5_实验五：固定翼无人机的操纵原理与实践_images/ac1d543a4d6eced888b502cb9b37593e65e374b2cc027c053713694f0e308078.jpg",
+        "3.5_实验五：固定翼无人机的操纵原理与实践_images/132ecbd490201d4b50c97a6726bdf6ca2f274ab569379afbe6eadc7fd64b1822.jpg"
+      ],
+      "code_blocks": []
+    },
+    {
+      "path": "课件/3.6_实验六：塞斯纳无人机模拟器试飞.md",
+      "characters": 2671,
+      "headings": [
+        {
+          "level": 2,
+          "text": "3.6 实验六：塞斯纳无人机模拟器试飞"
+        },
+        {
+          "level": 2,
+          "text": "3.6.1 实验目的"
+        },
+        {
+          "level": 2,
+          "text": "3.6.2 实验说明"
+        },
+        {
+          "level": 2,
+          "text": "3.6.3 实验步骤"
+        },
+        {
+          "level": 2,
+          "text": "步骤二：选择Cessna模型机型"
+        },
+        {
+          "level": 2,
+          "text": "步骤三：模拟起飞，观察升力产生过程与舵面响应"
+        }
+      ],
+      "images": [
+        "3.6_实验六：塞斯纳无人机模拟器试飞_images/7147260de97a37d716edea86d7ef83f2bb73a164341835c3ae9538e97266fbe2.jpg",
+        "3.6_实验六：塞斯纳无人机模拟器试飞_images/bfea65076fe932489e88dcabb19d2ea8e436efea856d49f942b04dadebd23653.jpg",
+        "3.6_实验六：塞斯纳无人机模拟器试飞_images/7ee47ecec516fe4098d1e4b7bf08d0452e5ecc83151b53a212c8a17876b5e548.jpg",
+        "3.6_实验六：塞斯纳无人机模拟器试飞_images/4bb23ed172257bb1319f329c57f926672ae9d72cdfa18827f3837ee2080e8d1a.jpg"
+      ],
+      "code_blocks": []
+    },
+    {
+      "path": "课件/4.1_实验一：Mission Planner地面站部署与飞控初始化校准.md",
+      "characters": 14953,
+      "headings": [
+        {
+          "level": 2,
+          "text": "第四章 无人机地面站系统配置与任务规划"
+        },
+        {
+          "level": 2,
+          "text": "4.1 实验一：Mission Planner 地面站部署与飞控初始化校准"
+        },
+        {
+          "level": 2,
+          "text": "4.1.1 实验目的"
+        },
+        {
+          "level": 2,
+          "text": "4.1.2 实验说明"
+        },
+        {
+          "level": 2,
+          "text": "4.1.3 实验步骤"
+        }
+      ],
+      "images": [
+        "4.1_实验一：Mission Planner地面站部署与飞控初始化校准_images/c2183a6bcf2c9af3a941471a96a54b2d79970f94c8a4951a3b9be37ea9103dfd.jpg",
+        "4.1_实验一：Mission Planner地面站部署与飞控初始化校准_images/febc39c4e8fc626928f42fca2ab35ed77e6145c1fd349a37aa1e80ba207cd4db.jpg",
+        "4.1_实验一：Mission Planner地面站部署与飞控初始化校准_images/388576ed8f61beaf46d2fa920dd761ee8cfb2928bd00afadf3fcc0f239ce5b48.jpg",
+        "4.1_实验一：Mission Planner地面站部署与飞控初始化校准_images/adcacd8b2e9e08ca1720dcbdb6063371f4f48e3db296954077f62270490c36e0.jpg",
+        "4.1_实验一：Mission Planner地面站部署与飞控初始化校准_images/b6521c7cf01df09651cceecee13a9d8ffc32df50cdf966c0ce3fbe52a18cd265.jpg",
+        "4.1_实验一：Mission Planner地面站部署与飞控初始化校准_images/eafcfed0b3dca25e2b2a16cb6cc5636f5013de7b9a578a3b60bf1020cc155e3c.jpg",
+        "4.1_实验一：Mission Planner地面站部署与飞控初始化校准_images/53beddf39970eba984abb2837edf232774f0a507a9d75bd30c06a09ca694442f.jpg",
+        "4.1_实验一：Mission Planner地面站部署与飞控初始化校准_images/8c01f93b0e6251261242977bffa6f3582e87b4a6106de4cffb870b830208e9df.jpg",
+        "4.1_实验一：Mission Planner地面站部署与飞控初始化校准_images/36c2de9e66db284e29be243a94a1514b139b29d4e1515c48d672a5be351a2dca.jpg",
+        "4.1_实验一：Mission Planner地面站部署与飞控初始化校准_images/d3bdcde58d86b54ff0972ef1ef1ed51dad31dd1a4704b5af556c7e8ee3b2b9d5.jpg",
+        "4.1_实验一：Mission Planner地面站部署与飞控初始化校准_images/9e989a5538da8c1e9a4e189f4388197a17fc9fa1b3fbdc0e19ba63832d92f633.jpg",
+        "4.1_实验一：Mission Planner地面站部署与飞控初始化校准_images/638f718a08c1b8bf91d3ce84f232d593366f9879618d4465876ff5a4cc2a794a.jpg",
+        "4.1_实验一：Mission Planner地面站部署与飞控初始化校准_images/e3f937ff85955355e6a5cabaa835eede03001b492abbdf44b2681049e21a5889.jpg",
+        "4.1_实验一：Mission Planner地面站部署与飞控初始化校准_images/92334df7faacbdb7bfd84e48161bc55a1621b2430582f684552d400c402223f5.jpg",
+        "4.1_实验一：Mission Planner地面站部署与飞控初始化校准_images/986d360bfdb8dfb60960ca6b99a3016d688186199c01811aabb2106e21b8f354.jpg",
+        "4.1_实验一：Mission Planner地面站部署与飞控初始化校准_images/db5e6319e5319f78345cd7ef589f5c01d4f0425723d6b8b60fa93712685cba6b.jpg",
+        "4.1_实验一：Mission Planner地面站部署与飞控初始化校准_images/515848b29288fc1e6dee0249fd37461061925a1e50435aab9b071219873786e1.jpg",
+        "4.1_实验一：Mission Planner地面站部署与飞控初始化校准_images/f4d1d538280a16fd6f3dd4f04bb068b9c581288491fa355a8c85c3c98cb0b8c7.jpg",
+        "4.1_实验一：Mission Planner地面站部署与飞控初始化校准_images/f51a49bb15052d45c68ee2cf7989d381c6cafa07e6208e6f770c0b60f6f07354.jpg",
+        "4.1_实验一：Mission Planner地面站部署与飞控初始化校准_images/c6aa8ffaac6b482771e81625962bf499a8ee2d3f5051b11a95fe37e11968e5ff.jpg",
+        "4.1_实验一：Mission Planner地面站部署与飞控初始化校准_images/f954c4960376730e8c511dc06056927c4f7bf3df0c827c02d47e9faea8a0d47c.jpg",
+        "4.1_实验一：Mission Planner地面站部署与飞控初始化校准_images/7cd9f44648005311ea0443a915fb12b1005c7a66a3ec86f9595ecb3f3eaf24a6.jpg",
+        "4.1_实验一：Mission Planner地面站部署与飞控初始化校准_images/f05c7b02bb29c5953efba53a062b79ec1d18cd070ac20aefd4d6b701ee36afa8.jpg",
+        "4.1_实验一：Mission Planner地面站部署与飞控初始化校准_images/ca8a76665ee6bad1cb2c178c07f645799d3426182a9a3b53fe5a0f7e063ff39d.jpg",
+        "4.1_实验一：Mission Planner地面站部署与飞控初始化校准_images/a162d0c1ad100908fbf20e4e8e6c409ca91c7cedec7e281031760d962027844f.jpg",
+        "4.1_实验一：Mission Planner地面站部署与飞控初始化校准_images/35f568419109d985e2cd8b5496029e90808c33e3e63d7c0b51e3702174f07aa8.jpg",
+        "4.1_实验一：Mission Planner地面站部署与飞控初始化校准_images/45cf5055028f040331fb61fa1d38c6957ef1a2a72c5a0a3a55787990d288a48f.jpg",
+        "4.1_实验一：Mission Planner地面站部署与飞控初始化校准_images/19da35ed517749fc00eae668150c857eaee421d096facb6036ae53a410128598.jpg"
+      ],
+      "code_blocks": []
+    },
+    {
+      "path": "课件/4.2_实验二：飞控参数配置与核心接口映射设置.md",
+      "characters": 8190,
+      "headings": [
+        {
+          "level": 2,
+          "text": "4.2 实验二：飞控参数配置与核心接口映射设置"
+        },
+        {
+          "level": 2,
+          "text": "4.2.1 实验目的"
+        },
+        {
+          "level": 2,
+          "text": "4.2.2 实验说明"
+        },
+        {
+          "level": 2,
+          "text": "4.2.3 实验步骤"
+        },
+        {
+          "level": 2,
+          "text": "步骤五：遥控器接收配置"
+        },
+        {
+          "level": 2,
+          "text": "Buzzer"
+        }
+      ],
+      "images": [
+        "4.2_实验二：飞控参数配置与核心接口映射设置_images/327b75771e9d13f8efbb23d26392ede2f0ace6b5a9b6972fcb1d94f29ec75ea4.jpg",
+        "4.2_实验二：飞控参数配置与核心接口映射设置_images/53d2c79b9533fbc1e74120684c0fd07df2064da182f90499efe2e53651bedcf1.jpg",
+        "4.2_实验二：飞控参数配置与核心接口映射设置_images/5c4450e10dfc386d79fbd9608cc2910711cd27db884af34411565fbe37bcee74.jpg",
+        "4.2_实验二：飞控参数配置与核心接口映射设置_images/dfd3756a287fad38966a8f4e1f341d29d45f9e9b33b7bb725843053d8b15aa6c.jpg"
+      ],
+      "code_blocks": []
+    },
+    {
+      "path": "课件/4.3_实验三：自主航线规划与飞行任务上传.md",
+      "characters": 7144,
+      "headings": [
+        {
+          "level": 2,
+          "text": "4.3 实验三：自主航线规划与飞行任务上传"
+        },
+        {
+          "level": 2,
+          "text": "4.3.1 实验目的"
+        },
+        {
+          "level": 2,
+          "text": "4.3.2 实验说明"
+        },
+        {
+          "level": 2,
+          "text": "4.3.3 实验步骤"
+        }
+      ],
+      "images": [
+        "4.3_实验三：自主航线规划与飞行任务上传_images/39ef1ad1779440c1f3e4ffaa549ad43a9d7a96d97e80c6c6403a83b15a2169cc.jpg",
+        "4.3_实验三：自主航线规划与飞行任务上传_images/1b8dc91c7faddac63157bc3d1d5f886b9383feef19b3dc5c0fc86c303ec5751e.jpg",
+        "4.3_实验三：自主航线规划与飞行任务上传_images/9cf147459f7ed5c531156574df13615241da3a7002ee36360da26784cd8bab6d.jpg",
+        "4.3_实验三：自主航线规划与飞行任务上传_images/77ce29662302e58fd5d8fd1d43b235caada53d7e85692e2677e04e02bd93a9c8.jpg",
+        "4.3_实验三：自主航线规划与飞行任务上传_images/cb1c24cf76fa5fc069e7bd41e2d06270c7829e2a2a7ff335bfeca2a3dd5c5bb7.jpg"
+      ],
+      "code_blocks": []
+    },
+    {
+      "path": "课件/5.1_实验一：机载嵌入式系统的硬件设计.md",
+      "characters": 7103,
+      "headings": [
+        {
+          "level": 2,
+          "text": "第五章 机载嵌入式系统的硬件设计"
+        },
+        {
+          "level": 2,
+          "text": "5.1 实验一：机载嵌入式系统的硬件设计"
+        },
+        {
+          "level": 2,
+          "text": "5.1.1 实验目的"
+        },
+        {
+          "level": 2,
+          "text": "5.1.2 实验说明"
+        },
+        {
+          "level": 2,
+          "text": "5.1.3 实验步骤"
+        },
+        {
+          "level": 2,
+          "text": "步骤二：电路原理图设计"
+        },
+        {
+          "level": 2,
+          "text": "步骤三：PCB设计"
+        },
+        {
+          "level": 2,
+          "text": "步骤四：原理图与 PCB 的协同关系"
+        },
+        {
+          "level": 2,
+          "text": "步骤五：工具调试与校准"
+        }
+      ],
+      "images": [
+        "5.1_实验一：机载嵌入式系统的硬件设计_images/377c5cb01e619c9d0fc5679c80f54d643627ef0ff509c8c3ac631d7e507e724e.jpg",
+        "5.1_实验一：机载嵌入式系统的硬件设计_images/f9b46799f40c6e9730011fe84e8b6a6a62bf14e64ef246ae3248765710f92cc7.jpg",
+        "5.1_实验一：机载嵌入式系统的硬件设计_images/f5692a92d5c68ec38eebdaa41f368d70744a8dad1670eac0a45b35f373b910e2.jpg",
+        "5.1_实验一：机载嵌入式系统的硬件设计_images/ba2d523c7da27f7f64c96c0f463c201941a8c6b6ee50d7ebdb3d4315403fa43c.jpg",
+        "5.1_实验一：机载嵌入式系统的硬件设计_images/33c57d2193c138649359a1209bcef90a9ba1d32a648e669d84ce150cb0cfb84d.jpg",
+        "5.1_实验一：机载嵌入式系统的硬件设计_images/5b90031dcf0c11ebab6d2af2226bacb59f509ba670e449c0ac85439615bb8c45.jpg",
+        "5.1_实验一：机载嵌入式系统的硬件设计_images/bac06eb088f7973109fb94a3349f7f52d680d60f827514ce86e59c8976b79918.jpg",
+        "5.1_实验一：机载嵌入式系统的硬件设计_images/479b9cfb4ca37d5d9f0001f6f1cae39f00809e572577fdc7389373360e5d51db.jpg",
+        "5.1_实验一：机载嵌入式系统的硬件设计_images/ad7a4d8afe9debff21fa362ecfa09fd751ed812b62ed96c8a014a7cb178fe88d.jpg",
+        "5.1_实验一：机载嵌入式系统的硬件设计_images/382a34f536fca82bbb7aea6d9487450702ae8839a12f65bd251365ec2a2e35ea.jpg"
+      ],
+      "code_blocks": []
+    },
+    {
+      "path": "课件/5.2_实验二：机载嵌入式系统的焊接与调试.md",
+      "characters": 11327,
+      "headings": [
+        {
+          "level": 2,
+          "text": "5.2 实验二：机载嵌入式系统的焊接与调试"
+        },
+        {
+          "level": 2,
+          "text": "5.2.1 实验目的"
+        },
+        {
+          "level": 2,
+          "text": "5.2.2 实验说明"
+        },
+        {
+          "level": 2,
+          "text": "5.2.3 实验步骤"
+        },
+        {
+          "level": 2,
+          "text": "步骤二：焊接后检测与电路验证"
+        }
+      ],
+      "images": [
+        "5.2_实验二：机载嵌入式系统的焊接与调试_images/8100a07bfc9a30eb5c81de47e1631b9c0d7cfbffee4b245f1d062d2950f58d77.jpg",
+        "5.2_实验二：机载嵌入式系统的焊接与调试_images/005334761eef3b678fd6765239ff94c995e7ed939922515027230766d86ba4d0.jpg",
+        "5.2_实验二：机载嵌入式系统的焊接与调试_images/e50b4073ffa002c9544711256707653ba011d1846816a755f70de85baca52a75.jpg",
+        "5.2_实验二：机载嵌入式系统的焊接与调试_images/0e84c531bd1112d00255ce3a77ddaa859108782269848e4c83d28100a6041fa8.jpg",
+        "5.2_实验二：机载嵌入式系统的焊接与调试_images/54ae013d279b231a2e3a9dbc9ae07bcf8af9fdfda0ad9075cdaf125040035c09.jpg",
+        "5.2_实验二：机载嵌入式系统的焊接与调试_images/230b6c453a3e4315de45bdd3efa4704bfff744f7f69bb35341ab5f5c48e32f22.jpg",
+        "5.2_实验二：机载嵌入式系统的焊接与调试_images/9a3bee2667278b5ed668810145b1edba62668698132b1c541d0501e26915dbd4.jpg",
+        "5.2_实验二：机载嵌入式系统的焊接与调试_images/074e09aca9b9062cb0fe92e0d5509c6bbbed1d52bb6b0ea5116267b4204a0525.jpg",
+        "5.2_实验二：机载嵌入式系统的焊接与调试_images/53c235e2580f7fd06b00cc5770a251ef90b62094fa8a9a6d7789babf16e7db2f.jpg",
+        "5.2_实验二：机载嵌入式系统的焊接与调试_images/fd06495ec18ac71e8c628d5c534d02718d337cd1dd49eeb0aef6c65b6873e2f4.jpg",
+        "5.2_实验二：机载嵌入式系统的焊接与调试_images/db18df5145b35dee3745fee014c00d9e1c71de02020df9f01b153f8c5183d6c9.jpg",
+        "5.2_实验二：机载嵌入式系统的焊接与调试_images/bb7afadb74b84127322fb52cabd75f159eedc34acd195bc0c27214113d96d1d2.jpg",
+        "5.2_实验二：机载嵌入式系统的焊接与调试_images/c4f7b1344f1c60e78f3470570f53fa6470c08be8871cf70a4344dd7675f5a863.jpg",
+        "5.2_实验二：机载嵌入式系统的焊接与调试_images/c89e2287d84147b4fcd98380b08b5eb4adbd0fa41ad1d60143f48fe04271b584.jpg",
+        "5.2_实验二：机载嵌入式系统的焊接与调试_images/7b40a3b8b16e00d13b428a002fea8bceba8446bdefcefdb451321c1429bfb772.jpg",
+        "5.2_实验二：机载嵌入式系统的焊接与调试_images/7323a80c3b609cfd8dec13c627bf445bd1b58606b77c6d9cc0c35f39682a1666.jpg",
+        "5.2_实验二：机载嵌入式系统的焊接与调试_images/c3ca70caf36ce6555068af28217b82b34a9bb8d4426840caee6dc470d6ab7b4c.jpg",
+        "5.2_实验二：机载嵌入式系统的焊接与调试_images/04ce38b2fe3da95949c904341bc255e28bd900d48214e837884c1d81327bb6f7.jpg",
+        "5.2_实验二：机载嵌入式系统的焊接与调试_images/cdf857c4fa78d0f7ed5b5e7fb267881f51ae11b8bea9c5a7ee391e94967eb0ea.jpg",
+        "5.2_实验二：机载嵌入式系统的焊接与调试_images/66c50666610a045a46318cc1c7b23d5f75749c60cdb28c0027e3ddaf6cda8922.jpg",
+        "5.2_实验二：机载嵌入式系统的焊接与调试_images/68d5ba734d7009496ab254709bb973511a558dfc14661f946cb0c6a8470ea611.jpg"
+      ],
+      "code_blocks": []
+    },
+    {
+      "path": "课件/6.1_实验一：图像数据标注与YOLO格式数据集构建.md",
+      "characters": 5162,
+      "headings": [
+        {
+          "level": 2,
+          "text": "第六章 机载嵌入式系统的目标识别功能设计"
+        },
+        {
+          "level": 2,
+          "text": "6.1 实验一：图像数据标注与YOLO格式数据集构建"
+        },
+        {
+          "level": 2,
+          "text": "6.1.1 实验目的"
+        },
+        {
+          "level": 2,
+          "text": "6.1.2 实验说明"
+        },
+        {
+          "level": 2,
+          "text": "6.1.3 实验步骤"
+        },
+        {
+          "level": 2,
+          "text": "步骤一：数据集的划分"
+        },
+        {
+          "level": 2,
+          "text": "步骤二：数据标注"
+        }
+      ],
+      "images": [
+        "6.1_实验一：图像数据标注与YOLO格式数据集构建_images/ea18c2fd7bcdcbd6998860056749ffffb0a42f1f80ae8d1330197f09c2feba8c.jpg",
+        "6.1_实验一：图像数据标注与YOLO格式数据集构建_images/db505833730e912377c175ff08737b5718c983072688e55e3ee0f1c32d3c2380.jpg",
+        "6.1_实验一：图像数据标注与YOLO格式数据集构建_images/a6bb69d0b0118723989630aff54700095ff8ba5ebc3228fa41e6ec0d4db841ad.jpg",
+        "6.1_实验一：图像数据标注与YOLO格式数据集构建_images/e6d16c7874a40779c863512eab9de43ff42ae878a71bf3fd739fd19f2bf73f90.jpg",
+        "6.1_实验一：图像数据标注与YOLO格式数据集构建_images/ff2c76965dc137d2715433afd42c54612e15a36850e78903bd64a63505bd33ec.jpg",
+        "6.1_实验一：图像数据标注与YOLO格式数据集构建_images/7e67578b7593291a1b16242bcebb6237f2e8803f4572a81711433f7d0d416e03.jpg",
+        "6.1_实验一：图像数据标注与YOLO格式数据集构建_images/aca7e488e22690be3b3f2ce5b6447383b00a9e3e33afb7143b877395bba2331d.jpg",
+        "6.1_实验一：图像数据标注与YOLO格式数据集构建_images/98c3e079399cbcdf86f1a6d957ba9acdb2e56a05718acfdf834d4f9be95125a3.jpg",
+        "6.1_实验一：图像数据标注与YOLO格式数据集构建_images/2e44fefb86c9faaec2634b94a8e0969f79d81323a28882fcbfcbab456c637722.jpg"
+      ],
+      "code_blocks": [
+        {
+          "language": "txt",
+          "characters": 160
+        },
+        {
+          "language": "txt",
+          "characters": 28
+        }
+      ]
+    },
+    {
+      "path": "课件/6.2_实验二：训练环境搭建与模型训练.md",
+      "characters": 36466,
+      "headings": [
+        {
+          "level": 2,
+          "text": "6.2 实验二：训练环境搭建与模型训练"
+        },
+        {
+          "level": 2,
+          "text": "6.2.1 实验目的"
+        },
+        {
+          "level": 2,
+          "text": "6.2.2 实验说明"
+        },
+        {
+          "level": 2,
+          "text": "6.2.3 实验步骤"
+        },
+        {
+          "level": 2,
+          "text": "步骤二：Miniconda 环境搭建"
+        },
+        {
+          "level": 1,
+          "text": "# To activate this environment, use"
+        },
+        {
+          "level": 1,
+          "text": "# $ conda activate yolov5"
+        },
+        {
+          "level": 1,
+          "text": "# To deactivate an active environment, use"
+        },
+        {
+          "level": 1,
+          "text": "# $ conda deactivate"
+        },
+        {
+          "level": 1,
+          "text": "# To activate this environment, use"
+        },
+        {
+          "level": 1,
+          "text": "# $ conda activate yolov5"
+        },
+        {
+          "level": 1,
+          "text": "# To deactivate an active environment, use"
+        },
+        {
+          "level": 1,
+          "text": "# $ conda deactivate"
+        },
+        {
+          "level": 2,
+          "text": "步骤三：配置PyPI镜像源"
+        },
+        {
+          "level": 1,
+          "text": "# To activate this environment, use"
+        },
+        {
+          "level": 1,
+          "text": "# $ conda activate yolov5"
+        },
+        {
+          "level": 1,
+          "text": "# To deactivate an active environment, use"
+        },
+        {
+          "level": 1,
+          "text": "# $ conda deactivate"
+        },
+        {
+          "level": 1,
+          "text": "CUDA 10.2"
+        },
+        {
+          "level": 1,
+          "text": "CUDA 11.1"
+        },
+        {
+          "level": 1,
+          "text": "CPU Only"
+        },
+        {
+          "level": 1,
+          "text": "ROCM5.x"
+        },
+        {
+          "level": 1,
+          "text": "# To activate this environment, use"
+        },
+        {
+          "level": 1,
+          "text": "#    $ conda activate yolov5"
+        },
+        {
+          "level": 1,
+          "text": "# To deactivate an active environment, use"
+        },
+        {
+          "level": 1,
+          "text": "#    $ conda deactivate"
+        },
+        {
+          "level": 2,
+          "text": "3.显卡16XX的安装问题"
+        },
+        {
+          "level": 2,
+          "text": "5.显卡30XX的安装问题"
+        },
+        {
+          "level": 1,
+          "text": "Classes"
+        },
+        {
+          "level": 1,
+          "text": "datasets"
+        },
+        {
+          "level": 1,
+          "text": "coco128 < downloads here (7 MB)"
+        },
+        {
+          "level": 1,
+          "text": "path: ./datasets # dataset root dir"
+        },
+        {
+          "level": 1,
+          "text": "Classes"
+        },
+        {
+          "level": 1,
+          "text": "Download script/URL (optional)"
+        },
+        {
+          "level": 1,
+          "text": "Logger arguments"
+        }
+      ],
+      "images": [
+        "6.2_实验二：训练环境搭建与模型训练_images/2e79b42c9c5f9f13f548613be76e48dbe26d57a9da8b1247139c2198e08dff27.jpg",
+        "6.2_实验二：训练环境搭建与模型训练_images/11475af78f0212a871c48cb276ff20d726a421785add694ca30b131b473d5576.jpg",
+        "6.2_实验二：训练环境搭建与模型训练_images/0fefe0c7eb4ae701629b3e186fe5bb3424c7afe48ea9bdf5cdf232cb287f5b42.jpg",
+        "6.2_实验二：训练环境搭建与模型训练_images/a3a739a1e92baf5315517c95716132010737f051659e8fbb0b9e543b4004840d.jpg",
+        "6.2_实验二：训练环境搭建与模型训练_images/c20bf7c41403a874ef4343f1bba3384aecb994c3c497332697732163e9ae49c4.jpg",
+        "6.2_实验二：训练环境搭建与模型训练_images/eaec4106c1d8e5f45db4c2bb1c1f5bdf4b58d6719b36370e1a22b4ac4f8d8fd8.jpg",
+        "6.2_实验二：训练环境搭建与模型训练_images/66f0e9a5f37a28eff1f89907accf85bee0b0812ae0fa2bc2c228e736b2de96a9.jpg",
+        "6.2_实验二：训练环境搭建与模型训练_images/759410866d193ca80d941c94d88442c80b4313b9570c88ec14b6ecd4cb8b3cc7.jpg",
+        "6.2_实验二：训练环境搭建与模型训练_images/5640f87f6b06b1a6d68bb5bb29f7a0b065d09fa13c5702763e8eb1fd66457caf.jpg",
+        "6.2_实验二：训练环境搭建与模型训练_images/ea95deb32ed25f0551cb9b88f8de6e35dc2ab064e0b56872377e2db328d9df25.jpg",
+        "6.2_实验二：训练环境搭建与模型训练_images/c9af863b994e5585479e235dfb2cb84788b7e739861658ab07068050c33d3903.jpg",
+        "6.2_实验二：训练环境搭建与模型训练_images/da794a502667a504d89fa8ecd52079e7806a8979b1023964ec7e57b3c63e32c1.jpg",
+        "6.2_实验二：训练环境搭建与模型训练_images/e94d4cc5eb8bf3cc57ca614ffcc7bace6f6e205b3b3e4f0348f05483025deb53.jpg",
+        "6.2_实验二：训练环境搭建与模型训练_images/3503bf7c954ccadfc1acc08864d355863f2b8d0a136dba827918c84d7bd88cec.jpg",
+        "6.2_实验二：训练环境搭建与模型训练_images/59c7cae211dd68b029553881b9c680a43c6c637e14a5c47b15104161c6752b85.jpg",
+        "6.2_实验二：训练环境搭建与模型训练_images/fc08449cdf00320af2ee3091b2730bc712ef4cfda805be7af25dd652bfc1b9e1.jpg",
+        "6.2_实验二：训练环境搭建与模型训练_images/cd8480907781bffc4c55d9dc406b7e599dce6e2339d2ae8dd5d28dacad0694cf.jpg",
+        "6.2_实验二：训练环境搭建与模型训练_images/abc2ea292114a89da3a95e8e8b2c65a7aad462f867236a6d6fcd955cb79ee43d.jpg",
+        "6.2_实验二：训练环境搭建与模型训练_images/293be4c1cc918067ac7102260f2995f6755da3e0afa415faaae6760b50e58805.jpg",
+        "6.2_实验二：训练环境搭建与模型训练_images/92d835136478872c0c345cca71e53e25f388982fbc95ca718970dbbc3c829ace.jpg",
+        "6.2_实验二：训练环境搭建与模型训练_images/cc1ea6fda1a40e3c2f9a681b174751c0fb14bb43bc506b8d4b548ef8063a3911.jpg",
+        "6.2_实验二：训练环境搭建与模型训练_images/b91164174147b8e195d9118f3cb082039028aeb35684ffd66a108adfdd6fc9d8.jpg",
+        "6.2_实验二：训练环境搭建与模型训练_images/8464b3a76f66512ed960145cf7649b780f2dcb8c8ccc2943ca891643200a88ef.jpg",
+        "6.2_实验二：训练环境搭建与模型训练_images/4ae64837f84be82d48dde54f7ca05d423fc969799f1f9fd6f28042db7ccdb4c9.jpg",
+        "6.2_实验二：训练环境搭建与模型训练_images/eb9a9a49816d39a5e65d9088215dd6d2f779a2e4c1868dd2e09e12a19f3a885a.jpg",
+        "6.2_实验二：训练环境搭建与模型训练_images/c388e1c01c4d420ea08f4a78b0366f71d36ae3de2ca8f6d6a0262db0ed96f9ed.jpg",
+        "6.2_实验二：训练环境搭建与模型训练_images/3c9367f1f69124e9170e122b20166aab650c0618a7d5558d2858e77760987bf5.jpg",
+        "6.2_实验二：训练环境搭建与模型训练_images/add77f559046f68b728200c80eaeb0f1840b5859f514e806f31457c936cb32bf.jpg"
+      ],
+      "code_blocks": [
+        {
+          "language": "batch",
+          "characters": 55
+        },
+        {
+          "language": "batch",
+          "characters": 82
+        },
+        {
+          "language": "txt",
+          "characters": 85
+        },
+        {
+          "language": "txt",
+          "characters": 227
+        }
+      ]
+    },
+    {
+      "path": "课件/6.3_实验三：模型格式转换与嵌入式部署.md",
+      "characters": 10921,
+      "headings": [
+        {
+          "level": 2,
+          "text": "6.3 实验三：模型格式转换与嵌入式部署"
+        },
+        {
+          "level": 2,
+          "text": "6.3.1 实验目的"
+        },
+        {
+          "level": 2,
+          "text": "6.3.2 实验说明"
+        },
+        {
+          "level": 2,
+          "text": "6.3.3 实验步骤"
+        },
+        {
+          "level": 2,
+          "text": "步骤三：将模型部署在RK3566"
+        }
+      ],
+      "images": [
+        "6.3_实验三：模型格式转换与嵌入式部署_images/d357945378fb10efefc7eba4cba38c08945ab5c59aadfa816bd5049b36478542.jpg",
+        "6.3_实验三：模型格式转换与嵌入式部署_images/f94745c9c092adb885d2e505c501764935ea8124c0a6b41c88a90a80b66cac2e.jpg",
+        "6.3_实验三：模型格式转换与嵌入式部署_images/cfc63112bf23709e6c3aa4ad8afe97d7185986d323ffd62c82d411f726ba79bb.jpg",
+        "6.3_实验三：模型格式转换与嵌入式部署_images/a01da615f20ca9bf9c98c5fab8f7a8a53f6aba252a0a0972bc8e605e6e1dd5f1.jpg",
+        "6.3_实验三：模型格式转换与嵌入式部署_images/90b47113ca8ceafe470b125783138820d4685f05b816498cc781ba1b4eb5acc7.jpg",
+        "6.3_实验三：模型格式转换与嵌入式部署_images/13b0af7922a15b23c8aefdf48b63d95c9bf9083b53468777db5ab4715b59e64d.jpg",
+        "6.3_实验三：模型格式转换与嵌入式部署_images/43fafa7b0bb47e032b0344fa5e0089423959f8b30fd19cdd006bf6a54de276e1.jpg",
+        "6.3_实验三：模型格式转换与嵌入式部署_images/3e90381790c594e56c96dfa9f28fb1e759941bd2f0183b216d92668dc1d6fed7.jpg",
+        "6.3_实验三：模型格式转换与嵌入式部署_images/c811fbf1e4117b40d75c335b75e89587d1a87dbdbc9bb8d76396bc94b42cc8de.jpg",
+        "6.3_实验三：模型格式转换与嵌入式部署_images/6cc0dad6881ba5654b72200222f4209f43c428847a344ff421e6886acb50104e.jpg",
+        "6.3_实验三：模型格式转换与嵌入式部署_images/c68b8520810f82db96aee85865154baa5165a4825f785fe8eb1d36a1e906434f.jpg",
+        "6.3_实验三：模型格式转换与嵌入式部署_images/d28ab116ba8d128e236d66b91d3f1b1f070d64f79fe0ca3c8048722ac589cc1d.jpg"
+      ],
+      "code_blocks": [
+        {
+          "language": "mermaid",
+          "characters": 119
+        }
+      ]
+    },
+    {
+      "path": "课件/7.1_实验一：启动MAVROS服务连接测试.md",
+      "characters": 19597,
+      "headings": [
+        {
+          "level": 2,
+          "text": "第七章 机载嵌入式系统的飞行应用（侦察打击）"
+        },
+        {
+          "level": 2,
+          "text": "7.1 实验一：启动 MAVROS服务连接测试"
+        },
+        {
+          "level": 2,
+          "text": "7.1.1 实验目的"
+        },
+        {
+          "level": 2,
+          "text": "7.1.2 实验说明"
+        },
+        {
+          "level": 2,
+          "text": "7.1.3 实验步骤"
+        },
+        {
+          "level": 2,
+          "text": "步骤二：创建工作空间"
+        },
+        {
+          "level": 2,
+          "text": "步骤三：编译工作空间"
+        },
+        {
+          "level": 1,
+          "text": "colored GCC warnings and errors"
+        },
+        {
+          "level": 1,
+          "text": "some more ls aliases"
+        },
+        {
+          "level": 1,
+          "text": "Add an \"alert\" alias for long running commands. Use like so:"
+        },
+        {
+          "level": 1,
+          "text": "sleep 10; alert"
+        },
+        {
+          "level": 1,
+          "text": "Alias definitions."
+        },
+        {
+          "level": 1,
+          "text": "You may want to put all your additions into a separate file like"
+        },
+        {
+          "level": 1,
+          "text": "~/.bash_aliases, instead of adding them here directly."
+        },
+        {
+          "level": 1,
+          "text": "enable programmable completion features (you don't need to enable"
+        },
+        {
+          "level": 1,
+          "text": "this, if it's already enabled in /etc/bash.bashrc and /etc/profile"
+        },
+        {
+          "level": 1,
+          "text": "sources /etc/bash.bashrc)."
+        },
+        {
+          "level": 2,
+          "text": "步骤五：安装并运行MAVROS"
+        },
+        {
+          "level": 3,
+          "text": "### Running command: \"make -j8 -l8\" in \"/home/jing/catkin_ws/build\""
+        },
+        {
+          "level": 3,
+          "text": "jing@zmy:~/catkin_ws$ echo \"source ~/catkin_ws/devel/setup.bash\" >> ~/.bashrc"
+        }
+      ],
+      "images": [
+        "7.1_实验一：启动MAVROS服务连接测试_images/0e22cc8a7d3b5c9cd53d6661fbaee44d8448849de07af063867bf5ba84f6a74a.jpg",
+        "7.1_实验一：启动MAVROS服务连接测试_images/a566205b0e99ab06fa0e61f591a556bed8f6115b09ba117603b4d818c1688e0a.jpg",
+        "7.1_实验一：启动MAVROS服务连接测试_images/13b513de7b9e3bcdc18cb7e19178b8baae1986093ef21f7a52f7197a695b034e.jpg",
+        "7.1_实验一：启动MAVROS服务连接测试_images/d2dae5bdc222bf00309858668bea92b279ca58dd15d2a79ffc9e09844c2f2eef.jpg",
+        "7.1_实验一：启动MAVROS服务连接测试_images/aaae60b4c22a378ec1eaa400f6cb78a9488017aad84fad9bf030d17d9144bc91.jpg",
+        "7.1_实验一：启动MAVROS服务连接测试_images/6da2eaefb0c568eda6c2b1c94e195ad52bc788dd4047dfccfa5effba5ea765b2.jpg",
+        "7.1_实验一：启动MAVROS服务连接测试_images/2e9b1180c534df1cbd74611a1422d837bdff307d37dc2de0136e394fed09249b.jpg",
+        "7.1_实验一：启动MAVROS服务连接测试_images/78f3792d97c083221adc7380661adcdada7352694b85f07aa201df0b205fef80.jpg",
+        "7.1_实验一：启动MAVROS服务连接测试_images/9be626661b00386b985c22c3993557d3c027a528c7ca94ad38713ead59739420.jpg",
+        "7.1_实验一：启动MAVROS服务连接测试_images/f6203992c836ef76c23f68c1ef37b67c69536ad7bb6e618bea016feb3e041054.jpg",
+        "7.1_实验一：启动MAVROS服务连接测试_images/817b85c5b75e86616463ff3f0b7ab6bab48ad9062c41b5cc7fd430632bf19410.jpg",
+        "7.1_实验一：启动MAVROS服务连接测试_images/5e8cc0226f64d6e369d8a6ccbb8578d69ec0183c402907fdd49602058daf2c34.jpg"
+      ],
+      "code_blocks": [
+        {
+          "language": "cpp",
+          "characters": 222
+        },
+        {
+          "language": "cpp",
+          "characters": 239
+        }
+      ]
+    },
+    {
+      "path": "课件/7.2_实验二：航线推送与航点解析文件.md",
+      "characters": 12377,
+      "headings": [
+        {
+          "level": 2,
+          "text": "7.2 实验二：航线推送与航点解析文件"
+        },
+        {
+          "level": 2,
+          "text": "7.2.1 实验目的"
+        },
+        {
+          "level": 2,
+          "text": "7.2.2 实验说明"
+        },
+        {
+          "level": 2,
+          "text": "7.2.3 实验步骤"
+        },
+        {
+          "level": 2,
+          "text": "Compile as C++11, supported in ROS Kinetic and newer"
+        },
+        {
+          "level": 1,
+          "text": "add_compile_options(-std=c++11)"
+        },
+        {
+          "level": 2,
+          "text": "Find catkin macros and libraries"
+        },
+        {
+          "level": 2,
+          "text": "if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)"
+        },
+        {
+          "level": 2,
+          "text": "is used, also find other catkin packages"
+        },
+        {
+          "level": 2,
+          "text": "System dependencies are found with CMake's conventions"
+        },
+        {
+          "level": 1,
+          "text": "find_package(Boost REQUIRED COMPONENTS system)"
+        },
+        {
+          "level": 2,
+          "text": "步骤三：解析航点文件并上传服务推送航点"
+        },
+        {
+          "level": 1,
+          "text": "FILES_MATCHING PATTERN \"*.h\""
+        },
+        {
+          "level": 1,
+          "text": "PATTERN \".svn\" EXCLUDE"
+        },
+        {
+          "level": 1,
+          "text": ")"
+        },
+        {
+          "level": 2,
+          "text": "Mark other files for installation (e.g. launch and bag files, etc.)"
+        },
+        {
+          "level": 1,
+          "text": "install(FILES"
+        },
+        {
+          "level": 1,
+          "text": "# myfile1"
+        },
+        {
+          "level": 1,
+          "text": "# myfile2"
+        },
+        {
+          "level": 1,
+          "text": "DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}"
+        },
+        {
+          "level": 1,
+          "text": ")"
+        },
+        {
+          "level": 2,
+          "text": "Testing ###"
+        },
+        {
+          "level": 2,
+          "text": "Add gtest based cpp test target and link libraries"
+        },
+        {
+          "level": 1,
+          "text": "catkin_add_gtest(${PROJECT_NAME}-test test/test_kadli.cpp)"
+        },
+        {
+          "level": 1,
+          "text": "if(TARGET ${PROJECT_NAME}-test)"
+        },
+        {
+          "level": 1,
+          "text": "target_link_libraries Angola{$PROJECT_NAME}-test ${PROJECT_NAME})"
+        },
+        {
+          "level": 1,
+          "text": "endif()"
+        },
+        {
+          "level": 2,
+          "text": "Add folders to be run by python nosetests"
+        },
+        {
+          "level": 1,
+          "text": "catkin_add_nosetests(test)"
+        }
+      ],
+      "images": [
+        "7.2_实验二：航线推送与航点解析文件_images/669fc696b3cd5bda30a0cb8d76fab39376feda1925cda285c378a0c6a63d833b.jpg",
+        "7.2_实验二：航线推送与航点解析文件_images/c7e26b29111fba2ac5ba3f5df107b9b1f48055a5b4ccbc1a1c2c8d56bd05e314.jpg",
+        "7.2_实验二：航线推送与航点解析文件_images/9eea465e19894f38121dbfa750544e33572e872ee13ed999d24be0162b5ba86f.jpg",
+        "7.2_实验二：航线推送与航点解析文件_images/19ad5631f043b39184d0c498614c0b0e5928f6f60872343acdea5cca8d7b0798.jpg",
+        "7.2_实验二：航线推送与航点解析文件_images/6b7fc9dcdcff99c307761114e7e401a04a7c188acf2662fcf1976a6301d2956d.jpg"
+      ],
+      "code_blocks": [
+        {
+          "language": "cpp",
+          "characters": 196
+        },
+        {
+          "language": "cpp",
+          "characters": 1360
+        },
+        {
+          "language": "cpp",
+          "characters": 515
+        }
+      ]
+    },
+    {
+      "path": "课件/7.3_实验三：语音识别控制系统与自动航线推送.md",
+      "characters": 7711,
+      "headings": [
+        {
+          "level": 2,
+          "text": "7.3 实验三：语音识别控制系统与自动航线推送"
+        },
+        {
+          "level": 2,
+          "text": "7.3.1 实验目的"
+        },
+        {
+          "level": 2,
+          "text": "7.3.2 实验说明"
+        },
+        {
+          "level": 2,
+          "text": "7.3.3 实验步骤"
+        },
+        {
+          "level": 2,
+          "text": "步骤二：测试麦克风语音识别效果"
+        },
+        {
+          "level": 2,
+          "text": "功。如图7.21所示："
+        }
+      ],
+      "images": [
+        "7.3_实验三：语音识别控制系统与自动航线推送_images/d7e96fb1ee33050dd4b8a26d470b1c164f65c5d3b9ade8415dec31157db563bc.jpg",
+        "7.3_实验三：语音识别控制系统与自动航线推送_images/e8a232e92b47842bd03b7eedeaaf59858ad018a94da5f9340e9ad565bb66d171.jpg"
+      ],
+      "code_blocks": [
+        {
+          "language": "cpp",
+          "characters": 686
+        },
+        {
+          "language": "cpp",
+          "characters": 934
+        },
+        {
+          "language": "cpp",
+          "characters": 1538
+        },
+        {
+          "language": "cpp",
+          "characters": 829
+        }
+      ]
+    },
+    {
+      "path": "课件/7.4_实验四：目标识别与地理坐标定位计算.md",
+      "characters": 12862,
+      "headings": [
+        {
+          "level": 2,
+          "text": "7.4 实验四：目标识别与地理坐标定位计算"
+        },
+        {
+          "level": 2,
+          "text": "7.4.1 实验目的"
+        },
+        {
+          "level": 2,
+          "text": "7.4.2 实验说明"
+        },
+        {
+          "level": 2,
+          "text": "7.4.3 实验步骤"
+        },
+        {
+          "level": 2,
+          "text": "步骤二：测试模型"
+        },
+        {
+          "level": 2,
+          "text": "步骤三：编写坐标系转换函数并计算目标地理坐标"
+        },
+        {
+          "level": 2,
+          "text": "(1) 无人机姿态相关话题:"
+        },
+        {
+          "level": 2,
+          "text": "(2) 像素坐标相关话题:"
+        }
+      ],
+      "images": [
+        "7.4_实验四：目标识别与地理坐标定位计算_images/da7e14d83323e2c1a34540d0b140e1448281069728c3a238c2c0980b384f91c9.jpg",
+        "7.4_实验四：目标识别与地理坐标定位计算_images/8f6114a4e95cd7ae45181ae7b7bde2dcc5c78d8538cd5d7d4c02a089f1536fa3.jpg",
+        "7.4_实验四：目标识别与地理坐标定位计算_images/f89923b5f75a6c9c905057773c53920f919b740c68eb39e44a72f600b0909754.jpg",
+        "7.4_实验四：目标识别与地理坐标定位计算_images/b78c12948b25aaecfb89cdb29608686983808a699a9eaffc92903e0e13c9b011.jpg",
+        "7.4_实验四：目标识别与地理坐标定位计算_images/9c16a732fddc60aac236b9f333ec8e2ea8cb5086a9a04bb1207ed9965c527f29.jpg"
+      ],
+      "code_blocks": [
+        {
+          "language": "cpp",
+          "characters": 265
+        },
+        {
+          "language": "cpp",
+          "characters": 558
+        },
+        {
+          "language": "cpp",
+          "characters": 350
+        },
+        {
+          "language": "txt",
+          "characters": 473
+        },
+        {
+          "language": "cpp",
+          "characters": 540
+        },
+        {
+          "language": "cpp",
+          "characters": 2091
+        },
+        {
+          "language": "txt",
+          "characters": 1407
+        }
+      ]
+    },
+    {
+      "path": "课件/7.5_实验五：航点修改与路径再规划.md",
+      "characters": 5093,
+      "headings": [
+        {
+          "level": 2,
+          "text": "7.5 实验五：航点修改与路径再规划"
+        },
+        {
+          "level": 2,
+          "text": "7.5.1 实验目的"
+        },
+        {
+          "level": 2,
+          "text": "7.5.2 实验说明"
+        },
+        {
+          "level": 2,
+          "text": "7.5.3 实验步骤"
+        },
+        {
+          "level": 2,
+          "text": "步骤二：修改航点经纬度坐标数据"
+        },
+        {
+          "level": 2,
+          "text": "// 定义一个结构体来表示点"
+        },
+        {
+          "level": 2,
+          "text": "步骤三：推送修改后的航点列表数据并设置当前航点"
+        }
+      ],
+      "images": [],
+      "code_blocks": [
+        {
+          "language": "cpp",
+          "characters": 340
+        },
+        {
+          "language": "cpp",
+          "characters": 1187
+        },
+        {
+          "language": "c",
+          "characters": 337
+        },
+        {
+          "language": "txt",
+          "characters": 189
+        },
+        {
+          "language": "txt",
+          "characters": 1334
+        }
+      ]
+    },
+    {
+      "path": "课件/7.6_实验六：自动投弹系统设计与实现.md",
+      "characters": 4737,
+      "headings": [
+        {
+          "level": 2,
+          "text": "7.6 实验六：自动投弹系统设计与实现"
+        },
+        {
+          "level": 2,
+          "text": "7.6.1 实验目的"
+        },
+        {
+          "level": 2,
+          "text": "7.6.2 实验说明"
+        },
+        {
+          "level": 2,
+          "text": "7.6.3 实验步骤"
+        },
+        {
+          "level": 2,
+          "text": "步骤二：编写 fire() 函数"
+        }
+      ],
+      "images": [
+        "7.6_实验六：自动投弹系统设计与实现_images/c41e895f28549bf8e3482540570573cb11ef4ce9f3766c61fdffaf78066f4181.jpg"
+      ],
+      "code_blocks": [
+        {
+          "language": "cpp",
+          "characters": 486
+        },
+        {
+          "language": "cpp",
+          "characters": 45
+        },
+        {
+          "language": "\" + \" echo 1 > \" + pwm_enable_path + \"\\\"\").c_str()) != 0) {",
+          "characters": 303
+        },
+        {
+          "language": "\" + \" echo \" + std::to_string(duty_cycle) + \" > \" + pwm_duty_path + \"\\\"\").c_str()) != 0) {",
+          "characters": 100
+        },
+        {
+          "language": "c",
+          "characters": 300
+        },
+        {
+          "language": "cpp",
+          "characters": 1237
+        }
+      ]
+    },
+    {
+      "path": "课件/8.1_实验一：4G配置与链路测试.md",
+      "characters": 11731,
+      "headings": [
+        {
+          "level": 2,
+          "text": "第八章 跨公网通信设计"
+        },
+        {
+          "level": 2,
+          "text": "8.1 实验一：4G配置与链路测试"
+        },
+        {
+          "level": 2,
+          "text": "8.1.1 实验目的"
+        },
+        {
+          "level": 2,
+          "text": "8.1.2 实验说明"
+        },
+        {
+          "level": 2,
+          "text": "8.1.3 实验步骤"
+        },
+        {
+          "level": 1,
+          "text": "虚拟机"
+        },
+        {
+          "level": 1,
+          "text": "泰山派"
+        },
+        {
+          "level": 1,
+          "text": "Alias definitions."
+        },
+        {
+          "level": 1,
+          "text": "You may want to put all your additions into a separate file like"
+        },
+        {
+          "level": 1,
+          "text": "~/.bash_aliases, instead of adding them here directly."
+        },
+        {
+          "level": 1,
+          "text": "See /usr/share/doc/bash-doc/examples in the bash-doc package."
+        },
+        {
+          "level": 1,
+          "text": "enable programmable completion features (you don't need to enable"
+        },
+        {
+          "level": 1,
+          "text": "this, if it's already enabled in /etc/bash.bashrc and /etc/profile"
+        },
+        {
+          "level": 1,
+          "text": "sources /etc/bash.bashrc)."
+        },
+        {
+          "level": 1,
+          "text": "See /usr/share/doc/bash-doc/examples in the bash-doc package."
+        },
+        {
+          "level": 1,
+          "text": "enable programmable completion features (you don't need to enable"
+        },
+        {
+          "level": 1,
+          "text": "this, if it's already enabled in /etc/bash.bashrc and /etc/profile"
+        },
+        {
+          "level": 1,
+          "text": "sources /etc/bash.bashrc)."
+        },
+        {
+          "level": 2,
+          "text": "步骤三：虚拟机远程连接泰山派"
+        }
+      ],
+      "images": [
+        "8.1_实验一：4G配置与链路测试_images/37fd4d873ec77d41305725222ba19143bc01dfd0eb07c076de51ffb4229380eb.jpg",
+        "8.1_实验一：4G配置与链路测试_images/45406e4f40113ded12a00669f9dee0a0c49963aee924f5f2be61c015e766297f.jpg",
+        "8.1_实验一：4G配置与链路测试_images/667e4fd9e5707fe27e52edf0d00275c3beea87501c93f84d7c755bd3bdd1c6a6.jpg",
+        "8.1_实验一：4G配置与链路测试_images/02bad43c3d6219836a609cff1b7a9092286a87be6a3272f69ce0ce652af9b58d.jpg",
+        "8.1_实验一：4G配置与链路测试_images/3075682298e44bccefc94db4604a0b3df33afb28cb61e691d4de13137e0af8cb.jpg",
+        "8.1_实验一：4G配置与链路测试_images/eca21997af30ff5e98725860e2af1242f243c139fe30e23a3e31bef371792860.jpg",
+        "8.1_实验一：4G配置与链路测试_images/ea7c7dba93c8fb10cf24c4d7e71c09f9f2c9f976cc4f00e150ddd363796abd9b.jpg",
+        "8.1_实验一：4G配置与链路测试_images/1253433a3edb45b1a20396130f04be6a9d8c9b4e086dda2f86b99d0eac1f8cc6.jpg",
+        "8.1_实验一：4G配置与链路测试_images/f66de71cc13fb9a5ae4afaf896a123dc2593db74280cfe4789137cfa43eccfab.jpg"
+      ],
+      "code_blocks": [
+        {
+          "language": "mermaid",
+          "characters": 63
+        }
+      ]
+    },
+    {
+      "path": "课件/8.2_实验二：4G图传功能验证.md",
+      "characters": 5917,
+      "headings": [
+        {
+          "level": 2,
+          "text": "8.2 实验二：4G图传功能验证"
+        },
+        {
+          "level": 2,
+          "text": "8.2.1 实验目的"
+        },
+        {
+          "level": 2,
+          "text": "8.2.2 实验说明"
+        },
+        {
+          "level": 2,
+          "text": "8.2.3 实验步骤"
+        },
+        {
+          "level": 2,
+          "text": "步骤一：启动泰山派端摄像头与图像处理节点"
+        }
+      ],
+      "images": [
+        "8.2_实验二：4G图传功能验证_images/58d01c5969051a2dcccfa20339d6329aec09e285079fef663095beab4224cf48.jpg",
+        "8.2_实验二：4G图传功能验证_images/425bfdfba6b34730be077fa5c75e4f7d5775b36b45903c4de87b85235f3cfcaa.jpg",
+        "8.2_实验二：4G图传功能验证_images/df23a3cef58524263a7158ef508f4d0355bba61af49e1a6f733b945e79ed8bb5.jpg"
+      ],
+      "code_blocks": []
+    }
+  ]
+}
