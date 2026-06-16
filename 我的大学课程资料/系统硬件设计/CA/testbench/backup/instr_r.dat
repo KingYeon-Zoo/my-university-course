@@ -1,0 +1,41 @@
+// R-Type instruction test file
+// Initialize base values
+ADDI x1, x0, 10
+ADDI x2, x0, 20
+ADDI x3, x0, 5
+ADDI x4, x0, -15
+ADDI x5, x0, 100
+ADDI x6, x0, 3
+ADDI x7, x0, 255
+ADDI x8, x0, -8
+
+// Basic Operation
+ADD x9, x1, x2
+ADD x10, x3, x4
+ADD x11, x5, x6
+SUB x12, x2, x1
+SUB x13, x5, x3
+SUB x14, x1, x4
+
+// Logic Operation
+AND x15, x7, x5
+AND x16, x1, x2
+AND x17, x3, x6
+OR x18, x1, x3
+OR x19, x4, x5
+OR x20, x6, x7
+XOR x21, x1, x2
+XOR x22, x5, x7
+XOR x23, x3, x4
+
+// Shift Operation
+SLL x24, x1, x6
+SLL x25, x5, x3
+SRL x26, x7, x3
+SRL x27, x5, x1
+SRA x28, x4, x3
+SRA x29, x8, x1
+
+// Compare Operation
+SLT x30, x1, x4
+SLTU x31, x1, x4

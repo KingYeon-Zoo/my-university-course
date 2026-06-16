@@ -27,6 +27,17 @@
 **/Debug/
 **/Release/
 
+# FPGA / Vivado 生成产物
+**/*.cache/
+**/*.sim/
+**/*.hw/
+**/*.ip_user_files/
+**/.Xil/
+**/xsim.dir/
+**/*.jou
+**/*.str
+**/*.wdb
+
 # 嵌套仓库的本地 Git 元数据备份
 **/.git.local-backup/
 

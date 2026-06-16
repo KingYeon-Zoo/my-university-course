@@ -1,0 +1,28 @@
+ADDI x1, x0, 22
+ADDI x2, x0, 90
+ADDI x3, x0, 12
+ADDI x4, x0, 29
+ADDI x5, x0, 23
+MUL x6, x1, x2
+MUL x7, x3, x4
+MUL x8, x5, x1
+MULH x9, x1, x2
+MULHU x10, x1, x2
+MULHSU x11, x3, x2
+DIV x12, x2, x1
+DIV x13, x4, x3
+DIVU x14, x2, x5
+DIV x15, x3, x4
+REM x16, x2, x1
+REM x17, x4, x3
+REMU x18, x2, x5
+REM x19, x1, x4
+MUL x20, x1, x2
+DIV x21, x20, x3
+REM x22, x20, x3
+DIV x23, x2, x0
+REM x24, x2, x0
+LUI x30, 0xDEADE
+ADDI x30, x30, -272
+JAL x0, 0
+

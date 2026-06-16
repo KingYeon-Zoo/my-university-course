@@ -1,0 +1,41 @@
+// Branch Prediction Test - Simple Loop Pattern
+// This test demonstrates branch prediction learning
+
+// Initialize counter
+ADDI x1, x0, 8        // Loop counter = 8
+ADDI x2, x0, 0        // Sum accumulator = 0
+
+// Simple Loop (Predictable Pattern) - starts at address 8
+ADD x2, x2, x1        // sum += counter
+ADDI x1, x1, -1       // counter--
+BNE x1, x0, -8        // if counter != 0, branch back 8 bytes (to ADD instruction)
+
+// First loop will show branch prediction learning
+// BHT should adapt: 00 -> 01 -> 10 -> 11 (strongly taken)
+// BTB should learn target address
+
+ADDI x3, x0, 5        // New counter = 5  
+ADDI x4, x0, 100      // New base value
+
+// Second Loop (Same pattern, should predict well) - starts at address 24
+ADD x4, x4, x3        // accumulate
+ADDI x3, x3, -1       // decrement
+BNE x3, x0, -8        // branch back 8 bytes (to ADD instruction)
+
+// This loop should have better prediction accuracy
+// BHT should quickly predict taken
+// BTB should have correct target
+
+// Conditional branches with different patterns
+ADDI x5, x0, 1        // Test value
+ADDI x6, x0, 2        // Compare value
+
+// Alternating pattern test
+BEQ x5, x6, 8         // Not taken (first time)
+ADDI x7, x0, 10       // Executed
+BNE x5, x6, 8         // Taken (should be predicted)
+ADDI x8, x0, 20       // Skipped
+ADDI x9, x0, 30       // Target of branch
+
+// Final verification
+ADDI x10, x0, 999     // Completion marker

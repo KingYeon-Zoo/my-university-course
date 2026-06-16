@@ -1,0 +1,17 @@
+// U-Type and J-Type instruction test file
+// Test LUI, AUIPC, and JAL instructions
+
+// Test LUI - Load Upper Immediate
+LUI x1, 0x12345
+
+// Test AUIPC - Add Upper Immediate to PC  
+AUIPC x2, 0x1000
+
+// Test JAL - Jump and Link
+JAL x3, 20
+
+// This instruction will be skipped by JAL
+ADDI x4, x0, 999
+
+// JAL will jump here
+ADDI x5, x0, 100

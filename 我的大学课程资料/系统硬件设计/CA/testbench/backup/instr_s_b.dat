@@ -1,0 +1,45 @@
+// S-Type and B-Type instruction test file
+// Initialize base values for testing
+ADDI x1, x0, 10
+ADDI x2, x0, 20
+ADDI x3, x0, 10
+ADDI x4, x0, 5
+ADDI x5, x0, 100
+ADDI x6, x0, -15
+
+// S-Type Store operations
+SW x1, 0(x0)
+SW x2, 4(x0)
+SW x5, 8(x0)
+SH x1, 12(x0)
+SH x2, 14(x0)
+SB x4, 16(x0)
+SB x6, 17(x0)
+
+// B-Type Branch operations
+BEQ x1, x3, 16
+ADDI x7, x0, 1
+ADDI x8, x0, 2
+BNE x1, x1, 16
+ADDI x9, x0, 3
+ADDI x10, x0, 4
+BLT x4, x1, 8
+ADDI x11, x0, 5
+ADDI x12, x0, 6
+BGE x2, x1, 8
+ADDI x13, x0, 7
+ADDI x14, x0, 8
+BLTU x4, x1, 8
+ADDI x15, x0, 9
+ADDI x16, x0, 10
+BGEU x2, x1, 8
+ADDI x17, x0, 11
+ADDI x18, x0, 12
+
+// Additional stores after branches
+SW x7, 20(x0)
+SH x15, 24(x0)
+SB x17, 28(x0)
+LW x19, 0(x0)
+LW x20, 4(x0)
+ADDI x21, x20, 4

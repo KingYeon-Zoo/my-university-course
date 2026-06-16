@@ -1,0 +1,45 @@
+// I-Type instruction test file
+// Initialize base values
+ADDI x1, x0, 10
+ADDI x2, x0, 20
+ADDI x3, x0, -15
+ADDI x4, x0, 100
+ADDI x5, x0, 255
+
+// Immediate arithmetic operations
+ADDI x6, x1, 5
+ADDI x7, x2, -10
+ADDI x8, x3, 25
+ADDI x9, x0, 2047
+ADDI x10, x0, -2048
+
+// Set less than immediate
+SLTI x11, x1, 15
+SLTI x12, x3, 0
+SLTIU x13, x1, 15
+SLTIU x14, x3, 10
+
+// Logical operations with immediate
+ANDI x15, x5, 15
+ANDI x16, x4, 255
+ORI x17, x1, 240
+ORI x18, x3, 15
+XORI x19, x5, 170
+XORI x20, x1, 255
+
+// Shift operations with immediate
+SLLI x21, x1, 2
+SLLI x22, x4, 3
+SRLI x23, x5, 2
+SRLI x24, x4, 4
+SRAI x25, x3, 2
+SRAI x26, x1, 1
+
+// Load operations
+LW x27, 0(x0)
+LH x28, 4(x0)
+LHU x29, 4(x0)
+LBU x30, 8(x0)
+
+// Jump and link register x31 = PC + 4 , Now address = x1 + 4
+JALR x31, x1, 2

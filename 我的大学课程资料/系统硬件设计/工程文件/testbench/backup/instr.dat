@@ -1,0 +1,59 @@
+ADDI x1, x0, 15
+ADDI x2, x0, 10 
+ADDI x3, x0, -5 
+ADD x4, x1, x2 
+SUB x5, x1, x2 
+ADD x6, x1, x3 
+SUB x7, x0, x3 
+ADDI x8, x0, 100 
+ADDI x9, x0, 2044
+AND x10, x8, x9 
+OR x11, x8, x9 
+XOR x12, x8, x9 
+ADDI x13, x1, 300
+SLTI x14, x1, 20
+SLTIU x15, x3, 10 
+ANDI x16, x8, 30 
+ORI x17, x8, 20 
+XORI x18, x8, 444
+ADDI x19, x0, 222 
+SLLI x20, x19, 4 
+SRLI x21, x20, 2 
+ADDI x22, x0, -8 
+SRAI x23, x22, 1 
+SLT x24, x1, x2
+SLT x25, x3, x1 
+SLTU x26, x3, x1 
+ADDI x27, x0, 0 
+SH x20, 0(x27) 
+SB x9, 4(x27) 
+SW x9, 8(x27) 
+SW x22, 12(x27) 
+LW x28, 0(x27)
+LBU x29, 12(x27)
+LHU x30, 12(x27) 
+ADD x31, x30, x28
+ADDI x4, x0, 0
+BEQ x5, x7, 24
+ADDI x1, x0, 0
+ADDI x2, x0, 0
+ADDI x3, x0, 0
+ADDI x4, x0, 0
+ADDI x5, x1, 4
+ADDI x6, x1, 4
+ADDI x7, x1, 4
+JAL x8, 24
+ADDI x1, x0, 0
+ADDI x2, x0, 0
+ADDI x3, x0, 0
+ADDI x4, x0, 0
+ADDI x9, x1, 4
+ADDI x10, x1, 4
+ADDI x11, x1, 4
+ADDI x12, x1, 4
+ADDI x13, x1, 4
+ADDI x14, x1, 4
+ADDI x15, x1, 4
+
+
+

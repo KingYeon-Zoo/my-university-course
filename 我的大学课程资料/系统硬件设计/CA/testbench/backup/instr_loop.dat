@@ -1,0 +1,21 @@
+// Branch Prediction Test - Simple Loop Pattern
+// This test demonstrates branch prediction learning
+
+// Initialize counter
+ADDI x1, x0, 10        // Loop counter = 8
+ADDI x2, x0, 0        // Sum accumulator = 0
+
+// Simple Loop (Predictable Pattern) - starts at address 8
+ADD x2, x2, x1        // sum += counter
+ADDI x1, x1, -1       // counter--
+BNE x1, x0, -8        // if counter != 0, branch back 8 bytes (to ADD instruction)
+
+ADDI x3, x0, 3
+ADDI x4, x0, 4
+LW x5, 0(x0)
+ADDI x6, x5, 5
+ADDI x7, x6, 6
+SW x7, 0(x0)
+ADDI x8, x7, 0
+
+

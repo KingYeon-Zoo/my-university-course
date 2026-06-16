@@ -1,0 +1,36 @@
+// CSR instruction test file
+// Initialize some values first
+ADDI x1, x0, 100
+ADDI x2, x0, 200
+ADDI x3, x0, 15
+
+// Test CSR write operations (CSRRW)
+CSRRW x4, mstatus, x1
+CSRRW x5, mtvec, x2
+CSRRW x6, mepc, x3
+
+// Test CSR read operations (read what we just wrote)
+CSRRW x7, mstatus, x0
+CSRRW x8, mtvec, x0
+CSRRW x9, mepc, x0
+
+// Test CSR set bits operations (CSRRS)
+CSRRS x10, mstatus, x2
+CSRRS x11, mtvec, x1
+
+// Test CSR clear bits operations (CSRRC)
+CSRRC x12, mstatus, x3
+CSRRC x13, mtvec, x2
+
+// Test CSR immediate operations
+CSRRWI x14, mstatus, 8
+CSRRSI x15, mtvec, 4
+CSRRCI x16, mepc, 2
+
+// Test reading performance counters
+CSRRW x17, rdcycle, x0
+CSRRW x18, rdinstret, x0
+
+// Final read to check results
+CSRRW x19, mstatus, x0
+CSRRW x20, mtvec, x0
