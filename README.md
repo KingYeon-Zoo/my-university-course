@@ -1,6 +1,12 @@
-# 我的大学三年课程档案
+# 我的大学课程档案
 
-这里保存着我大学三年间积累的课程资料、课堂笔记、实验代码、课程设计与一些零散记录。
+坐标 HFUT 合肥校区，计算机科学与技术专业。
+
+大学几年里，我从许多前辈留在 GitHub 上的课程仓库中受益良多。如今也把自己的课程资料、学习笔记、实验代码和一点回忆整理在这里。资料会过时，代码会稚嫩，但开源与传承不会。
+
+Located at HFUT Hefei Campus, Computer Science and Technology.
+
+During my university years, I benefited a lot from course repositories shared by earlier students on GitHub. Now I am leaving my own coursework, notes, lab code, and memories here in return. Materials may age and code may be immature, but open sharing and academic inheritance should continue.
 
 我曾经习惯把这些内容在不同硬盘之间反复拷贝。现在，我更愿意把它们整理成一份长期保存的数字档案。它们未必完整，也未必足够优秀，却真实记录了我走过的大学生活。
 

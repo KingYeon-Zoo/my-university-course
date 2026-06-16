@@ -6,6 +6,24 @@
 课程笔记/.obsidian/
 课程笔记/.trash/
 
+# 可再生成的依赖、环境、缓存和编译产物
+**/node_modules/
+**/.conda_envs/
+**/.conda-ffmpeg/
+**/.venv/
+**/venv/
+**/__pycache__/
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/.idea/
+**/.vs/
+**/build/
+**/dist/
+**/target/
+**/Debug/
+**/Release/
+
 # 嵌套仓库的本地 Git 元数据备份
 **/.git.local-backup/
 
