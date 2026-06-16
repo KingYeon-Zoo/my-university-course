@@ -44,9 +44,9 @@ During my university years, I benefited a lot from course repositories shared by
 <details>
 <summary>如果你感兴趣，可以看看一个“loser”的独白……</summary>
 
-这是一段比较私人、也可能有些负面的文字。目前它还没有写完。
+这是一段比较私人、也可能有些负面的文字，关于大学三年里的顺风、捷径、膨胀、失控与回望。
 
-[《写在大学三年之后》](./随笔/写在大学三年之后.md)
+[《一个贪心国王的败局独白》](./随笔/一个贪心国王的败局独白.md)
 
 </details>
 
