@@ -1,0 +1,74 @@
+#include<iostream>
+#include<string>
+#include<cmath>
+using namespace std;
+
+int char_to_int(char c) {
+	if (c > '0' && c <= '9') {
+		return c - '0';
+	}
+	else if (c >= 'A' && c <= 'F') {
+		return c - 'A' + 10;
+	}
+	else if (c >= 'a' && c <= 'f') {
+		return c - 'a' + 10;
+	}
+	else {
+		return -1;
+	}
+}
+
+string char_table = "0123456789ABCDEF";
+
+char int_to_char(int x) {
+	return char_table[x];
+}
+
+int to_D(string num, int base) {
+	int result = 0;
+	int power = 0;
+	for (int i = num.length() - 1; i >= 0; i--) {
+		result += char_to_int(num[i]) * pow(base, power);
+		power++;
+	}
+	return result;
+}
+
+string D_to_anybase(int x, int base) {
+	string result;
+	while (x > 0) {
+		int res = x % base;
+		result = int_to_char(res) + result; // 前置拼接字符
+		x /= base;
+	}
+	return result.empty() ? "0" : result; // 处理 x 为 0 的情况
+}
+
+
+int main() {
+	int from_base;    
+	string num;      
+	int to_base;      
+
+	cout << "请输入源进制 数字 目标进制（用空格分隔）：" << endl;
+	cin >> from_base >> num >> to_base;
+
+	if (from_base != 2 && from_base != 8 && from_base != 10 && from_base != 16) {
+		cout << "源进制必须是 2、8、10 或 16" << endl;
+		return 1;
+	}
+
+	if (to_base != 2 && to_base != 8 && to_base != 10 && to_base != 16) {
+		cout << "目标进制必须是 2、8、10 或 16" << endl;
+		return 1;
+	}
+
+	int decimal = to_D(num, from_base);
+
+	// 再从十进制转换为目标进制
+	string result = D_to_anybase(decimal, to_base);
+
+	cout << "转换结果：" << result << endl;
+
+	return 0;
+}

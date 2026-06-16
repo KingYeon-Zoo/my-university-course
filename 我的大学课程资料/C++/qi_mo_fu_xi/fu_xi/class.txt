@@ -1,0 +1,146 @@
+#include<iostream>
+#include<string>
+#include<fstream>
+using namespace std;
+
+class Base {
+	virtual void f() = 0;
+};
+
+class Student:public Base {
+	friend void master(Student* student);
+private:
+	string name;
+	int id;
+public:
+	void f() override {
+		cout << "STUDENT" << endl;
+	}
+	static int num;
+	Student() :name("none"), id(0) {
+		num++;
+		cout << "Student类默认构造函数调用！" << endl;
+	}
+	Student(string name, int id) :name(name), id(id) {
+		num++;
+		cout << "Student类有参构造函数调用！" << endl;
+	}
+	virtual~Student() {
+		num--;
+		cout << "Student类析构函数调用！" << endl;
+	}
+	virtual void speak() {
+		cout << "I am a student!" << endl;
+	}
+	void get_name() {
+		cout << name << endl;
+	}
+	void get_id() {
+		cout << id << endl;
+	}
+	static void get_num() {
+		cout << num << endl;
+	}
+	static int return_num() {
+		return num;
+	}
+	friend void teacher(Student* student) {
+		cout << student->name << endl;
+		cout << student->id << endl;
+	}
+	Student operator+ (const Student& s1) {
+		Student s;
+		s.name = this->name + s1.name;
+		s.id = this->id + s1.id;
+		return s;
+	}
+	Student operator++() {
+		this->id++;
+		return *this;
+	}
+	Student operator++(int) {
+		Student s = *this;
+		this->id++;
+		return s;
+	}
+	void load_to_file() {
+		ofstream f;
+		f.open("student.txt", ios::out);
+		f<< "Name: " << name << ", ID: " << id << endl;
+		f.close();
+
+	}
+	void read_form_file() {
+		ifstream f;
+		f.open("student.txt", ios::in);
+		f >> name >> id;
+	}
+};
+
+void read_and_load() {
+	ifstream ifs;
+	ofstream ofs;
+	ofs.open("new_student.txt", ios::out);
+	ifs.open("student.txt", ios::in);
+	string line;
+	while (getline(ifs, line)) {
+		ofs << line << endl;
+	}
+	ifs.close();
+	ofs.close();	
+}
+
+int Student::num = 0;
+
+void master(Student* student) {
+	cout << student->name << endl;
+	cout << student->id << endl;
+}
+
+class new_student :public Student {
+private:
+	int age;
+public:
+	void f() override {
+		cout << "NEW_STUDENT" << endl;
+	}
+	new_student() :age(0) {
+		num++;
+		cout << "new_student类默认构造函数调用！" << endl;
+	}
+	new_student(int age) :age(age) {
+		num++;
+		cout << "new_student类有参构造函数调用！" << endl;
+	}
+	new_student(string name, int id, int age) : Student(name, id), age(age) {
+		num++;
+		cout << "new_student类有参构造函数调用！" << endl;
+	}
+	~new_student() {
+		num--;
+		cout << "new_student类析构函数调用！" << endl;
+	}
+	void get_age() {
+		cout << age << endl;
+	}
+	void speak() {
+		cout << "I am a new student!" << endl;
+	}
+};
+
+void test_1() {
+	Student s1("Tom", 1);
+	Student* p = &s1;
+	teacher(p);
+}
+
+void test_2() {
+	Student s1("Tom", 1);
+	Student* p = &s1;
+	master(p);
+}
+
+int main() {
+	read_and_load();
+	return 0;
+}
