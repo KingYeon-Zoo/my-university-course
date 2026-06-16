@@ -1,0 +1,1 @@
+D:\Users\Desktop\course\计算机体系结构\实验\WinMIPS64\example4.s

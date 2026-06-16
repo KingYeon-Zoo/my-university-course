@@ -1,0 +1,51 @@
+pseudo-LRU
+
+(1) two-way set associative - one bit
+
+   indicates which line of the two has been reference more recently
+
+
+(2) four-way set associative - three bits
+
+   each bit represents one branch point in a binary decision tree; let 1
+   represent that the left side has been referenced more recently than the
+   right side, and 0 vice-versa
+
+              are all 4 lines valid?
+                   /       \
+                 yes        no, use an invalid line
+                  |
+                  |
+                  |
+             bit_0 == 0?            state | replace      ref to | next state
+              /       \             ------+--------      -------+-----------
+             y         n             00x  |  line_0      line_0 |    11_
+            /           \            01x  |  line_1      line_1 |    10_
+     bit_1 == 0?    bit_2 == 0?      1x0  |  line_2      line_2 |    0_1
+       /    \          /    \        1x1  |  line_3      line_3 |    0_0
+      y      n        y      n
+     /        \      /        \        ('x' means       ('_' means unchanged)
+   line_0  line_1  line_2  line_3      don't care)
+
+   (see Figure 3-7, p. 3-18, in Intel Embedded Pentium Processor Family Dev.
+    Manual, 1998, http://www.intel.com/design/intarch/manuals/273204.htm)
+
+
+note that there is a 6-bit encoding for true LRU for four-way set associative
+
+  bit 0: bank[1] more recently used than bank[0]
+  bit 1: bank[2] more recently used than bank[0]
+  bit 2: bank[2] more recently used than bank[1]
+  bit 3: bank[3] more recently used than bank[0]
+  bit 4: bank[3] more recently used than bank[1]
+  bit 5: bank[3] more recently used than bank[2]
+
+  this results in 24 valid bit patterns within the 64 possible bit patterns
+  (4! possible valid traces for bank references)
+
+  e.g., a trace of 0 1 2 3, where 0 is LRU and 3 is MRU, is encoded as 111111
+
+  you can implement a state machine with a 256x6 ROM (6-bit state encoding
+  appended with a 2-bit bank reference input will yield a new 6-bit state),
+  and you can implement an LRU bank indicator with a 64x2 ROM
+
