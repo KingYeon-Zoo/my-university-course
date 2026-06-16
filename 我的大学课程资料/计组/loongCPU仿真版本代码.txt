@@ -1,0 +1,239 @@
+module cpu_top #(parameter ADDR_W = 12) (
+    input  wire       clk,     // 板载 100 MHz（P17）
+    input  wire       rst,     // 高电平复位（S6→P15）
+    output wire [7:0] led      // D1_0…D1_7
+);
+
+    // 1) 时钟分频 → cpu_clk ≈ 0.75 Hz
+    reg [25:0] divcnt;
+    always @(posedge clk) begin
+        if (rst) divcnt <= 26'd0;
+        else     divcnt <= divcnt + 1;
+    end
+    wire cpu_clk = divcnt[25];
+
+    // 2) 多周期 CPU -- 除了 clk 换成 cpu_clk，逻辑与原来一模一样
+    reg  [31:0] pc, pc_next;
+    always @(posedge cpu_clk) begin
+        if (rst) pc <= 32'd0;
+        else      pc <= pc_next;
+    end
+
+    wire [31:0] instr;
+    imem  #(.AW(ADDR_W)) u_imem  ( .clk(cpu_clk),
+                                   .addr(pc[ADDR_W+1:2]),
+                                   .dout(instr) );
+
+    wire        is_add, is_st, is_b;
+    wire [4:0]  rj, rk, rd;
+    wire [31:0] imm12;
+    wire [25:0] offs26;
+    control u_ctl ( .instr(instr),
+                    .is_add(is_add),
+                    .is_st(is_st),
+                    .is_b(is_b),
+                    .rj(rj), .rk(rk), .rd(rd),
+                    .imm12(imm12), .offs26(offs26) );
+
+    wire [31:0] rj_val, rk_val, alu_out, dmem_rdata;
+    reg         we_rf;
+    reg  [31:0] rf_wdata;
+    regfile u_rf ( .clk(cpu_clk), .ra(rj), .rb(rk),
+                   .rd(rd), .rd_we(we_rf), .rd_wdata(rf_wdata),
+                   .ra_data(rj_val), .rb_data(rk_val) );
+
+    alu u_alu ( .in1(rj_val), .in2(rk_val),
+                .add_en(is_add), .sum(alu_out) );
+
+    reg  [1:0] state, nxt;
+    localparam IF = 2'b00, ID = 2'b01, EX = 2'b10;
+    always @(posedge cpu_clk) begin
+        if (rst) state <= IF;
+        else      state <= nxt;
+    end
+
+    wire        dmem_we   = is_st && (state == EX);
+    wire [31:0] dmem_addr = rj_val + imm12;
+    dmem #(.AW(ADDR_W)) u_dmem ( .clk(cpu_clk),
+                                 .we(dmem_we),
+                                 .addr(dmem_addr[ADDR_W+1:2]),
+                                 .din(rk_val),
+                                 .dout(dmem_rdata) );
+
+    always @* begin
+        nxt      = state;
+        pc_next  = pc;
+        we_rf    = 1'b0;
+        rf_wdata = 32'h0;
+        case (state)
+            IF: begin
+                pc_next = pc + 32'd4;
+                nxt     = ID;
+            end
+            ID: nxt = EX;
+            EX: begin
+                if (is_add) begin
+                    we_rf    = (rd != 5'd0);
+                    rf_wdata = alu_out;
+                end else if (is_b) begin
+                    pc_next = pc + {{4{offs26[25]}}, offs26, 2'b00};
+                end
+                nxt = IF;
+            end
+        endcase
+    end
+
+    // 3) LED 显示多周期状态 + 指令类别
+    reg [7:0] led_reg;
+    always @(posedge cpu_clk or posedge rst) begin
+        if (rst)    led_reg <= 8'd0;
+        else        led_reg <= { 3'b000,
+                                 is_b,
+                                 is_st,
+                                 is_add,
+                                 state };
+    end
+    assign led = led_reg;
+
+endmodule
+
+module imem #(parameter AW = 12) (
+    input  wire             clk,
+    input  wire [AW-1:0]    addr,
+    output reg  [31:0]      dout
+);
+
+    (* ram_style = "block" *)
+    reg [31:0] rom [0:(1<<AW)-1];
+
+    // synthesis translate_off
+    integer fp;
+    initial begin
+        fp = $fopen("prog.mem", "r");
+        if (fp == 0) begin
+            $display("### ERROR: Cannot open prog.mem ###");
+            $fatal(1, "Cannot open prog.mem");
+        end
+        $fclose(fp);
+        $readmemh("prog.mem", rom);
+    end
+    // synthesis translate_on
+
+    always @(posedge clk) begin
+        dout <= rom[addr];
+    end
+
+endmodule
+module control(
+    input  wire [31:0] instr,
+    output wire        is_add,
+    output wire        is_st,
+    output wire        is_b,
+    output wire [4:0]  rj,
+    output wire [4:0]  rk,
+    output wire [4:0]  rd,
+    output wire [31:0] imm12,
+    output wire [25:0] offs26
+);
+    wire [5:0] opcode   = instr[31:26];
+    wire [4:0] rj_f     = instr[9 :5];
+    wire [4:0] rd_f     = instr[4 :0];
+    wire [4:0] rk_f     = instr[14:10];
+
+    assign is_add = (opcode == 6'b000000);          
+    assign is_st  = (opcode == 6'b001010);          
+    assign is_b   = (opcode == 6'b010101);          
+
+    assign rj = rj_f;
+    assign rk = is_st ? rd_f : rk_f;           
+    assign rd = rd_f;                            
+
+    assign imm12  = {{20{instr[21]}}, instr[21:10]};
+    assign offs26 = instr[25:0];
+endmodule
+module regfile(
+    input  wire        clk,
+    input  wire [4:0]  ra, rb, rd,
+    input  wire        rd_we,
+    input  wire [31:0] rd_wdata,
+    output wire [31:0] ra_data,
+    output wire [31:0] rb_data
+);
+    reg [31:0] rf [0:31];
+
+    integer i;
+    initial begin
+        for (i = 0; i < 32; i = i + 1) rf[i] = 32'h0;
+        rf[2] = 32'h1;
+    end
+
+    assign ra_data = (ra == 5'd0) ? 32'h0 : rf[ra];
+    assign rb_data = (rb == 5'd0) ? 32'h0 : rf[rb];
+
+    always @(posedge clk)
+        if (rd_we && rd != 5'd0) rf[rd] <= rd_wdata;
+endmodule
+module alu(
+    input  wire [31:0] in1,
+    input  wire [31:0] in2,
+    input  wire        add_en,
+    output wire [31:0] sum
+);
+    assign sum = add_en ? in1 + in2 : 32'h0;
+endmodule
+module dmem #(parameter AW = 12) (      
+    input  wire             clk,
+    input  wire             we,         
+    input  wire [AW-1:0]    addr,      
+    input  wire [31:0]      din,        
+    output reg  [31:0]      dout        
+);
+
+    (* ram_style = "block" *)
+    reg [31:0] mem [0:(1<<AW)-1];
+
+    always @(posedge clk) begin
+        if (we)
+            mem[addr] <= din;
+        dout <= mem[addr];            
+    end
+
+endmodule
+`timescale 1ns/1ps
+module cpu_tb;
+
+    reg clk = 1'b0;
+    always #5 clk = ~clk;              
+
+    reg rst;
+    initial begin
+        rst = 1'b1;
+        #30 rst = 1'b0;                 
+    end
+
+    cpu_top dut (
+        .clk (clk),
+        .rst (rst)
+    );
+
+    integer i;
+    initial begin
+        @(negedge rst);
+        for (i = 0; i < 60; i = i + 1)
+            @(posedge clk);
+
+        if (dut.u_dmem.mem[0] !== 32'h0000_0001) begin
+            $display("TEST FAILED  --  DMEM[0]=%h  (expected 0x1)", dut.u_dmem.mem[0]);
+            $stop;
+        end else begin
+            $display("TEST PASSED  --  DMEM[0]=%h", dut.u_dmem.mem[0]);
+            $stop;
+        end
+    end
+
+endmodule
+00000013
+00400123
+00000123
+28000002
+000001E3
