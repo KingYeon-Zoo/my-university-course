@@ -12,6 +12,13 @@
 **/.conda-ffmpeg/
 **/.venv/
 **/venv/
+**/.env
+**/.env.*
+!**/.env.example
+!**/.env.sample
+!**/.env.template
+**/.envrc
+**/.direnv/
 **/__pycache__/
 **/.pytest_cache/
 **/.mypy_cache/
