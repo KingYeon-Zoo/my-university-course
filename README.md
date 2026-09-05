@@ -66,3 +66,7 @@ Welcome to my university course archive. This repository records my journey as a
 ## 复核与验证
 
 [2026-09-05 复核记录](docs/reviews/2026-09-05.md)记录本次检查、结果与未覆盖部分。
+
+## 历史源码清理
+
+2026-09-05 已移除不再维护且触发依赖安全告警的历史源码副本。课程资料和独立保留的设计、报告等文档继续归档。旧代码可从本次删除提交的父提交恢复；历史报告中的运行结果不代表当前仍提供可运行项目。删除明细见 [清理记录](docs/reviews/2026-09-05-legacy-cleanup.md)。
