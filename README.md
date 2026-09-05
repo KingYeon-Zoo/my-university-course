@@ -43,22 +43,6 @@ Welcome to my university course archive. This repository records my journey as a
 
 ---
 
-## 🤝 参考与致谢 (References & Credits)
-
-在整理本归档的过程中，我曾克隆并参考过以下前辈在 GitHub 上留下的优秀开源仓库。正是这种无私分享、彼此传承的开源精神，让后来者少走了许多弯路，也让我有了保存这段大学经历的勇气。下方链接均指向原项目，所有提交记录与版权归原作者所有：
-
-*   [EternityPetrichor/HFUT-CS](https://github.com/EternityPetrichor/HFUT-CS) - 经典 HFUT 课程整理
-*   [Franpin/HFUT-IOT-Learning-Work](https://github.com/Franpin/HFUT-IOT-Learning-Work) - 丰富的物联网学习资料
-*   [h9696/Hfut-cs](https://github.com/h9696/Hfut-cs) - 计算机专业课程汇总
-*   [wza13/hfut-cs-assignments](https://github.com/wza13/hfut-cs-assignments) - 课程作业参考
-*   [Martin-share/hfut-cs-final-exams-and-note](https://github.com/Martin-share/hfut-cs-final-exams-and-note) - 珍贵的期末复习资料与笔记
-*   [mox-hub/hfut-cs](https://github.com/mox-hub/hfut-cs) - 计算机学习档案
-*   [styitches/HFUT-CS](https://github.com/styitches/HFUT-CS) - 课程资源库
-*   [sunmiao0301/HFUT-CS](https://github.com/sunmiao0301/HFUT-CS) - 合肥校区优秀归档
-*   [thinkinglf/HFUT-22CS](https://github.com/thinkinglf/HFUT-22CS) - 22级课程归档参考
-
----
-
 ## ⚖️ 许可说明 (License)
 
 除另有说明外，本仓库中由我本人创作的笔记与代码仅供学习和交流使用。仓库中的第三方材料继续遵循其原有版权声明及许可证，本仓库不改变其任何权利归属。

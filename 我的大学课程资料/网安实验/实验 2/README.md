@@ -30,17 +30,9 @@
 └── tests/
 ```
 
-## 规则来源与重写说明
+## 检测规则
 
-实验规则不是简单的 `IDS_TEST` 字符串，而是参考以下公开资料后重新编写的本地规则：
-
-- [Suricata 官方规则格式](https://docs.suricata.io/en/suricata-8.0.3/rules/intro.html)
-- [Suricata 官方 HTTP sticky buffer 文档](https://docs.suricata.io/en/suricata-8.0.0/rules/http-keywords.html)
-- [Suricata 官方 Linux NFQUEUE IPS 文档](https://docs.suricata.io/en/suricata-7.0.15/setting-up-ipsinline-for-linux.html)
-- [Suricata 官方 suricata-update / ET Open 规则管理文档](https://docs.suricata.io/en/suricata-8.0.1/rule-management/suricata-update.html)
-- [AWS GitHub：导入 Proofpoint Emerging Threats Open 规则集](https://github.com/aws-samples/aws-network-firewall-rulegroups-with-proofpoints-emerging-threats-open-ruleset)
-
-重写后的规则使用 `flow:established,to_server`、`http.uri`、`http.uri.raw`、`http.user_agent`、`content`、`pcre` 和 `drop`，并且只作用于实验服务 `8080/tcp`。默认 `suricata-update` 获取的 ET Open 规则仍然保留。
+实验规则使用 `flow:established,to_server`、`http.uri`、`http.uri.raw`、`http.user_agent`、`content`、`pcre` 和 `drop`，并且只作用于实验服务 `8080/tcp`。默认 `suricata-update` 获取的 ET Open 规则仍然保留。
 
 ## 一、Mac 创建 conda 环境
 
