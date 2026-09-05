@@ -1,7 +1,0 @@
-target
-logs
-backups
-.git
-.idea
-*.iml
-Docker配置文档.md
